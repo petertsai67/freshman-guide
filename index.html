@@ -2,29 +2,38 @@
 <html>
 <head>
 <meta charset="utf-8" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-74621X7L57"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-74621X7L57');
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+<link rel="preload" as="script" href="https://unpkg.com/react@18.3.1/umd/react.production.min.js" integrity="sha384-DGyLxAyjq0f9SPpVevD6IgztCFlnMF6oW/XQGmfe+IsZ8TqEiDrcHkMLKI6fiB/Z" crossorigin="anonymous">
+<link rel="preload" as="script" href="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" integrity="sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1" crossorigin="anonymous">
+<link rel="preload" as="font" type="font/ttf" href="assets/fonts/seed-bd-sub.ttf" crossorigin>
+<link rel="preload" as="font" type="font/ttf" href="assets/fonts/pixel-subset.ttf" crossorigin>
 <script src="./support.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet data-dc-atomics>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-49QV9BDXZD"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-49QV9BDXZD');
-</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&family=Noto+Sans+TC:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap" rel="stylesheet">
 <style>
 @font-face{font-family:'PixelTC';src:url('assets/fonts/pixel-subset.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:'LINE Seed TW';src:url('assets/fonts/seed-rg-sub.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:'LINE Seed TW';src:url('assets/fonts/seed-bd-sub.ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 body,button,h1,h2,h3,p,span,div{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
-body{margin:0;background:#EFE7DF;color:#2C2521;font-family:'Rubik','LINE Seed TW','Noto Sans TC',system-ui,sans-serif;font-weight:500;-webkit-font-smoothing:antialiased;text-wrap:pretty}
+body{margin:0;background:#EFE7DF;color:#2C2521;font-family:'Rubik','LINE Seed TW','PingFang TC','Microsoft JhengHei',system-ui,sans-serif;font-weight:500;-webkit-font-smoothing:antialiased;text-wrap:pretty}
 a{color:#2C2521;text-decoration:underline}
 a:hover{color:#E8794A}
 button{font-family:inherit;font-weight:700;cursor:pointer}
@@ -57,35 +66,24 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
 @keyframes blobC{0%{transform:translate(0,0) scale(1.02)}35%{transform:translate(64px,-66px) scale(.76)}60%{transform:translate(-92px,-20px) scale(1.42)}85%{transform:translate(-22px,72px) scale(1.06)}100%{transform:translate(0,0) scale(1.02)}}
 @keyframes cdpop{0%{transform:scale(1)}34%{transform:scale(1.085)}100%{transform:scale(1)}}
 @keyframes iconpop{0%{transform:scale(1)}30%{transform:scale(.82)}62%{transform:scale(1.08)}100%{transform:scale(1)}}
-@keyframes pinpulse{0%{transform:scale(.5);opacity:.95}70%{opacity:.14}100%{transform:scale(1.3);opacity:0}}
-@keyframes asknote{0%{transform:translateY(14px);opacity:0}100%{transform:translateY(0);opacity:1}}
-@keyframes ctakick{0%{transform:translateY(0)}20%{transform:translateY(-13px)}46%{transform:translateY(0)}64%{transform:translateY(-6px)}84%,100%{transform:translateY(0)}}
-@keyframes bangpop{0%{transform:translateY(7px) scale(.4);opacity:0}14%{transform:translateY(-5px) scale(1.16);opacity:1}26%{transform:translateY(0) scale(1)}42%{transform:translateY(-4px) scale(1.06)}56%{transform:translateY(0) scale(1)}80%{transform:translateY(0) scale(1);opacity:1}100%{transform:translateY(0) scale(.88);opacity:0}}
-@keyframes ctatap{0%,52%{transform:translateY(0)}62%{transform:translateY(-14px);animation-timing-function:cubic-bezier(.36,0,.5,1)}74%{transform:translateY(0);animation-timing-function:cubic-bezier(.34,1.24,.36,1)}82%{transform:translateY(-6px);animation-timing-function:cubic-bezier(.36,0,.5,1)}92%,100%{transform:translateY(0)}}
-@keyframes ctafloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
-@keyframes ctasheen{0%{transform:translateX(-16%) scaleX(.9);opacity:.26}45%{transform:translateX(54%) scaleX(1.12);opacity:.74}100%{transform:translateX(-16%) scaleX(.9);opacity:.26}}
 </style>
 <title>南臺新生開學懶人導航</title>
 <meta name="description" content="南臺科大新生開學待辦清單：註冊繳費、選課、宿舍、機車證，一頁走完開學前的最後一哩路。">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://petertsai67.github.io/freshman-guide/">
+<meta property="og:url" content="https://stust-csie-sa.github.io/freshman-guide/">
 <meta property="og:title" content="南臺新生開學懶人導航">
-<meta property="og:description" content="選課、住宿、重要時程、常用服務與校園導航，一次整理。">
-<meta property="og:image" content="https://petertsai67.github.io/freshman-guide/assets/og-cover-v2.png">
-<meta property="og:image:secure_url" content="https://petertsai67.github.io/freshman-guide/assets/og-cover-v2.png">
-<meta property="og:image:type" content="image/png">
+<meta property="og:description" content="註冊繳費、選課、宿舍、機車證，一頁走完開學前的最後一哩路。">
+<meta property="og:image" content="https://stust-csie-sa.github.io/freshman-guide/assets/og-cover.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="南臺新生開學懶人導航">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:site_name" content="南臺科大資訊工程系學會">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="南臺新生開學懶人導航">
-<meta name="twitter:description" content="選課、住宿、重要時程、常用服務與校園導航，一次整理。">
-<meta name="twitter:image" content="https://petertsai67.github.io/freshman-guide/assets/og-cover-v2.png">
-<meta name="twitter:image:alt" content="南臺新生開學懶人導航">
+<meta name="twitter:description" content="註冊繳費、選課、宿舍、機車證，一頁走完開學前的最後一哩路。">
+<meta name="twitter:image" content="https://stust-csie-sa.github.io/freshman-guide/assets/og-cover.png">
 <meta name="ext-resource-dependency" content="assets/campus-map-sq.png" data-resource-id="campusMap">
 <meta name="ext-resource-dependency" content="assets/csie-logo.svg" data-resource-id="logo">
 <meta name="ext-resource-dependency" content="assets/sa-logo.png" data-resource-id="saLogo">
@@ -117,8 +115,8 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
     </sc-if>
     <sc-if value="{{ isMoney }}">
       <div style="display:flex;gap:26px;animation:bounceicon 2s cubic-bezier(.3,1.4,.4,1) both">
-        <div style="font-family:'PixelTC','Noto Sans TC',sans-serif;font-size:132px;line-height:1;color:#E7DDD2">$</div>
-        <div style="font-family:'PixelTC','Noto Sans TC',sans-serif;font-size:132px;line-height:1;color:#E7DDD2">$</div>
+        <div style="font-family:'PixelTC','PingFang TC','Microsoft JhengHei',sans-serif;font-size:132px;line-height:1;color:#E7DDD2">$</div>
+        <div style="font-family:'PixelTC','PingFang TC','Microsoft JhengHei',sans-serif;font-size:132px;line-height:1;color:#E7DDD2">$</div>
       </div>
     </sc-if>
     <sc-if value="{{ isHouse }}">
@@ -140,13 +138,13 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
 
   <div ref="{{ heroRef }}" data-screen-label="Intro" data-hero="1" style="position:relative;display:flex;flex-direction:column;padding:0;min-height:{{ heroMin }};transform:{{ bounceTf }};transition:transform .34s cubic-bezier(.3,1.3,.4,1)">
 
-    <div ref="{{ bgRef }}" style="position:absolute;left:50%;margin-left:-50vw;width:100vw;top:0;bottom:0;z-index:0;overflow:hidden;contain:paint;pointer-events:none;transform:{{ blowTf }};opacity:{{ blowOp }};transition:transform 1.15s cubic-bezier(.55,0,.3,1),opacity .8s ease;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 7%,#000 92%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 7%,#000 92%,transparent 100%)">
-      <div style="position:absolute;left:-10%;top:2%;animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 1.9s both"><div style="width:190px;height:176px;border-radius:50%;filter:blur(26px);background:radial-gradient(circle at 50% 45%,rgba(232,121,74,.5) 0%,rgba(232,121,74,.14) 58%,rgba(232,121,74,0) 78%);animation:blobA 4.5s ease-in-out infinite;will-change:transform;backface-visibility:hidden"></div></div>
-      <div style="position:absolute;right:-8%;top:14%;animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 1.96s both"><div style="width:214px;height:196px;border-radius:50%;filter:blur(28px);background:radial-gradient(circle at 50% 50%,rgba(238,150,110,.5) 0%,rgba(238,150,110,.15) 56%,rgba(238,150,110,0) 78%);animation:blobC 5.2s ease-in-out infinite;will-change:transform;backface-visibility:hidden"></div></div>
-      <div style="position:absolute;left:6%;top:34%;animation:dropin 1.05s cubic-bezier(.3,1.05,.4,1) 2.02s both"><div style="width:262px;height:246px;border-radius:50%;filter:blur(30px);background:radial-gradient(circle at 46% 48%,rgba(228,112,63,.62) 0%,rgba(232,121,74,.2) 52%,rgba(232,121,74,0) 76%);animation:blobB 6s ease-in-out infinite;will-change:transform;backface-visibility:hidden"></div></div>
-      <div style="position:absolute;right:2%;top:52%;animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 2.08s both"><div style="width:198px;height:184px;border-radius:50%;filter:blur(26px);background:radial-gradient(circle at 50% 50%,rgba(240,144,106,.52) 0%,rgba(240,144,106,.16) 56%,rgba(240,144,106,0) 78%);animation:blobA 5.6s ease-in-out infinite reverse;will-change:transform;backface-visibility:hidden"></div></div>
-      <div style="position:absolute;left:-6%;top:70%;animation:dropin 1.05s cubic-bezier(.3,1.05,.4,1) 2.14s both"><div style="width:236px;height:214px;border-radius:50%;filter:blur(30px);background:radial-gradient(circle at 48% 50%,rgba(230,116,70,.5) 0%,rgba(232,121,74,.16) 54%,rgba(232,121,74,0) 78%);animation:blobC 6.4s ease-in-out infinite;will-change:transform;backface-visibility:hidden"></div></div>
-      <div style="position:absolute;right:12%;top:82%;animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 2.2s both"><div style="width:180px;height:166px;border-radius:50%;filter:blur(24px);background:radial-gradient(circle at 50% 50%,rgba(242,160,120,.46) 0%,rgba(242,160,120,.14) 56%,rgba(242,160,120,0) 78%);animation:blobB 4.9s ease-in-out infinite reverse;will-change:transform;backface-visibility:hidden"></div></div>
+    <div ref="{{ bgRef }}" style="position:absolute;left:50%;margin-left:-50vw;width:100vw;top:0;bottom:0;z-index:0;overflow:hidden;pointer-events:none;transform:{{ blowTf }};opacity:{{ blowOp }};transition:transform 1.15s cubic-bezier(.55,0,.3,1),opacity .8s ease;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 7%,#000 92%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 7%,#000 92%,transparent 100%)">
+      <div style="position:absolute;left:-10%;top:2%;animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 1.9s both"><div style="width:190px;height:176px;border-radius:50%;filter:blur(26px);background:radial-gradient(circle at 50% 45%,rgba(232,121,74,.5) 0%,rgba(232,121,74,.14) 58%,rgba(232,121,74,0) 78%);animation:blobA 4.5s ease-in-out infinite"></div></div>
+      <div style="position:absolute;right:-8%;top:14%;animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 1.96s both"><div style="width:214px;height:196px;border-radius:50%;filter:blur(28px);background:radial-gradient(circle at 50% 50%,rgba(238,150,110,.5) 0%,rgba(238,150,110,.15) 56%,rgba(238,150,110,0) 78%);animation:blobC 5.2s ease-in-out infinite"></div></div>
+      <div style="position:absolute;left:6%;top:34%;animation:dropin 1.05s cubic-bezier(.3,1.05,.4,1) 2.02s both"><div style="width:262px;height:246px;border-radius:50%;filter:blur(30px);background:radial-gradient(circle at 46% 48%,rgba(228,112,63,.62) 0%,rgba(232,121,74,.2) 52%,rgba(232,121,74,0) 76%);animation:blobB 6s ease-in-out infinite"></div></div>
+      <div style="position:absolute;right:2%;top:52%;animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 2.08s both"><div style="width:198px;height:184px;border-radius:50%;filter:blur(26px);background:radial-gradient(circle at 50% 50%,rgba(240,144,106,.52) 0%,rgba(240,144,106,.16) 56%,rgba(240,144,106,0) 78%);animation:blobA 5.6s ease-in-out infinite reverse"></div></div>
+      <div style="position:absolute;left:-6%;top:70%;animation:dropin 1.05s cubic-bezier(.3,1.05,.4,1) 2.14s both"><div style="width:236px;height:214px;border-radius:50%;filter:blur(30px);background:radial-gradient(circle at 48% 50%,rgba(230,116,70,.5) 0%,rgba(232,121,74,.16) 54%,rgba(232,121,74,0) 78%);animation:blobC 6.4s ease-in-out infinite"></div></div>
+      <div style="position:absolute;right:12%;top:82%;animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 2.2s both"><div style="width:180px;height:166px;border-radius:50%;filter:blur(24px);background:radial-gradient(circle at 50% 50%,rgba(242,160,120,.46) 0%,rgba(242,160,120,.14) 56%,rgba(242,160,120,0) 78%);animation:blobB 4.9s ease-in-out infinite reverse"></div></div>
     </div>
     <div ref="{{ paneRef }}" onScroll="{{ onPaneScroll }}" style="position:relative;z-index:5;flex:none;height:{{ paneH }};display:flex;align-items:stretch;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:none">
       <section data-screen-label="Tools" style="flex:none;width:100%;box-sizing:border-box;scroll-snap-align:center;display:flex;flex-direction:column;justify-content:flex-start;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:14px 24px 16px">
@@ -157,28 +155,28 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
             <div style="margin:20px 0 0;display:flex;flex-direction:column;gap:22px">
               <div>
                 <div style="display:flex;align-items:center;gap:10px;padding:0 4px 10px">
-                  <span style="font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:14px;letter-spacing:.08em;color:#2C2521">日常</span>
+                  <span style="font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:14px;letter-spacing:.08em;color:#2C2521">日常</span>
                   <span style="flex:1;height:1px;background:rgba(44,37,33,.14)"></span>
                 </div>
                 <div style="display:flex;flex-direction:column;gap:8px">
                 <a href="https://portal.stust.edu.tw/abs_stu/checkin.asp" target="_blank" rel="noopener" onClick="{{ svcTap }}" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:18px;text-decoration:none;border:1px solid rgba(255,255,255,.6);box-shadow:inset 0 1px 0 rgba(255,255,255,.55);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);background:rgba(251,246,240,.62);transition:transform .2s ease,background .25s ease" style-hover="transform:scale(1.015);background:rgba(250,224,207,.72)" style-active="transform:scale(.99)">
                   <span data-svcicon="1" style="flex:none;width:40px;height:40px;border-radius:13px;display:flex;align-items:center;justify-content:center;background:#2C2521;color:#FBF6F0"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.2" y="5" width="17.6" height="15.2" rx="2.6" stroke-width="1.8"></rect><path d="M3.2 9.8 H20.8 M8 3 V7 M16 3 V7" stroke-width="1.8"></path><path d="M10 13.6 L14 17.6 M14 13.6 L10 17.6" stroke-width="1.8"></path></svg></span>
                   <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
-                    <span style="font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:15px;line-height:1.4;color:#2C2521">請假系統</span>
+                    <span style="font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:15px;line-height:1.4;color:#2C2521">請假系統</span>
                   </span>
                   <span style="flex:none;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;line-height:1;background:rgba(44,37,33,.08);color:#6B5A4E">↗</span>
                 </a>
                 <a href="https://portal.stust.edu.tw/family/" target="_blank" rel="noopener" onClick="{{ svcTap }}" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:18px;text-decoration:none;border:1px solid rgba(255,255,255,.6);box-shadow:inset 0 1px 0 rgba(255,255,255,.55);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);background:rgba(251,246,240,.62);transition:transform .2s ease,background .25s ease" style-hover="transform:scale(1.015);background:rgba(250,224,207,.72)" style-active="transform:scale(.99)">
                   <span data-svcicon="1" style="flex:none;width:40px;height:40px;border-radius:13px;display:flex;align-items:center;justify-content:center;background:#2C2521;color:#FBF6F0"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9.2" cy="8.6" r="3.3" stroke-width="1.8"></circle><path d="M3.6 19.6 C3.6 16.5 6.1 14.2 9.2 14.2 C12.3 14.2 14.8 16.5 14.8 19.6" stroke-width="1.8"></path><path d="M16.6 5.9 A3 3 0 0 1 16.6 11.5" stroke-width="1.8"></path><path d="M18.2 14.6 C19.8 15.5 20.8 17.1 20.8 19" stroke-width="1.8"></path></svg></span>
                   <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
-                    <span style="font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:15px;line-height:1.4;color:#2C2521">家長查看請假／缺課查詢</span>
+                    <span style="font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:15px;line-height:1.4;color:#2C2521">家長查看請假／缺課查詢</span>
                   </span>
                   <span style="flex:none;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;line-height:1;background:rgba(44,37,33,.08);color:#6B5A4E">↗</span>
                 </a>
                 <a href="{{ outlookUrl }}" target="_blank" rel="noopener" onClick="{{ svcTap }}" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:18px;text-decoration:none;border:1px solid rgba(255,255,255,.6);box-shadow:inset 0 1px 0 rgba(255,255,255,.55);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);background:rgba(251,246,240,.62);transition:transform .2s ease,background .25s ease" style-hover="transform:scale(1.015);background:rgba(250,224,207,.72)" style-active="transform:scale(.99)">
                   <span data-svcicon="1" style="flex:none;width:40px;height:40px;border-radius:13px;display:flex;align-items:center;justify-content:center;background:#2C2521;color:#FBF6F0"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.8" y="5" width="18.4" height="14" rx="2.4" stroke-width="1.8"></rect><path d="M3.8 6.6 L12 12.8 L20.2 6.6" stroke-width="1.8"></path></svg></span>
                   <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
-                    <span style="font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:15px;line-height:1.4;color:#2C2521">Outlook</span>
+                    <span style="font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:15px;line-height:1.4;color:#2C2521">Outlook</span>
                     <span style="font-size:11.5px;line-height:1.5;color:#7A6759">校方主要資訊寄送於此</span>
                   </span>
                   <span style="flex:none;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;line-height:1;background:rgba(44,37,33,.08);color:#6B5A4E">↗</span>
@@ -186,14 +184,14 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
                 <a href="https://course.stust.edu.tw/CourSel/Login.aspx?ReturnUrl=%2fCourSel%2fPages%2fNextCourse.aspx" target="_blank" rel="noopener" onClick="{{ svcTap }}" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:18px;text-decoration:none;border:1px solid rgba(255,255,255,.6);box-shadow:inset 0 1px 0 rgba(255,255,255,.55);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);background:rgba(251,246,240,.62);transition:transform .2s ease,background .25s ease" style-hover="transform:scale(1.015);background:rgba(250,224,207,.72)" style-active="transform:scale(.99)">
                   <span data-svcicon="1" style="flex:none;width:40px;height:40px;border-radius:13px;display:flex;align-items:center;justify-content:center;background:#2C2521;color:#FBF6F0"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.4" y="3.6" width="17.2" height="16.8" rx="2.6" stroke-width="1.8"></rect><path d="M7.6 8.6 H16.4 M7.6 12 H16.4 M7.6 15.4 H13" stroke-width="1.8"></path></svg></span>
                   <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
-                    <span style="font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:15px;line-height:1.4;color:#2C2521">選課系統</span>
+                    <span style="font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:15px;line-height:1.4;color:#2C2521">選課系統</span>
                   </span>
                   <span style="flex:none;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;line-height:1;background:rgba(44,37,33,.08);color:#6B5A4E">↗</span>
                 </a>
                 <a href="https://portal.stust.edu.tw/studclub/Login.aspx?ReturnUrl=%2fstudclub%2f" target="_blank" rel="noopener" onClick="{{ svcTap }}" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:18px;text-decoration:none;border:1px solid rgba(255,255,255,.6);box-shadow:inset 0 1px 0 rgba(255,255,255,.55);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);background:rgba(251,246,240,.62);transition:transform .2s ease,background .25s ease" style-hover="transform:scale(1.015);background:rgba(250,224,207,.72)" style-active="transform:scale(.99)">
                   <span data-svcicon="1" style="flex:none;width:40px;height:40px;border-radius:13px;display:flex;align-items:center;justify-content:center;background:#2C2521;color:#FBF6F0"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7.6" r="3.2" stroke-width="1.8"></circle><path d="M6.2 19.6 C6.2 16.3 8.8 14 12 14 C15.2 14 17.8 16.3 17.8 19.6" stroke-width="1.8"></path><circle cx="4.5" cy="10.6" r="2" stroke-width="1.6"></circle><circle cx="19.5" cy="10.6" r="2" stroke-width="1.6"></circle></svg></span>
                   <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
-                    <span style="font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:15px;line-height:1.4;color:#2C2521">社團系統</span>
+                    <span style="font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:15px;line-height:1.4;color:#2C2521">社團系統</span>
                   </span>
                   <span style="flex:none;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;line-height:1;background:rgba(44,37,33,.08);color:#6B5A4E">↗</span>
                 </a>
@@ -201,21 +199,21 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
               </div>
               <div>
                 <div style="display:flex;align-items:center;gap:10px;padding:0 4px 10px">
-                  <span style="font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:14px;letter-spacing:.08em;color:#2C2521">住宿</span>
+                  <span style="font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:14px;letter-spacing:.08em;color:#2C2521">住宿</span>
                   <span style="flex:1;height:1px;background:rgba(44,37,33,.14)"></span>
                 </div>
                 <div style="display:flex;flex-direction:column;gap:8px">
                 <a href="https://aura.stust.edu.tw/dorm_fix/Login.aspx" target="_blank" rel="noopener" onClick="{{ svcTap }}" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:18px;text-decoration:none;border:1px solid rgba(255,255,255,.6);box-shadow:inset 0 1px 0 rgba(255,255,255,.55);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);background:rgba(251,246,240,.62);transition:transform .2s ease,background .25s ease" style-hover="transform:scale(1.015);background:rgba(250,224,207,.72)" style-active="transform:scale(.99)">
                   <span data-svcicon="1" style="flex:none;width:40px;height:40px;border-radius:13px;display:flex;align-items:center;justify-content:center;background:#2C2521;color:#FBF6F0"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3.6 A5 5 0 0 0 9.6 10.8 L3.9 16.5 A2 2 0 0 0 6.7 19.3 L12.4 13.6 A5 5 0 0 0 19.6 8.2 L16.9 10.9 L14.2 8.2 L16.9 5.5 Z" stroke-width="1.7"></path></svg></span>
                   <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
-                    <span style="font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:15px;line-height:1.4;color:#2C2521">宿舍維修</span>
+                    <span style="font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:15px;line-height:1.4;color:#2C2521">宿舍維修</span>
                   </span>
                   <span style="flex:none;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;line-height:1;background:rgba(44,37,33,.08);color:#6B5A4E">↗</span>
                 </a>
                 <a href="http://120.117.35.172:8080/southtainan2mobile/meter_data.php" target="_blank" rel="noopener" onClick="{{ svcTap }}" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:18px;text-decoration:none;border:1px solid rgba(255,255,255,.6);box-shadow:inset 0 1px 0 rgba(255,255,255,.55);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);background:rgba(251,246,240,.62);transition:transform .2s ease,background .25s ease" style-hover="transform:scale(1.015);background:rgba(250,224,207,.72)" style-active="transform:scale(.99)">
                   <span data-svcicon="1" style="flex:none;width:40px;height:40px;border-radius:13px;display:flex;align-items:center;justify-content:center;background:#2C2521;color:#FBF6F0"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8 V21.2 M4.1 7.4 L19.9 16.6 M19.9 7.4 L4.1 16.6" stroke-width="1.7"></path><path d="M9.6 5 L12 7.4 L14.4 5 M9.6 19 L12 16.6 L14.4 19" stroke-width="1.7"></path></svg></span>
                   <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
-                    <span style="font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:15px;line-height:1.4;color:#2C2521">宿舍冷氣額度</span>
+                    <span style="font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:15px;line-height:1.4;color:#2C2521">宿舍冷氣額度</span>
                     <span style="font-size:11.5px;line-height:1.5;color:#C25A2F;font-weight:800">需連接校網才打得開</span>
                   </span>
                   <span style="flex:none;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;line-height:1;background:rgba(44,37,33,.08);color:#6B5A4E">↗</span>
@@ -224,21 +222,21 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
               </div>
               <div>
                 <div style="display:flex;align-items:center;gap:10px;padding:0 4px 10px">
-                  <span style="font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:14px;letter-spacing:.08em;color:#2C2521">體育</span>
+                  <span style="font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:14px;letter-spacing:.08em;color:#2C2521">體育</span>
                   <span style="flex:1;height:1px;background:rgba(44,37,33,.14)"></span>
                 </div>
                 <div style="display:flex;flex-direction:column;gap:8px">
                 <a href="https://pec.stust.edu.tw/tc/node/badmintonv2" target="_blank" rel="noopener" onClick="{{ svcTap }}" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:18px;text-decoration:none;border:1px solid rgba(255,255,255,.6);box-shadow:inset 0 1px 0 rgba(255,255,255,.55);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);background:rgba(251,246,240,.62);transition:transform .2s ease,background .25s ease" style-hover="transform:scale(1.015);background:rgba(250,224,207,.72)" style-active="transform:scale(.99)">
                   <span data-svcicon="1" style="flex:none;width:40px;height:40px;border-radius:13px;display:flex;align-items:center;justify-content:center;background:#2C2521;color:#FBF6F0"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.4 4.6 C17.2 4.6 19.6 7 19.6 9.8 C19.6 12.3 17.6 14.2 15.1 14.2 C12.6 14.2 10.6 12.2 10.6 9.7 C10.6 6.9 11.6 4.6 14.4 4.6 Z" stroke-width="1.7"></path><path d="M11.6 13.2 L4.6 20.2" stroke-width="2"></path><path d="M11.6 6.4 L18.6 13.4" stroke-width="1.3"></path><path d="M14.8 4.9 L15.2 13.9" stroke-width="1.3"></path></svg></span>
                   <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
-                    <span style="font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:15px;line-height:1.4;color:#2C2521">羽球場借用查看</span>
+                    <span style="font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:15px;line-height:1.4;color:#2C2521">羽球場借用查看</span>
                   </span>
                   <span style="flex:none;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;line-height:1;background:rgba(44,37,33,.08);color:#6B5A4E">↗</span>
                 </a>
                 <a href="https://pec.stust.edu.tw/tc/node/billiards" target="_blank" rel="noopener" onClick="{{ svcTap }}" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:18px;text-decoration:none;border:1px solid rgba(255,255,255,.6);box-shadow:inset 0 1px 0 rgba(255,255,255,.55);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);background:rgba(251,246,240,.62);transition:transform .2s ease,background .25s ease" style-hover="transform:scale(1.015);background:rgba(250,224,207,.72)" style-active="transform:scale(.99)">
                   <span data-svcicon="1" style="flex:none;width:40px;height:40px;border-radius:13px;display:flex;align-items:center;justify-content:center;background:#2C2521;color:#FBF6F0"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.6" cy="9.4" r="6" stroke-width="1.7"></circle><path d="M13.8 14.4 L19 19.6" stroke-width="2.1"></path><circle cx="18.4" cy="6.2" r="1.7" fill="currentColor" stroke="none"></circle></svg></span>
                   <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px">
-                    <span style="font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:15px;line-height:1.4;color:#2C2521">桌球場借用查看</span>
+                    <span style="font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:15px;line-height:1.4;color:#2C2521">桌球場借用查看</span>
                   </span>
                   <span style="flex:none;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;line-height:1;background:rgba(44,37,33,.08);color:#6B5A4E">↗</span>
                 </a>
@@ -259,14 +257,14 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
           <img src="assets/sa-logo.png" alt="STUSTSA 南臺科大學生會" style="display:block;height:clamp(34px,10.4vw,52px);width:auto;max-width:100%;object-fit:contain;margin:0" />
         </a>
       </div>
-      <div style="margin-top:9px;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:10.5px;line-height:1.5;letter-spacing:.06em;color:#A8927E">南臺科大資工系學會 製做　南臺學生會 協力</div>
+      <div style="margin-top:9px;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:10.5px;line-height:1.5;letter-spacing:.06em;color:#A8927E">南臺科大資工系學會 製做　南臺學生會 協力</div>
     </div>
     <div style="position:relative;z-index:4;flex:none;padding:22px 0 0;transform:{{ blowTf }};opacity:{{ blowOp }};transform-origin:50% 100%;transition:transform .85s cubic-bezier(.55,0,.2,1),opacity .6s ease">
       <h1 style="margin:0;letter-spacing:.01em">
-        <span style="display:block;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-size:min(36px,5.4vh);line-height:1.32;font-weight:400;letter-spacing:.03em"><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 0.09s both">一</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 0.18s both">起</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 0.26s both">走</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 0.35s both">完</span></span>
-        <span style="display:block;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-size:min(36px,5.4vh);line-height:1.32;font-weight:700;letter-spacing:.01em"><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 0.49s both">開</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 0.58s both">學</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 0.67s both">前</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 0.75s both">的</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 0.84s both">最</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 0.93s both">後</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 1.01s both">一</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 1.1s both">哩</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 1.19s both">路</span></span>
+        <span style="display:block;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-size:min(36px,5.4vh);line-height:1.32;font-weight:400;letter-spacing:.03em"><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 0.09s both">一</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 0.18s both">起</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 0.26s both">走</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 0.35s both">完</span></span>
+        <span style="display:block;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-size:min(36px,5.4vh);line-height:1.32;font-weight:700;letter-spacing:.01em"><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 0.49s both">開</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 0.58s both">學</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 0.67s both">前</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 0.75s both">的</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 0.84s both">最</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 0.93s both">後</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 1.01s both">一</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 1.1s both">哩</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 1.19s both">路</span></span>
       </h1>
-      <div style="margin-top:16px;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;letter-spacing:.045em;color:#2C2521">
+      <div style="margin-top:16px;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;letter-spacing:.045em;color:#2C2521">
         <div style="font-size:14px;line-height:1.6;font-weight:400;color:#6B5A4E"><span style="display:inline-block;margin-right:.34em;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 1.33s both">LET'S</span><span style="display:inline-block;margin-right:.34em;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 1.42s both">CROSS</span><span style="display:inline-block;margin-right:.34em;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 1.51s both">THE</span><span style="display:inline-block;margin-right:.34em;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 1.59s both">FINISH</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 1.68s both">LINE</span></div>
         <div style="font-size:14px;line-height:1.6;font-weight:700"><span style="display:inline-block;margin-right:.34em;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 1.77s both">TO</span><span style="display:inline-block;margin-right:.34em;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 1.84s both">THE</span><span style="display:inline-block;margin-right:.34em;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 1.91s both">NEW</span><span style="display:inline-block;margin-right:.34em;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 1.98s both">SCHOOL</span><span style="display:inline-block;margin-right:.34em;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 2.05s both">YEAR</span><span style="display:inline-block;animation:charin 1.15s cubic-bezier(.22,.9,.26,1) 2.12s both">TOGETHER</span></div>
       </div>
@@ -276,63 +274,56 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
       <div style="position:absolute;inset:0;z-index:0;display:flex;flex-direction:column;justify-content:space-evenly;opacity:{{ blowOp }};transition:opacity .6s ease">
         <div style="overflow:hidden">
           <div style="display:flex;width:max-content;will-change:transform;backface-visibility:hidden;animation:mqb 24s linear infinite">
-            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:16px;letter-spacing:.06em;color:rgba(85,72,63,.5);padding-right:64px">要去哪裡繳學費⋯　　宿舍到底抽到沒　　</div>
-            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:16px;letter-spacing:.06em;color:rgba(85,72,63,.5);padding-right:64px">要去哪裡繳學費⋯　　宿舍到底抽到沒　　</div>
+            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:16px;letter-spacing:.06em;color:rgba(85,72,63,.5);padding-right:64px">要去哪裡繳學費⋯　　宿舍到底抽到沒　　</div>
+            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:16px;letter-spacing:.06em;color:rgba(85,72,63,.5);padding-right:64px">要去哪裡繳學費⋯　　宿舍到底抽到沒　　</div>
           </div>
         </div>
         <div style="overflow:hidden">
           <div style="display:flex;width:max-content;will-change:transform;backface-visibility:hidden;animation:mqa 12s linear infinite">
-            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:400;font-size:13px;letter-spacing:.08em;color:rgba(107,90,78,.3);padding-right:56px">學校網站好複雜＊＊＊　　要去哪裡繳學費⋯　　</div>
-            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:400;font-size:13px;letter-spacing:.08em;color:rgba(107,90,78,.3);padding-right:56px">學校網站好複雜＊＊＊　　要去哪裡繳學費⋯　　</div>
+            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:400;font-size:13px;letter-spacing:.08em;color:rgba(107,90,78,.3);padding-right:56px">學校網站好複雜＊＊＊　　要去哪裡繳學費⋯　　</div>
+            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:400;font-size:13px;letter-spacing:.08em;color:rgba(107,90,78,.3);padding-right:56px">學校網站好複雜＊＊＊　　要去哪裡繳學費⋯　　</div>
           </div>
         </div>
         <div style="overflow:hidden">
           <div style="display:flex;width:max-content;will-change:transform;backface-visibility:hidden;animation:mqa 24s linear infinite">
-            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:400;font-size:14px;letter-spacing:.07em;color:rgba(107,90,78,.42);padding-right:60px">新訓到底是哪天？？？　　課表怎麼還是空的　　</div>
-            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:400;font-size:14px;letter-spacing:.07em;color:rgba(107,90,78,.42);padding-right:60px">新訓到底是哪天？？？　　課表怎麼還是空的　　</div>
-            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:400;font-size:14px;letter-spacing:.07em;color:rgba(107,90,78,.42);padding-right:60px">新訓到底是哪天？？？　　課表怎麼還是空的　　</div>
-            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:400;font-size:14px;letter-spacing:.07em;color:rgba(107,90,78,.42);padding-right:60px">新訓到底是哪天？？？　　課表怎麼還是空的　　</div>
-            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:400;font-size:14px;letter-spacing:.07em;color:rgba(107,90,78,.42);padding-right:60px">新訓到底是哪天？？？　　課表怎麼還是空的　　</div>
-            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:400;font-size:14px;letter-spacing:.07em;color:rgba(107,90,78,.42);padding-right:60px">新訓到底是哪天？？？　　課表怎麼還是空的　　</div>
+            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:400;font-size:14px;letter-spacing:.07em;color:rgba(107,90,78,.42);padding-right:60px">新訓到底是哪天？？？　　課表怎麼還是空的　　</div>
+            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:400;font-size:14px;letter-spacing:.07em;color:rgba(107,90,78,.42);padding-right:60px">新訓到底是哪天？？？　　課表怎麼還是空的　　</div>
+            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:400;font-size:14px;letter-spacing:.07em;color:rgba(107,90,78,.42);padding-right:60px">新訓到底是哪天？？？　　課表怎麼還是空的　　</div>
+            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:400;font-size:14px;letter-spacing:.07em;color:rgba(107,90,78,.42);padding-right:60px">新訓到底是哪天？？？　　課表怎麼還是空的　　</div>
+            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:400;font-size:14px;letter-spacing:.07em;color:rgba(107,90,78,.42);padding-right:60px">新訓到底是哪天？？？　　課表怎麼還是空的　　</div>
+            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:400;font-size:14px;letter-spacing:.07em;color:rgba(107,90,78,.42);padding-right:60px">新訓到底是哪天？？？　　課表怎麼還是空的　　</div>
           </div>
         </div>
         <div style="overflow:hidden">
           <div style="display:flex;width:max-content;will-change:transform;backface-visibility:hidden;animation:mqb 21s linear infinite">
-            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:15px;letter-spacing:.07em;color:rgba(85,72,63,.58);padding-right:60px">新舊校網資訊混亂 完全法克　　</div>
-            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:15px;letter-spacing:.07em;color:rgba(85,72,63,.58);padding-right:60px">新舊校網資訊混亂 完全法克　　</div>
-            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:15px;letter-spacing:.07em;color:rgba(85,72,63,.58);padding-right:60px">新舊校網資訊混亂 完全法克　　</div>
-            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:15px;letter-spacing:.07em;color:rgba(85,72,63,.58);padding-right:60px">新舊校網資訊混亂 完全法克　　</div>
-            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:15px;letter-spacing:.07em;color:rgba(85,72,63,.58);padding-right:60px">新舊校網資訊混亂 完全法克　　</div>
-            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:15px;letter-spacing:.07em;color:rgba(85,72,63,.58);padding-right:60px">新舊校網資訊混亂 完全法克　　</div>
+            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:15px;letter-spacing:.07em;color:rgba(85,72,63,.58);padding-right:60px">新舊校網資訊混亂 完全法克　　</div>
+            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:15px;letter-spacing:.07em;color:rgba(85,72,63,.58);padding-right:60px">新舊校網資訊混亂 完全法克　　</div>
+            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:15px;letter-spacing:.07em;color:rgba(85,72,63,.58);padding-right:60px">新舊校網資訊混亂 完全法克　　</div>
+            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:15px;letter-spacing:.07em;color:rgba(85,72,63,.58);padding-right:60px">新舊校網資訊混亂 完全法克　　</div>
+            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:15px;letter-spacing:.07em;color:rgba(85,72,63,.58);padding-right:60px">新舊校網資訊混亂 完全法克　　</div>
+            <div style="flex:none;white-space:nowrap;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:15px;letter-spacing:.07em;color:rgba(85,72,63,.58);padding-right:60px">新舊校網資訊混亂 完全法克　　</div>
           </div>
         </div>
       </div>
       <div style="position:absolute;left:-4%;top:0%;z-index:0;display:none">
-        <div style="animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 2.02s both"><div style="width:138px;height:128px;border-radius:50%;filter:blur(19px);background:radial-gradient(circle at 50% 45%,rgba(232,121,74,.62) 0%,rgba(232,121,74,.16) 58%,rgba(232,121,74,0) 78%);animation:blobA 4.5s ease-in-out infinite;will-change:transform;backface-visibility:hidden"></div></div>
+        <div style="animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 2.02s both"><div style="width:138px;height:128px;border-radius:50%;filter:blur(19px);background:radial-gradient(circle at 50% 45%,rgba(232,121,74,.62) 0%,rgba(232,121,74,.16) 58%,rgba(232,121,74,0) 78%);animation:blobA 4.5s ease-in-out infinite"></div></div>
       </div>
       <div style="position:absolute;left:14%;top:11%;z-index:0;display:none">
-        <div style="animation:dropin 1.05s cubic-bezier(.3,1.05,.4,1) 2.06s both"><div style="width:224px;height:214px;border-radius:50%;filter:blur(24px);background:radial-gradient(circle at 46% 48%,rgba(228,112,63,.7) 0%,rgba(232,121,74,.22) 52%,rgba(232,121,74,0) 76%);animation:blobB 6s ease-in-out infinite;will-change:transform;backface-visibility:hidden"></div></div>
+        <div style="animation:dropin 1.05s cubic-bezier(.3,1.05,.4,1) 2.06s both"><div style="width:224px;height:214px;border-radius:50%;filter:blur(24px);background:radial-gradient(circle at 46% 48%,rgba(228,112,63,.7) 0%,rgba(232,121,74,.22) 52%,rgba(232,121,74,0) 76%);animation:blobB 6s ease-in-out infinite"></div></div>
       </div>
       <div style="position:absolute;right:-6%;top:16%;z-index:0;display:none">
-        <div style="animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 2.1s both"><div style="width:178px;height:164px;border-radius:50%;filter:blur(21px);background:radial-gradient(circle at 50% 50%,rgba(238,150,110,.58) 0%,rgba(238,150,110,.18) 56%,rgba(238,150,110,0) 78%);animation:blobC 5.2s ease-in-out infinite;will-change:transform;backface-visibility:hidden"></div></div>
+        <div style="animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 2.1s both"><div style="width:178px;height:164px;border-radius:50%;filter:blur(21px);background:radial-gradient(circle at 50% 50%,rgba(238,150,110,.58) 0%,rgba(238,150,110,.18) 56%,rgba(238,150,110,0) 78%);animation:blobC 5.2s ease-in-out infinite"></div></div>
       </div>
 
     </div>
 
     <div style="position:relative;z-index:5;flex:none;display:flex;align-items:center;padding:0;margin-bottom:-2px;transform:{{ blowTf }};opacity:{{ blowOp }};transform-origin:0% 100%;transition:transform 1.05s cubic-bezier(.55,0,.2,1) 120ms,opacity .7s ease 120ms">
-      <span ref="{{ ctaRef }}" style="position:relative;display:inline-flex;align-items:center;transform-origin:left center;animation:{{ ctaAnim }}">
-        <span aria-hidden="true" style="position:absolute;left:-7%;top:8%;width:64%;height:84%;pointer-events:none;z-index:0;border-radius:999px;filter:blur(24px);background:linear-gradient(90deg,rgba(232,121,74,0) 0%,rgba(232,121,74,.6) 45%,rgba(246,178,120,0) 100%);opacity:{{ ctaGlow }};animation:{{ ctaSheen }}"></span>
-      <span style="position:relative;z-index:1;display:inline-flex;align-items:center;transform-origin:left center;color:#2C2521;animation:{{ ctaTap }}">
-      <span style="display:inline-flex;align-items:center;transform-origin:left center;animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 2.26s both">
-      <button onClick="{{ startNow }}" style="position:relative;z-index:1;display:flex;align-items:center;gap:14px;border:0;background:transparent;padding:0;margin:0;cursor:pointer;color:inherit;font-size:clamp(44px,min(17vw,14vh),92px);transition:transform .34s cubic-bezier(.32,.72,0,1),color .25s ease;transform-origin:left center" style-hover="color:#E4703F;transform:scale(1.11)" style-active="transform:scale(.97)">
-        <span style="font-family:'PixelTC','Noto Sans TC',sans-serif;font-weight:400;font-size:1em;line-height:.92;letter-spacing:.06em;white-space:nowrap;color:inherit">{{ startWord }}</span>
+      <button onClick="{{ startNow }}" style="display:flex;align-items:center;gap:14px;border:0;background:transparent;padding:0;margin:0;cursor:pointer;color:#2C2521;font-size:clamp(44px,min(17vw,14vh),92px);transition:transform .3s cubic-bezier(.32,.72,0,1),color .25s ease,font-size .28s cubic-bezier(.32,.72,0,1);transform-origin:left center;animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 2.26s both" style-hover="color:#E4703F;font-size:clamp(62px,19vw,102px)" style-active="transform:scale(.97)">
+        <span style="font-family:'PixelTC','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:400;font-size:1em;line-height:.92;letter-spacing:.06em;white-space:nowrap;color:inherit">{{ startWord }}</span>
         <svg viewBox="0 0 10 14" style="width:15px;height:22px;display:block;flex:none;margin-top:6px" aria-hidden="true"><path d="M2.6 3.2 L7.4 7 L2.6 10.8 Z" fill="currentColor" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path></svg>
       </button>
-      </span>
-      </span>
-      </span>
       <sc-if value="{{ hasProgress }}">
-        <div style="margin-left:14px;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.05em;color:#B06B45">{{ progressNote }}</div>
+        <div style="margin-left:14px;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.05em;color:#B06B45">{{ progressNote }}</div>
       </sc-if>
     </div>
 
@@ -350,12 +341,12 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
                     <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:26px;overflow:hidden;display:flex;flex-direction:column;background:{{ a.frontBg }};box-shadow:inset 0 1.5px 0 rgba(255,255,255,.4),inset 0 0 0 1px rgba(255,255,255,.12),0 14px 32px rgba(44,37,33,.22)">
                       <div style="flex:none;height:150px;position:relative;background:repeating-linear-gradient(135deg,rgba(251,246,240,.10) 0 9px,rgba(251,246,240,.03) 9px 18px);display:flex;align-items:center;justify-content:center">
                         <div style="position:absolute;left:0;right:0;bottom:0;height:52%;z-index:1;background:linear-gradient(180deg,rgba(44,37,33,0) 0%,rgba(44,37,33,.42) 100%)"></div>
-                        <sc-if value="{{ a.hasImage }}">
-                          <div role="img" aria-label="{{ a.title }}" style="position:absolute;left:0;top:0;width:100%;height:100%;background-image:url({{ a.image }});background-size:cover;background-position:50% 62%;background-repeat:no-repeat"></div></sc-if>
+                        <sc-if value="{{ a.hasImage }}" hint-placeholder-val="{{ true }}">
+                          <img src="{{ a.image }}" alt="{{ a.title }}" style="position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:50% 62%" /></sc-if>
 
                       </div>
                       <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:7px;padding:15px 16px 16px">
-                        <div style="font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:16px;line-height:1.4;color:#FBF6F0">{{ a.title }}</div>
+                        <div style="font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:16px;line-height:1.4;color:#FBF6F0">{{ a.title }}</div>
                         <div style="font-size:11.5px;line-height:1.6;color:rgba(251,246,240,.62)">{{ a.blurb }}</div>
                         <div style="margin-top:auto;display:flex;align-items:center;gap:7px;font-size:11px;letter-spacing:.06em;color:rgba(251,246,240,.5)"><span>翻到背面</span><svg viewBox="0 0 10 14" style="width:7px;height:10px;display:block;flex:none" aria-hidden="true"><path d="M2.6 3.2 L7.4 7 L2.6 10.8 Z" fill="currentColor" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path></svg></div>
                       </div>
@@ -363,10 +354,10 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
 
                     <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;transform:rotateY(180deg);border-radius:26px;overflow:hidden;display:flex;flex-direction:column;gap:10px;padding:20px 18px;background:#F8F2EB;box-shadow:0 14px 32px rgba(44,37,33,.22)">
                       <div style="font-size:10.5px;line-height:1;letter-spacing:.1em;color:#A8927E">{{ a.tag }}</div>
-                      <div style="font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:17px;line-height:1.45;color:#2C2521">{{ a.title }}</div>
+                      <div style="font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:17px;line-height:1.45;color:#2C2521">{{ a.title }}</div>
                       <div style="margin-top:6px">
                         <div style="font-size:10.5px;letter-spacing:.1em;color:#A8927E">活動時間</div>
-                        <div style="margin-top:5px;font-family:'PixelTC','Noto Sans TC',sans-serif;font-size:15px;line-height:1.5;color:#2C2521">{{ a.when }}</div>
+                        <div style="margin-top:5px;font-family:'PixelTC','PingFang TC','Microsoft JhengHei',sans-serif;font-size:15px;line-height:1.5;color:#2C2521">{{ a.when }}</div>
                         <div style="margin-top:4px;font-size:11.5px;line-height:1.6;color:#7A6759">{{ a.place }}</div>
                       </div>
                       <div style="margin-top:auto">
@@ -393,15 +384,12 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
     </sc-if>
     <div ref="{{ cardsRef }}" style="position:relative;z-index:5;flex:none;width:100%;margin:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:14px;align-items:start;padding:14px 24px 12px;animation:floatup .9s cubic-bezier(.25,.9,.3,1) 1.86s both">
       <div ref="{{ eyeBox }}" onClick="{{ tapMap }}" onPointerDown="{{ onEyeDown }}" onPointerMove="{{ onEyeMove }}" onPointerUp="{{ onEyeUp }}" onPointerCancel="{{ onEyeUp }}" style="position:relative;width:100%;min-width:0;overflow:hidden;background:#E3D6C8;border-radius:14px;aspect-ratio:472/325;max-height:21vh;container-type:inline-size;touch-action:pan-y;cursor:pointer;opacity:{{ mpSrcOp }};transition:transform .18s ease,opacity .18s ease" style-hover="transform:scale(1.02)" style-active="transform:scale(1.03)">
-        <div style="position:absolute;left:14px;top:13px;display:flex;align-items:center;gap:7px;color:rgba(44,37,33,.52);font-family:'PixelTC','Noto Sans TC',sans-serif;font-size:13px;letter-spacing:.04em;line-height:1">校園地圖</div>
-        <sc-if value="{{ eyeBang }}">
-          <div aria-hidden="true" style="position:absolute;left:50%;top:10%;margin-left:-7px;z-index:6;transform-origin:50% 100%;font-family:'PixelTC','Noto Sans TC',sans-serif;font-size:34px;line-height:1;color:#E8794A;text-shadow:0 2px 0 rgba(44,37,33,.14);pointer-events:none;animation:bangpop 1.5s cubic-bezier(.3,1.3,.4,1) infinite">!</div>
-        </sc-if>
+        <div style="position:absolute;left:14px;top:13px;display:flex;align-items:center;gap:7px;color:rgba(44,37,33,.52);font-family:'PixelTC','PingFang TC','Microsoft JhengHei',sans-serif;font-size:13px;letter-spacing:.04em;line-height:1">校園地圖</div>
         <sc-if value="{{ dead }}">
           <div onClick="{{ revive }}" style="position:absolute;left:0;right:0;top:0;bottom:30%;z-index:5;background:#1A5FC8;color:#FFFFFF;cursor:pointer;display:flex;flex-direction:column;justify-content:center;gap:9px;padding:16px 18px;animation:eyesfade .2s ease both">
-            <div style="font-family:'PixelTC','Noto Sans TC',sans-serif;font-size:38px;line-height:1">:(</div>
-            <div style="font-family:'PixelTC','Noto Sans TC',sans-serif;font-size:12px;line-height:1.65">你把眼睛甩壞了，它需要重新啟動。<br>正在收集「你到底甩了幾次」的資料…</div>
-            <div style="font-family:'PixelTC','Noto Sans TC',sans-serif;font-size:12px;line-height:1">{{ deadPct }}</div>
+            <div style="font-family:'PixelTC','PingFang TC','Microsoft JhengHei',sans-serif;font-size:38px;line-height:1">:(</div>
+            <div style="font-family:'PixelTC','PingFang TC','Microsoft JhengHei',sans-serif;font-size:12px;line-height:1.65">你把眼睛甩壞了，它需要重新啟動。<br>正在收集「你到底甩了幾次」的資料…</div>
+            <div style="font-family:'PixelTC','PingFang TC','Microsoft JhengHei',sans-serif;font-size:12px;line-height:1">{{ deadPct }}</div>
             <div style="font-size:9px;line-height:1.8;opacity:.85">錯誤代碼：EYE_SPIN_OVERLOAD<br>（點一下可以立刻叫醒它）</div>
           </div>
         </sc-if>
@@ -418,8 +406,8 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
           </sc-if>
           <sc-if value="{{ isMoney }}">
             <div style="display:flex;gap:10px;animation:bounceicon 2s cubic-bezier(.3,1.4,.4,1) both">
-              <div style="font-family:'PixelTC','Noto Sans TC',sans-serif;font-size:46px;line-height:1;color:#2C2521">$</div>
-              <div style="font-family:'PixelTC','Noto Sans TC',sans-serif;font-size:46px;line-height:1;color:#2C2521">$</div>
+              <div style="font-family:'PixelTC','PingFang TC','Microsoft JhengHei',sans-serif;font-size:46px;line-height:1;color:#2C2521">$</div>
+              <div style="font-family:'PixelTC','PingFang TC','Microsoft JhengHei',sans-serif;font-size:46px;line-height:1;color:#2C2521">$</div>
             </div>
           </sc-if>
           <sc-if value="{{ isHouse }}">
@@ -441,14 +429,14 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
         <sc-for list="{{ ripples }}" as="rp" hint-placeholder-count="0">
           <div style="position:absolute;width:120px;height:120px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,rgba(232,121,74,.5) 0%,rgba(232,121,74,.26) 40%,rgba(232,121,74,0) 70%);mix-blend-mode:multiply;animation:ripple .85s ease-out forwards;left:{{ rp.x }};top:{{ rp.y }}"></div>
         </sc-for>
-        <div style="position:absolute;left:0;right:0;bottom:13px;display:flex;align-items:center;justify-content:center;gap:3.4cqw;color:#2C2521;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:clamp(12px,7.6cqw,19px);letter-spacing:.04em"><span>打開地圖</span><svg viewBox="0 0 10 14" style="width:clamp(6px,3.6cqw,9px);height:clamp(9px,5.4cqw,13px);display:block;flex:none" aria-hidden="true"><path d="M2.6 3.2 L7.4 7 L2.6 10.8 Z" fill="#E8794A" stroke="#E8794A" stroke-width="2.2" stroke-linejoin="round"></path></svg></div>
+        <div style="position:absolute;left:0;right:0;bottom:13px;display:flex;align-items:center;justify-content:center;gap:3.4cqw;color:#2C2521;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:clamp(12px,7.6cqw,19px);letter-spacing:.04em"><span>打開地圖</span><svg viewBox="0 0 10 14" style="width:clamp(6px,3.6cqw,9px);height:clamp(9px,5.4cqw,13px);display:block;flex:none" aria-hidden="true"><path d="M2.6 3.2 L7.4 7 L2.6 10.8 Z" fill="#E8794A" stroke="#E8794A" stroke-width="2.2" stroke-linejoin="round"></path></svg></div>
       </div>
 
       <button id="cdcard" ref="{{ tlCard }}" onClick="{{ tapTl }}" style="position:relative;width:100%;min-width:0;align-self:stretch;height:auto;aspect-ratio:472/325;max-height:21vh;container-type:inline-size;border:0;border-radius:14px;background:linear-gradient(150deg,#F3A972 0%,#E8794A 100%);padding:0;cursor:pointer;overflow:hidden;isolation:isolate;display:flex;opacity:{{ tlSrcOp }};transition:transform .32s cubic-bezier(.32,.72,0,1),box-shadow .3s ease,opacity .18s ease" style-hover="transform:scale(1.03);box-shadow:0 14px 32px rgba(44,37,33,.24)" style-active="transform:scale(.98)">
         <div style="position:relative;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5.5cqw;padding:6cqw 5cqw">
           <svg viewBox="0 -960 960 960" style="width:clamp(36px,27cqw,66px);height:clamp(36px,27cqw,66px);display:block;fill:#FBF6F0" aria-hidden="true"><path d="M224.62-120q-27.62 0-46.12-18.5Q160-157 160-184.62v-510.76q0-27.62 18.5-46.12Q197-760 224.62-760h70.76v-89.23h43.08V-760h286.16v-89.23h40V-760h70.76q27.62 0 46.12 18.5Q800-723 800-695.38v263.46l-40 40v-143.46H200v350.76q0 9.24 7.69 16.93 7.69 7.69 16.93 7.69h238l40.76 40H224.62ZM200-575.39h560v-119.99q0-9.24-7.69-16.93-7.69-7.69-16.93-7.69H224.62q-9.24 0-16.93 7.69-7.69 7.69-7.69 16.93v119.99Zm0 0V-720-575.39ZM658.92-100 549.23-208.92l28.31-28.31 81.15 81.15L821-318.38l28.31 28.53L658.92-100Z"></path></svg>
           <div style="display:flex;align-items:center;gap:3.4cqw">
-            <span style="font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:clamp(12px,7.6cqw,19px);letter-spacing:.04em;color:#FBF6F0">時程表</span>
+            <span style="font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:clamp(12px,7.6cqw,19px);letter-spacing:.04em;color:#FBF6F0">時程表</span>
             <svg viewBox="0 0 10 14" style="width:clamp(6px,3.6cqw,9px);height:clamp(9px,5.4cqw,13px);display:block;flex:none" aria-hidden="true"><path d="M2.6 3.2 L7.4 7 L2.6 10.8 Z" fill="#2C2521" stroke="#2C2521" stroke-width="2.2" stroke-linejoin="round"></path></svg>
           </div>
         </div>
@@ -479,7 +467,7 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
       <div style="display:grid;grid-template-columns:1fr 0.62fr;gap:12px;padding:4px 0">
         <div onClick="{{ shakeBar }}" style="position:relative;overflow:hidden;background:#2C2521;border-radius:999px;height:48px;display:flex;align-items:center;justify-content:center;cursor:pointer">
           <div style="position:absolute;left:0;top:0;bottom:0;transition:width .5s cubic-bezier(.3,1,.3,1);background:#C8BCAE;width:{{ pctBar }}"></div>
-          <div style="position:relative;color:#FBF6F0;font-family:'PixelTC','Noto Sans TC',sans-serif;font-size:17px;letter-spacing:.02em"><span>完成度{{ pctLabel }}</span></div>
+          <div style="position:relative;color:#FBF6F0;font-family:'PixelTC','PingFang TC','Microsoft JhengHei',sans-serif;font-size:17px;letter-spacing:.02em"><span>完成度{{ pctLabel }}</span></div>
         </div>
         <div onClick="{{ tapCd }}" style="background:#2C2521;border-radius:999px;height:48px;display:flex;align-items:center;justify-content:center;gap:9px;cursor:pointer">
           <div style="display:flex;align-items:flex-end;gap:7px">
@@ -491,7 +479,7 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
               </div>
             </sc-for>
           </div>
-          <div style="color:#FBF6F0;font-family:'PixelTC','Noto Sans TC',sans-serif;font-size:13px">天後開學</div>
+          <div style="color:#FBF6F0;font-family:'PixelTC','PingFang TC','Microsoft JhengHei',sans-serif;font-size:13px">天後開學</div>
         </div>
       </div>
     </sc-if>
@@ -509,10 +497,10 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
     <div style="display:flex;gap:10px;align-items:stretch">
       <div style="flex:1;min-width:0;display:grid;grid-template-columns:{{ idCols }};gap:10px;transition:grid-template-columns .5s cubic-bezier(.32,.72,0,1)">
         <sc-for list="{{ options }}" as="opt" hint-placeholder-count="2">
-          <button ref="{{ opt.ref }}" onClick="{{ opt.pick }}" onMouseEnter="{{ opt.enter }}" onMouseLeave="{{ opt.leave }}" style="position:relative;height:200px;border:0;border-radius:30px;overflow:hidden;cursor:pointer;container-type:inline-size;display:flex;align-items:center;justify-content:center;isolation:isolate;background:{{ opt.bg }};outline:none;-webkit-tap-highlight-color:transparent;box-shadow:inset 0 1.5px 0 rgba(255,255,255,.42),inset 0 0 0 1px rgba(255,255,255,.14),0 14px 34px rgba(44,37,33,.26);transition:transform .3s cubic-bezier(.32,.72,0,1),background .35s ease,box-shadow .35s ease;transform:{{ opt.scale }}" style-active="transform:scale(.99)">
+          <button ref="{{ opt.ref }}" onClick="{{ opt.pick }}" onMouseEnter="{{ opt.enter }}" onMouseLeave="{{ opt.leave }}" style="position:relative;height:200px;border:0;border-radius:30px;overflow:hidden;cursor:pointer;container-type:inline-size;display:flex;align-items:center;justify-content:center;isolation:isolate;background:{{ opt.bg }};backdrop-filter:blur(20px) saturate(170%);-webkit-backdrop-filter:blur(20px) saturate(170%);outline:none;-webkit-tap-highlight-color:transparent;box-shadow:inset 0 1.5px 0 rgba(255,255,255,.42),inset 0 0 0 1px rgba(255,255,255,.14),0 14px 34px rgba(44,37,33,.26);transition:transform .3s cubic-bezier(.32,.72,0,1),background .35s ease,box-shadow .35s ease;transform:{{ opt.scale }}" style-active="transform:scale(.99)">
             <div style="position:absolute;left:0;right:0;top:0;height:58%;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.30) 0%,rgba(255,255,255,.10) 42%,rgba(255,255,255,0) 100%)"></div>
             <div style="position:absolute;left:-14%;top:-28%;width:78%;height:70%;pointer-events:none;border-radius:50%;filter:blur(16px);background:radial-gradient(closest-side,rgba(255,255,255,.42),rgba(255,255,255,0));transition:opacity .4s ease;opacity:{{ opt.sheen }}"></div>
-            <div style="position:relative;font-family:'PixelTC','Noto Sans TC',sans-serif;font-weight:400;font-size:{{ opt.fs }};line-height:1;letter-spacing:.02em;white-space:nowrap;color:{{ opt.fg }};transform:{{ opt.tf }};text-shadow:{{ opt.glow }};transition:transform .42s cubic-bezier(.32,.72,0,1),text-shadow .42s ease,color .3s ease">{{ opt.name }}</div>
+            <div style="position:relative;font-family:'PixelTC','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:400;font-size:{{ opt.fs }};line-height:1;letter-spacing:.02em;white-space:nowrap;color:{{ opt.fg }};transform:{{ opt.tf }};text-shadow:{{ opt.glow }};transition:transform .42s cubic-bezier(.32,.72,0,1),text-shadow .42s ease,color .3s ease">{{ opt.name }}</div>
           </button>
         </sc-for>
       </div>
@@ -554,7 +542,7 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
               <div style="flex:none;width:13px;height:13px;border-radius:50%;background:#E8794A;margin-top:5px;margin-left:9px"></div>
             </div>
             <div style="display:flex;align-items:center;gap:12px;padding:0 4px;flex-wrap:wrap">
-              <div style="flex:none;font-family:'Rubik','LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:38px;line-height:1;letter-spacing:.01em;color:#2C2521">{{ g.no }}</div>
+              <div style="flex:none;font-family:'Rubik','LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:38px;line-height:1;letter-spacing:.01em;color:#2C2521">{{ g.no }}</div>
               <h3 style="margin:0;font-size:24px;line-height:1.2">{{ g.title }}</h3>
               <span style="font-size:11px;border-radius:999px;padding:5px 12px;background:{{ g.pillBg }};color:{{ g.pillColor }}">{{ g.pillText }}</span>
             </div>
@@ -574,7 +562,7 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
                   <div onClick="{{ it.toggleOpen }}" style="position:relative;display:flex;gap:14px;padding:18px 20px;cursor:pointer;align-items:center;min-height:58px">
                     <button onClick="{{ it.toggle }}" aria-label="標記完成" aria-pressed="{{ it.donePressed }}" style="flex:none;width:26px;height:26px;padding:0;border-radius:10px;display:flex;align-items:center;justify-content:center;color:{{ it.markColor }};font-size:14px;line-height:1;outline:none;-webkit-tap-highlight-color:transparent;border:2px solid {{ it.cbxBorder }};background:{{ it.cbxBg }}" style-focus="box-shadow:0 0 0 3px rgba(232,121,74,.75)"><sc-if value="{{ it.doneOn }}"><div style="display:grid;grid-template-columns:repeat(5,3px);grid-auto-rows:3px;animation:ckpop .42s cubic-bezier(.22,1,.36,1) both"><div></div><div></div><div></div><div></div><div style="background:#E8794A"></div><div></div><div></div><div></div><div style="background:#E8794A"></div><div></div><div style="background:#E8794A"></div><div></div><div style="background:#E8794A"></div><div></div><div></div><div></div><div style="background:#E8794A"></div><div></div><div></div><div></div></div></sc-if></button>
                     <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:4px">
-                      <div style="font-family:'PixelTC','Noto Sans TC',sans-serif;font-weight:400;font-size:16px;line-height:1.5;color:{{ it.titleColor }};white-space:normal;text-wrap:pretty">{{ it.title }}</div>
+                      <div style="font-family:'PixelTC','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:400;font-size:16px;line-height:1.5;color:{{ it.titleColor }};white-space:normal;text-wrap:pretty">{{ it.title }}</div>
                       <div style="display:flex;align-items:center;gap:6px">
                         <span style="flex:none;width:6px;height:6px;border-radius:50%;background:{{ it.statusDot }}"></span>
                         <span style="font-size:11.5px;line-height:1.4;color:{{ it.statusColor }}">{{ it.statusText }}</span>
@@ -625,19 +613,19 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
                             <div style="margin-top:8px;padding-top:16px;border-top:1px solid rgba(44,37,33,.14);font-size:15px;color:{{ b.headColor }}">{{ b.text }}</div>
                           </sc-if>
                           <sc-if value="{{ b.isP }}">
-                            <p style="margin:0;font-family:'Rubik','LINE Seed TW','Noto Sans TC',sans-serif;font-weight:500;font-size:13px;line-height:1.95;color:{{ b.bodyColor }}">{{ b.text }}</p>
+                            <p style="margin:0;font-family:'Rubik','LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:500;font-size:13px;line-height:1.95;color:{{ b.bodyColor }}">{{ b.text }}</p>
                           </sc-if>
                           <sc-if value="{{ b.isOl }}">
                             <ol style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:7px">
                               <sc-for list="{{ b.rows }}" as="r" hint-placeholder-count="3">
-                                <li style="display:flex;gap:8px;font-family:'Rubik','LINE Seed TW','Noto Sans TC',sans-serif;font-weight:500;font-size:13px;line-height:1.8;color:{{ b.bodyColor }}"><span style="flex:none;color:{{ b.numColor }}">{{ r.n }}</span><span style="flex:1;min-width:0">{{ r.text }}</span></li>
+                                <li style="display:flex;gap:8px;font-family:'Rubik','LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:500;font-size:13px;line-height:1.8;color:{{ b.bodyColor }}"><span style="flex:none;color:{{ b.numColor }}">{{ r.n }}</span><span style="flex:1;min-width:0">{{ r.text }}</span></li>
                               </sc-for>
                             </ol>
                           </sc-if>
                           <sc-if value="{{ b.isUl }}">
                             <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:7px">
                               <sc-for list="{{ b.rows }}" as="r" hint-placeholder-count="3">
-                                <li style="position:relative;padding-left:18px;font-family:'Rubik','LINE Seed TW','Noto Sans TC',sans-serif;font-weight:500;font-size:13px;line-height:1.8;color:{{ b.bodyColor }}"><span style="position:absolute;left:0;top:11px;width:7px;height:2px;border-radius:2px;background:{{ b.numColor }}"></span>{{ r.text }}</li>
+                                <li style="position:relative;padding-left:18px;font-family:'Rubik','LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:500;font-size:13px;line-height:1.8;color:{{ b.bodyColor }}"><span style="position:absolute;left:0;top:11px;width:7px;height:2px;border-radius:2px;background:{{ b.numColor }}"></span>{{ r.text }}</li>
                               </sc-for>
                             </ul>
                           </sc-if>
@@ -669,7 +657,7 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
                             </div>
                           </sc-if>
                           <sc-if value="{{ b.isNote }}">
-                            <div style="padding:12px 14px;border-radius:13px;background:{{ b.noteBg }};font-family:'Rubik','LINE Seed TW','Noto Sans TC',sans-serif;font-weight:500;font-size:12.5px;line-height:1.85;color:{{ b.noteColor }}">{{ b.text }}</div>
+                            <div style="padding:12px 14px;border-radius:13px;background:{{ b.noteBg }};font-family:'Rubik','LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:500;font-size:12.5px;line-height:1.85;color:{{ b.noteColor }}">{{ b.text }}</div>
                           </sc-if>
                           <sc-if value="{{ b.isSkip }}">
                             <div style="display:flex;gap:9px;align-items:flex-start;padding:11px 13px;border-radius:13px;background:{{ b.warnBg }}">
@@ -700,11 +688,13 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
           <h3 style="margin:0;padding:0 4px;font-size:20px;line-height:1.45">恭喜你做好開學準備，建議你逛逛：</h3>
           <div style="margin:18px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:12px">
           <button onClick="{{ goTools }}" style="display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:18px 18px 16px;border:0;outline:none;-webkit-tap-highlight-color:transparent;border-radius:22px;cursor:pointer;text-align:left;font-weight:400;background:#F8F2EB;color:#2C2521;box-shadow:0 12px 28px rgba(44,37,33,.14);transition:transform .3s cubic-bezier(.32,.72,0,1),box-shadow .3s ease" style-hover="transform:translateY(-4px);box-shadow:0 18px 36px rgba(44,37,33,.2)" style-active="transform:scale(.98)">
-            <span style="font-family:'PixelTC','Noto Sans TC',sans-serif;font-size:17px;line-height:1.4">南臺常用服務</span>
+            <span style="display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.1em;opacity:.62"><svg viewBox="0 0 10 14" style="width:7px;height:10px;display:block;flex:none" aria-hidden="true"><path d="M7.4 3.2 L2.6 7 L7.4 10.8 Z" fill="currentColor" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path></svg><span>左滑</span></span>
+            <span style="font-family:'PixelTC','PingFang TC','Microsoft JhengHei',sans-serif;font-size:17px;line-height:1.4">南臺常用服務</span>
             <span style="font-size:11.5px;line-height:1.6;opacity:.72">請假、選課、宿舍、球場，全部收在這頁。</span>
           </button>
           <button onClick="{{ goActs }}" style="display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:18px 18px 16px;border:0;outline:none;-webkit-tap-highlight-color:transparent;border-radius:22px;cursor:pointer;text-align:left;font-weight:400;background:linear-gradient(150deg,#F3A972 0%,#E8794A 100%);color:#FFFFFF;box-shadow:0 12px 28px rgba(44,37,33,.14);transition:transform .3s cubic-bezier(.32,.72,0,1),box-shadow .3s ease" style-hover="transform:translateY(-4px);box-shadow:0 18px 36px rgba(44,37,33,.2)" style-active="transform:scale(.98)">
-            <span style="font-family:'PixelTC','Noto Sans TC',sans-serif;font-size:17px;line-height:1.4">開學建議活動</span>
+            <span style="display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.1em;opacity:.62"><span>右滑</span><svg viewBox="0 0 10 14" style="width:7px;height:10px;display:block;flex:none" aria-hidden="true"><path d="M2.6 3.2 L7.4 7 L2.6 10.8 Z" fill="currentColor" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path></svg></span>
+            <span style="font-family:'PixelTC','PingFang TC','Microsoft JhengHei',sans-serif;font-size:17px;line-height:1.4">開學建議活動</span>
             <span style="font-size:11.5px;line-height:1.6;opacity:.72">上學期值得去的活動，先卡好行事曆。</span>
           </button>
           </div>
@@ -754,7 +744,7 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
             <div style="position:relative;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:14px 12px">
               <svg viewBox="0 -960 960 960" style="width:56px;height:56px;display:block;fill:#FBF6F0" aria-hidden="true"><path d="M224.62-120q-27.62 0-46.12-18.5Q160-157 160-184.62v-510.76q0-27.62 18.5-46.12Q197-760 224.62-760h70.76v-89.23h43.08V-760h286.16v-89.23h40V-760h70.76q27.62 0 46.12 18.5Q800-723 800-695.38v263.46l-40 40v-143.46H200v350.76q0 9.24 7.69 16.93 7.69 7.69 16.93 7.69h238l40.76 40H224.62ZM200-575.39h560v-119.99q0-9.24-7.69-16.93-7.69-7.69-16.93-7.69H224.62q-9.24 0-16.93 7.69-7.69 7.69-7.69 16.93v119.99Zm0 0V-720-575.39ZM658.92-100 549.23-208.92l28.31-28.31 81.15 81.15L821-318.38l28.31 28.53L658.92-100Z"></path></svg>
               <div style="display:flex;align-items:center;gap:8px">
-                <span style="font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:19px;letter-spacing:.04em;color:#FBF6F0">時程表</span>
+                <span style="font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:19px;letter-spacing:.04em;color:#FBF6F0">時程表</span>
                 <svg viewBox="0 0 10 14" style="width:9px;height:13px;display:block;flex:none" aria-hidden="true"><path d="M2.6 3.2 L7.4 7 L2.6 10.8 Z" fill="#2C2521" stroke="#2C2521" stroke-width="2.2" stroke-linejoin="round"></path></svg>
               </div>
             </div>
@@ -770,7 +760,7 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
           </div>
           <div style="flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:18px 22px 34px">
             <div onClick="{{ popCd }}" style="position:relative;display:flex;align-items:flex-end;justify-content:flex-start;gap:14px;padding:10px 4px 18px;cursor:pointer;user-select:none;transform-origin:left center;will-change:transform">
-              <div style="flex:none;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:clamp(24px,7.4vw,34px);letter-spacing:.06em;line-height:1;color:rgba(44,37,33,.13)">開學還有</div>
+              <div style="flex:none;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:clamp(24px,7.4vw,34px);letter-spacing:.06em;line-height:1;color:rgba(44,37,33,.13)">開學還有</div>
               <div style="flex:none;display:flex;align-items:flex-end;gap:10px;margin-bottom:2px">
                 <sc-for list="{{ cdDigits }}" as="d" hint-placeholder-count="2">
                   <div style="display:grid;grid-template-columns:repeat(3,clamp(14px,4.4vw,20px));grid-auto-rows:clamp(14px,4.4vw,20px)">
@@ -780,19 +770,20 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
                   </div>
                 </sc-for>
               </div>
-              <div style="flex:none;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:clamp(24px,7.4vw,34px);line-height:1;color:rgba(44,37,33,.13)">天</div>
+              <div style="flex:none;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:clamp(24px,7.4vw,34px);line-height:1;color:rgba(44,37,33,.13)">天</div>
             </div>
-            <p style="margin:0 4px;font-size:13px;line-height:1.7;color:#6B5A4E">8/27 到 9/14，什麼時候該做什麼。選課分四個階段，標籤上有 選課 n/4。紅圈是截止日，過了就沒了。</p>
+            <p style="margin:0 4px;font-size:13px;line-height:1.7;color:#6B5A4E">8/27 到 9/14，什麼時候該做什麼。左邊橘色粗線串起來的四個階段是同一件事：選課。紅圈是截止日，過了就沒了。</p>
             <div style="margin:22px 0 0 4px">
               <sc-for list="{{ cal }}" as="c" hint-placeholder-count="11">
                 <div style="display:grid;grid-template-columns:22px 1fr;gap:12px">
                   <div style="position:relative">
                     <div style="position:absolute;left:10px;top:{{ c.axTop }};bottom:{{ c.axBot }};width:2px;background:rgba(44,37,33,.12)"></div>
+                    <div style="position:absolute;left:0;top:{{ c.brkTop }};bottom:{{ c.brkBot }};width:4px;border-radius:2px;background:{{ c.brkBg }}"></div>
                     <div style="position:absolute;left:{{ c.nodeL }};top:11px;width:{{ c.nodeS }};height:{{ c.nodeS }};border-radius:{{ c.nodeR }};background:{{ c.nodeBg }};border:{{ c.nodeBorder }};box-shadow:0 0 0 4px #F8F2EB"></div>
                   </div>
                   <div style="padding:0 0 22px">
                     <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
-                      <span style="font-family:'Rubik','LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:14px;letter-spacing:.02em;color:{{ c.dateColor }}">{{ c.date }}</span>
+                      <span style="font-family:'Rubik','LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:14px;letter-spacing:.02em;color:{{ c.dateColor }}">{{ c.date }}</span>
                       <sc-if value="{{ c.hasTag }}">
                         <span style="font-size:11px;line-height:1;white-space:nowrap;border-radius:999px;padding:4px 9px;background:{{ c.tagBg }};color:{{ c.tagColor }};border:{{ c.tagBorder }}">{{ c.tag }}</span>
                       </sc-if>
@@ -821,14 +812,14 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
       <div style="position:absolute;left:{{ mpL }};top:{{ mpT }};width:{{ mpW }};height:{{ mpH }};border-radius:{{ mpR }};transform-origin:0 0;transform:{{ mpBox }};will-change:transform;transition:{{ mpTrans }}">
        <div style="position:relative;width:100%;height:100%;border-radius:inherit;transform-style:preserve-3d;transform:{{ mpRot }};will-change:transform;transition:{{ mpTrans }}">
         <div style="position:absolute;left:0;top:0;width:{{ mpFrontW }};height:{{ mpFrontH }};transform-origin:0 0;transform:{{ mpFrontTf }};backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;background:#E3D6C8;overflow:hidden;container-type:inline-size">
-          <div style="position:absolute;left:14px;top:13px;display:flex;align-items:center;gap:7px;color:rgba(44,37,33,.52);font-family:'PixelTC','Noto Sans TC',sans-serif;font-size:13px;letter-spacing:.04em;line-height:1">校園地圖</div>
+          <div style="position:absolute;left:14px;top:13px;display:flex;align-items:center;gap:7px;color:rgba(44,37,33,.52);font-family:'PixelTC','PingFang TC','Microsoft JhengHei',sans-serif;font-size:13px;letter-spacing:.04em;line-height:1">校園地圖</div>
           <div style="position:absolute;left:0;right:0;top:0;bottom:30%;display:flex;align-items:center;justify-content:center">
             <div style="display:flex;gap:1.7%;width:100%;justify-content:center">
               <div style="position:relative;width:12%;aspect-ratio:1;border-radius:50%;background:#FFFCF7"><div style="position:absolute;left:31.5%;top:31.5%;width:37%;aspect-ratio:1;border-radius:50%;background:#2C2521"></div></div>
               <div style="position:relative;width:12%;aspect-ratio:1;border-radius:50%;background:#FFFCF7"><div style="position:absolute;left:31.5%;top:31.5%;width:37%;aspect-ratio:1;border-radius:50%;background:#2C2521"></div></div>
             </div>
           </div>
-          <div style="position:absolute;left:0;right:0;bottom:13px;display:flex;align-items:center;justify-content:center;gap:3.4cqw;color:#2C2521;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:clamp(12px,7.6cqw,19px);letter-spacing:.04em"><span>打開地圖</span><svg viewBox="0 0 10 14" style="width:clamp(6px,3.6cqw,9px);height:clamp(9px,5.4cqw,13px);display:block;flex:none" aria-hidden="true"><path d="M2.6 3.2 L7.4 7 L2.6 10.8 Z" fill="#E8794A" stroke="#E8794A" stroke-width="2.2" stroke-linejoin="round"></path></svg></div>
+          <div style="position:absolute;left:0;right:0;bottom:13px;display:flex;align-items:center;justify-content:center;gap:3.4cqw;color:#2C2521;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:clamp(12px,7.6cqw,19px);letter-spacing:.04em"><span>打開地圖</span><svg viewBox="0 0 10 14" style="width:clamp(6px,3.6cqw,9px);height:clamp(9px,5.4cqw,13px);display:block;flex:none" aria-hidden="true"><path d="M2.6 3.2 L7.4 7 L2.6 10.8 Z" fill="#E8794A" stroke="#E8794A" stroke-width="2.2" stroke-linejoin="round"></path></svg></div>
         </div>
         <div style="position:absolute;left:0;top:0;width:{{ mpOpenW }};height:{{ mpOpenH }};backface-visibility:hidden;-webkit-backface-visibility:hidden;transform:{{ mpBackTf }};border-radius:26px;background:#F8F2EB;overflow:hidden;contain:paint;display:flex;flex-direction:column;box-shadow:{{ mpShadow }}">
           <div style="flex:none;display:flex;align-items:center;gap:14px;padding:16px 20px 14px;border-bottom:1px solid rgba(44,37,33,.1)">
@@ -841,29 +832,6 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
           <div style="flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:18px 20px 28px;display:flex;flex-direction:column;gap:16px">
             <div ref="{{ mapWrap }}" onPointerDown="{{ mapDown }}" onPointerMove="{{ mapMove }}" onPointerUp="{{ mapUp }}" onPointerCancel="{{ mapUp }}" style="position:relative;flex:none;width:100%;aspect-ratio:1/1;border-radius:22px;overflow:hidden;background:#F7F2E8;border:1px solid rgba(44,37,33,.14);touch-action:none;cursor:{{ mapCur }}">
               <img ref="{{ mapImg }}" src="assets/campus-map-sq.png" alt="南臺科大校園地圖" draggable="false" style="position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;transform-origin:50% 50%;-webkit-user-drag:none;user-select:none;pointer-events:none" />
-              <div ref="{{ mapLayer }}" style="position:absolute;left:0;top:0;width:100%;height:100%;transform-origin:50% 50%;pointer-events:none;z-index:2">
-                <sc-if value="{{ hasPin }}">
-                  <div ref="{{ mapPin }}" style="position:absolute;left:{{ pinL }};top:{{ pinT }};width:44px;height:44px;transform:translate(-50%,-50%);transform-origin:50% 50%">
-                    <div style="position:absolute;left:0;top:0;width:100%;height:100%;border-radius:50%;border:2.5px solid #E8794A;animation:pinpulse 1.9s ease-out infinite"></div>
-                    <div style="position:absolute;left:50%;top:50%;width:13px;height:13px;margin:-6.5px 0 0 -6.5px;border-radius:50%;background:#E8794A;box-shadow:0 0 0 3px rgba(251,246,240,.92)"></div>
-                  </div>
-                </sc-if>
-              </div>
-              <sc-if value="{{ canReset }}">
-                <button onClick="{{ mapReset }}" style="position:absolute;left:12px;top:12px;z-index:3;display:flex;align-items:center;gap:6px;min-height:34px;padding:0 12px;border:0;outline:none;-webkit-tap-highlight-color:transparent;border-radius:999px;cursor:pointer;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.03em;background:rgba(251,246,240,.92);color:#6B5A4E;box-shadow:0 6px 16px rgba(44,37,33,.18);transition:background .2s ease,transform .24s cubic-bezier(.32,.72,0,1)" style-hover="background:#FFFFFF;transform:translateY(-1px)" style-active="transform:scale(.97)">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9.5 4.5H5.5v4M14.5 19.5h4v-4M19.5 9.5v-4h-4M4.5 14.5v4h4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                  <span>完整地圖</span>
-                </button>
-              </sc-if>
-              <sc-if value="{{ askOpen }}">
-                <div style="position:absolute;left:10px;right:10px;bottom:10px;z-index:4;display:flex;align-items:center;gap:8px;padding:11px 11px 11px 14px;border-radius:18px;background:rgba(251,246,240,.97);box-shadow:0 12px 28px rgba(44,37,33,.26);animation:asknote .28s cubic-bezier(.25,.9,.3,1) both">
-                  <div style="flex:1;min-width:0;font-size:12.5px;line-height:1.5;color:#2C2521;text-wrap:pretty">{{ askText }}</div>
-                  <sc-if value="{{ askHasUrl }}">
-                    <button onClick="{{ askGo }}" style="flex:none;min-height:38px;padding:0 15px;border:0;outline:none;-webkit-tap-highlight-color:transparent;border-radius:999px;cursor:pointer;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.04em;color:#FFFFFF;background:linear-gradient(100deg,#F3A972,#E8794A);box-shadow:0 8px 18px rgba(232,121,74,.3);transition:background .35s ease,color .3s ease,transform .35s cubic-bezier(.32,.72,0,1),box-shadow .35s ease" style-hover="transform:scale(1.03)" style-active="transform:scale(.985)">導航</button>
-                  </sc-if>
-                  <button onClick="{{ askNo }}" style="flex:none;min-height:38px;padding:0 13px;border:0;outline:none;-webkit-tap-highlight-color:transparent;border-radius:999px;cursor:pointer;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.04em;color:#6B5A4E;background:rgba(44,37,33,.08);transition:background .35s ease,color .3s ease,transform .35s cubic-bezier(.32,.72,0,1),box-shadow .35s ease" style-hover="background:rgba(44,37,33,.14);transform:scale(1.03)" style-active="transform:scale(.985)">{{ askNoLabel }}</button>
-                </div>
-              </sc-if>
               <div style="position:absolute;right:12px;top:12px;display:flex;flex-direction:column;gap:8px">
                 <button onClick="{{ mapIn }}" aria-label="放大" style="width:40px;height:40px;border:0;border-radius:50%;background:rgba(44,37,33,.86);color:#FBF6F0;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .24s cubic-bezier(.32,.72,0,1),background .2s ease" style-hover="transform:scale(1.08);background:#E8794A" style-active="transform:scale(.94)">
                   <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="2.2"></circle><path d="M15.5 15.5 L21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"></path><path d="M10.5 7.6 V13.4 M7.6 10.5 H13.4" stroke="currentColor" stroke-width="2"></path></svg>
@@ -872,6 +840,17 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
                   <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="2.2"></circle><path d="M15.5 15.5 L21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"></path><path d="M7.6 10.5 H13.4" stroke="currentColor" stroke-width="2"></path></svg>
                 </button>
               </div>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;align-items:center;gap:9px;padding:6px 8px 6px 16px;border-radius:16px;background:#FFFFFF;border:1px solid rgba(44,37,33,.12)">
+                <span style="flex:none;font-size:12.5px;letter-spacing:.04em;color:#7A6759">找教室</span>
+                <input type="text" value="{{ bldQ }}" onChange="{{ bldChange }}" onKeyDown="{{ bldKey }}" placeholder="G" style="flex:1;min-width:0;height:42px;border:0;outline:none;background:transparent;font-family:'PixelTC','PingFang TC','Microsoft JhengHei',sans-serif;font-size:16px;letter-spacing:.06em;color:#2C2521" />
+                <button onClick="{{ bldGo }}" style="flex:none;height:38px;padding:0 18px;border:0;border-radius:12px;background:#2C2521;color:#FBF6F0;font-size:14px;letter-spacing:.04em;cursor:pointer;transition:transform .26s cubic-bezier(.32,.72,0,1),background .22s ease" style-hover="transform:scale(1.05);background:#E8794A">查詢</button>
+              </div>
+              <sc-if value="{{ bldMsg }}">
+                <div style="padding:12px 16px;border-radius:16px;background:#FFFFFF;border:1px solid rgba(44,37,33,.12);font-size:13px;line-height:1.6;letter-spacing:.02em;color:{{ bldMsgColor }}">{{ bldMsg }}</div>
+              </sc-if>
             </div>
 
             <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px">
@@ -887,26 +866,6 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
                 <span data-svcicon="1" style="display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="5" cy="16.6" r="3.2" stroke-width="1.8"></circle><circle cx="19" cy="16.6" r="3.2" stroke-width="1.8"></circle><path d="M8.2 16.6 H13 l3.2-5.2h-4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12.2 11.4 9.6 7.6 H7.2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16.2 11.4 18.4 15" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
                 <span style="font-size:12.5px;letter-spacing:.04em">機車停車場</span>
               </a>
-            </div>
-
-            <div style="display:flex;flex-direction:column;gap:10px">
-              <button onClick="{{ legendToggle }}" style="display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;min-height:46px;padding:0 16px;border:1px solid rgba(44,37,33,.12);border-radius:16px;background:#FFFFFF;color:#2C2521;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:13.5px;letter-spacing:.03em;cursor:pointer;transition:background .22s ease" style-hover="background:#F7F2E8">
-                <span>{{ legendLabel }}</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex:none;transform:{{ chevTf }};transition:transform .46s cubic-bezier(.32,.72,0,1)"><path d="M6 9.5 L12 15.5 L18 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-              </button>
-              <div style="overflow:hidden;height:{{ legendPanelH }};transition:height .46s cubic-bezier(.32,.72,0,1)">
-                <div ref="{{ legendInner }}" style="transform-origin:20% 0;transition:opacity .26s ease,transform .46s cubic-bezier(.32,.72,0,1);opacity:{{ legendOp }};transform:{{ legendTf }}">
-                <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;padding:14px;border:1px solid rgba(44,37,33,.12);border-radius:18px;background:#FFFFFF">
-                  <sc-for list="{{ bldLegend }}" as="b" hint-placeholder-count="9">
-                    <button onClick="{{ b.focus }}" style="display:flex;align-items:center;gap:9px;min-width:0;min-height:44px;padding:6px 10px;border:0;outline:none;-webkit-tap-highlight-color:transparent;border-radius:12px;background:transparent;text-align:left;font-weight:400;color:inherit;cursor:pointer;transition:background .2s ease,transform .24s cubic-bezier(.32,.72,0,1)" style-hover="background:#F7F2E8;transform:translateX(2px)" style-active="transform:scale(.98)">
-                      <span style="flex:none;font-family:'Rubik','LINE Seed TW',sans-serif;font-weight:700;font-size:13px;letter-spacing:.04em;color:#E8794A;min-width:26px">{{ b.code }}</span>
-                      <span style="flex:1;min-width:0;font-size:12.5px;line-height:1.45;color:#6B5A4E;text-wrap:pretty">{{ b.name }}</span>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex:none;color:#A8927E"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path><circle cx="12" cy="10" r="2.6" stroke="currentColor" stroke-width="2"></circle></svg>
-                    </button>
-                  </sc-for>
-                </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -1113,7 +1072,7 @@ const GROUPS = [
   { key: 'study', react: 'stamp', no: '04', title: '學業', pillText: '開學前後', pillNow: false,
     sub: '選課看時間，抵免看資格。',
     items: [
-      { id: 'course', title: '新生選課', range: '依官方公告', verified: false, login: true, autoDone: 'five',
+      { id: 'course', title: '新生選課', range: '依官方公告', verified: false, login: true,
         one: '看好時間 → 登入 → 加選 → 確認課表。',
         chips: [],
         ctas: [['前往選課', 'https://course.stust.edu.tw/CourSel/Login.aspx']],
@@ -1125,7 +1084,7 @@ const GROUPS = [
           { links: [['五專課程時序', 'https://academic.stust.edu.tw/tc/node/course-5year']], only: 'five' },
           { p: '課程時序表會列出你這個系每學期該修哪些必修，選課前先看過會少走很多冤枉路。' },
           { p: '選課說明在新生專區 › 常見問題 › 選課。' },
-          { skip: '五專前三年是統一排課，學校會幫你排好，不用自己選課，這張卡已自動標記完成。', only: 'five' }
+          { note: '五專前三年是統一排課，不用自己選課；直接把這張卡標成完成就好。', only: 'five' }
         ] },
       { id: 'waived', title: '申請學分抵免', date: '8/17 起', range: '8/17 – 9/18', start: [8, 17], end: [9, 18], login: true,
         one: '曾修過相關課程？符合資格可申請。',
@@ -1193,7 +1152,7 @@ const GLYPH = {
   '9': ['111','101','111','001','111']
 };
 
-const KEY = 'stust-csie-freshman-todo-v4';
+const KEY = 'stust-csie-freshman-todo-v3';
 const IDS = ['uni', 'five'];
 
 const ACTS = [
@@ -1245,115 +1204,24 @@ const BUILDING_LINKS = {
   Z: 'https://www.google.com/maps/dir//23.0241495,120.2233944/@23.0239506,120.2231446,19.96z/data=!4m2!4m1!3e9?entry=ttu&g_ep=EgoyMDI2MDgxMC4wIKXMDSoASAFQAw%3D%3D'
 };
 
-// 棟別 → 中文館名與主要單位（依校方導覽地圖）
-const BUILDING_NAMES = {
-  A: { name: '電機系專業教室', alias: ['電機'] },
-  B: { name: '電機系館', alias: ['電機'] },
-  C: { name: '資工系館', alias: ['資工', '資訊工程'] },
-  D: { name: '一般教室', alias: [] },
-  E: { name: '修齊大樓', alias: ['圖書館', '計網中心', '商管學院'] },
-  F: { name: '學務處衛保組・諮商輔導組', alias: ['衛保', '諮商', '健康中心'] },
-  G: { name: '體育中心・社團辦公室', alias: ['體育', '社團'] },
-  I: { name: '工學院', alias: ['化材', '食品'] },
-  J: { name: '電子系館', alias: ['電子'] },
-  K: { name: '機械系館', alias: ['機械'] },
-  L: { name: '行政大樓', alias: ['教務處', '學務處', '總務處', '註冊', '出納', '國際處'] },
-  M: { name: '人文藝術大樓', alias: ['藝文中心', '通識中心', '校史室'] },
-  N: { name: '文炳館', alias: ['人文社會學院', '應英', '應日', '幼保', '師培'] },
-  O: { name: '高齡福祉大樓', alias: ['高福'] },
-  P: { name: '機車停車場・產設系', alias: ['機車', '停車', '產設'] },
-  Q: { name: '汽車工廠・半導體與光電系', alias: ['半導體', '光電', '汽車工廠'] },
-  R: { name: '機械系汽車組', alias: ['汽車組'] },
-  S: { name: '進修部・管科大樓', alias: ['進修', '會資', '國企', '財金', '企管', '財法'] },
-  T: { name: '雙語教學中心・管理學院', alias: ['雙語', '休閒', '餐旅', '工管', '資管', '行流'] },
-  U: { name: '優活館', alias: ['體育中心教室'] },
-  V: { name: '能源工程館', alias: ['能源', '育成中心'] },
-  W: { name: '磅礡館', alias: ['統一商場', '南臺書坊', '流音', '設計學院', '資傳', '多樂', '視傳', '書店', '星巴克'] },
-  X: { name: '創思設計坊', alias: ['產品設計', '設計坊'] },
-  Y: { name: '三連堂', alias: ['大禮堂', '禮堂'] },
-  Z: { name: '西淮館', alias: ['學務長辦公室', '課外組'] },
-  H1: { name: '第一學生宿舍', alias: ['宿舍'] },
-  H2: { name: '第二學生宿舍・創業教育空間', alias: ['宿舍', '創業'] },
-  H3: { name: '第三學生宿舍', alias: ['宿舍'] },
-  H5: { name: '第五學生宿舍（國際會館）', alias: ['宿舍', '國際會館'] },
-  H6: { name: '第六學生宿舍・幼兒園', alias: ['宿舍', '幼兒園'] }
-};
-
-// 棟別 → 校園地圖上的定位（x/y 為圖片正規化坐標，z 為放大倍率）
-const BUILDING_FOCUS = {
-  A: { x: 0.292, y: 0.131, z: 2.8 },
-  B: { x: 0.292, y: 0.186, z: 2.8 },
-  C: { x: 0.294, y: 0.253, z: 2.8 },
-  D: { x: 0.292, y: 0.299, z: 2.8 },
-  E: { x: 0.404, y: 0.404, z: 2.3 },
-  F: { x: 0.652, y: 0.455, z: 2.8 },
-  G: { x: 0.568, y: 0.580, z: 2.3 },
-  I: { x: 0.196, y: 0.145, z: 2.8 },
-  J: { x: 0.187, y: 0.188, z: 2.8 },
-  K: { x: 0.394, y: 0.156, z: 2.3 },
-  L: { x: 0.403, y: 0.245, z: 2.3 },
-  M: { x: 0.404, y: 0.483, z: 2.3 },
-  N: { x: 0.619, y: 0.234, z: 2.8 },
-  O: { x: 0.524, y: 0.801, z: 2.8 },
-  P: { x: 0.111, y: 0.286, z: 2.8 },
-  Q: { x: 0.492, y: 0.054, z: 2.8 },
-  R: { x: 0.536, y: 0.105, z: 2.8 },
-  S: { x: 0.189, y: 0.269, z: 2.3 },
-  T: { x: 0.740, y: 0.201, z: 2.3 },
-  U: { x: 0.450, y: 0.571, z: 2.8 },
-  V: { x: 0.597, y: 0.083, z: 2.8 },
-  W: { x: 0.841, y: 0.188, z: 2.3 },
-  X: { x: 0.111, y: 0.173, z: 2.8 },
-  Y: { x: 0.629, y: 0.322, z: 2.3 },
-  Z: { x: 0.326, y: 0.343, z: 3.0 },
-  H1: { x: 0.723, y: 0.636, z: 2.5 },
-  H2: { x: 0.683, y: 0.551, z: 2.8 },
-  H3: { x: 0.194, y: 0.514, z: 2.8 },
-  H5: { x: 0.179, y: 0.585, z: 2.8 },
-  H6: { x: 0.451, y: 0.790, z: 2.5 }
-};
-
 // 最長有效棟別代碼優先（H1/H2… 不得先被解析成 H）
 const BUILDING_CODES = Object.keys(BUILDING_LINKS).sort((a, b) => b.length - a.length);
 
-// 中文查詢：館名或關鍵字（例如「圖書館」「資工」「宿舍」）
-function matchByName(raw) {
-  const q = String(raw || '').trim().replace(/\s+/g, '').replace(/[棟館系]$/, '');
-  if (!q) return null;
-  const hit = [];
-  for (const code in BUILDING_NAMES) {
-    const b = BUILDING_NAMES[code];
-    if (b.name.indexOf(q) >= 0 || b.alias.some(a => a.indexOf(q) >= 0 || q.indexOf(a) >= 0)) hit.push(code);
-  }
-  return hit.length ? hit : null;
-}
-
 function resolveBuilding(raw) {
   const s = String(raw || '').trim().toUpperCase().replace(/\s+/g, '').replace(/棟$/, '');
-  if (!s) return { ok: false, msg: '請先輸入棟別代碼或建築名稱，例如 G 或 圖書館' };
-  if (!/^[A-Z][0-9A-Z]*$/.test(s)) {
-    const hits = matchByName(raw);
-    if (!hits) return { ok: false, msg: '找不到這個地點，換個關鍵字試試（例如 圖書館、宿舍、資工）' };
-    const usable = hits.filter(c => BUILDING_LINKS[c]);
-    if (!usable.length) return { ok: false, msg: '目前尚無 ' + hits[0] + ' 棟精準導航資料' };
-    if (usable.length > 1) {
-      return { ok: false, multi: true, msg: '符合多個地點：' + usable.map(c => c + '棟 ' + BUILDING_NAMES[c].name).join('、') + '　請輸入代碼' };
-    }
-    const c = usable[0];
-    return { ok: true, code: c, url: BUILDING_LINKS[c], label: c + '棟 ' + BUILDING_NAMES[c].name };
-  }
+  if (!s) return { ok: false, msg: '請先輸入教室代碼，例如 C306' };
+  if (!/^[A-Z][0-9A-Z]*$/.test(s)) return { ok: false, msg: '找不到這間教室，請確認教室代碼' };
   const code = BUILDING_CODES.find(c => s.indexOf(c) === 0);
   if (!code) return { ok: false, msg: '找不到這間教室，請確認教室代碼' };
   const rest = s.slice(code.length);
   if (rest && !/^[0-9]+$/.test(rest)) return { ok: false, msg: '找不到這間教室，請確認教室代碼' };
   const url = BUILDING_LINKS[code];
   if (!url) return { ok: false, code, msg: '目前尚無 ' + code + ' 棟精準導航資料' };
-  const nm = BUILDING_NAMES[code];
-  return { ok: true, code, url, label: (rest ? s : code) + ' → ' + code + '棟' + (nm ? ' ' + nm.name : '') };
+  return { ok: true, code, url, label: (rest ? s : code) + ' → ' + code + '棟' };
 }
 
 class Component extends DCLogic {
-  state = { started: false, revealed: false, ctaPhase: 'wait', eyeBang: false, headerH: 0, tl: null, tlNoAnim: false, tlRect: null, identity: null, done: {}, branch: {}, open: {}, hideLogo: false, toast: '', cleared: false, slide: 0, dragX: 0, dragging: false, offset: 0, logoRowH: 0, logoOverhang: 0, scrolled: false, reaction: null, grabbing: false, dizzy: false, ripples: [] };
+  state = { started: false, headerH: 0, tl: null, tlNoAnim: false, tlRect: null, identity: null, done: {}, branch: {}, open: {}, hideLogo: false, toast: '', cleared: false, slide: 0, dragX: 0, dragging: false, offset: 0, logoRowH: 0, logoOverhang: 0, scrolled: false, reaction: null, grabbing: false, dizzy: false, ripples: [] };
   _rid = 0;
   pupilL = React.createRef();
   pupilR = React.createRef();
@@ -1369,7 +1237,6 @@ class Component extends DCLogic {
   heroRef = React.createRef();
   idRef = React.createRef();
   qCard = React.createRef();
-  ctaRef = React.createRef();
   tlCard = React.createRef();
 
   // 捲到某個元素，讓它落在頂部（扣掉黏頭高度）
@@ -1377,172 +1244,20 @@ class Component extends DCLogic {
     if (!el) return;
     clearTimeout(this._advT);
     this._advT = setTimeout(() => {
-      this.autoToEl(el, pad == null ? 22 : pad, 340);
+      const top = Math.max(0, window.scrollY + el.getBoundingClientRect().top - (pad == null ? 22 : pad));
+      window.scrollTo({ top, behavior: 'smooth' });
     }, delay || 0);
   }
 
-  reduced() {
-    try { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) { return false; }
-  }
-
-  // 自動捲動：每格只按「剩餘距離」指數逗近目標，
-  // 頁首收合造成目標位移時只会變速度，不會產生位置跳格
-  autoTo(y, dur) {
-    this.cancelAuto();
-    const live = typeof y === 'function' ? y : () => y;
-    const at = () => Math.max(0, Math.round(live()));
-    if (Math.abs(at() - window.scrollY) < 2) return;
-    if (this.reduced()) { window.scrollTo(0, at()); return; }
-    const D = Math.max(160, dur || 320), tau = D / 3.1, t0 = performance.now();
-    let prev = t0;
-    this._auto = true;
+  smoothTo(y, dur) {
+    const s = window.scrollY, d = y - s, t0 = performance.now();
     const step = (t) => {
-      if (!this._auto) return;
-      const dt = Math.min(64, Math.max(1, t - prev));
-      prev = t;
-      const cur = window.scrollY;
-      const rem = at() - cur;
-      if (Math.abs(rem) < 0.6) { this._auto = false; this._raf = 0; window.scrollTo(0, at()); return; }
-      window.scrollTo(0, cur + rem * (1 - Math.exp(-dt / tau)));
-      if (t - t0 > D * 2.4) {
-        this._auto = false; this._raf = 0;
-        if (Math.abs(at() - window.scrollY) < 3) window.scrollTo(0, at());
-        return;
-      }
-      this._raf = requestAnimationFrame(step);
+      const k = Math.min(1, (t - t0) / dur);
+      const e = k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
+      window.scrollTo(0, s + d * e);
+      if (k < 1) requestAnimationFrame(step);
     };
-    this._raf = requestAnimationFrame(step);
-  }
-
-  // 以目標元素「在畫面上的位置」為張，自適應版面高度變化：
-  // 每格把元素拉回 easing 該到的位置，頁首收合再怎麼推都不會跳格
-  autoToEl(target, pad, dur) {
-    this.cancelAuto();
-    const get = typeof target === 'function' ? target : () => target;
-    const goalOf = () => (typeof pad === 'function' ? pad() : (pad == null ? 22 : pad));
-    const el0 = get();
-    if (!el0) return;
-    const startTop = el0.getBoundingClientRect().top;
-    if (Math.abs(startTop - goalOf()) < 2) return;
-    if (this.reduced()) { window.scrollTo(0, Math.max(0, window.scrollY + startTop - goalOf())); return; }
-    const D = Math.max(160, dur || 320), t0 = performance.now();
-    this._auto = true;
-    const step = (t) => {
-      if (!this._auto) return;
-      const el = get();
-      if (!el) { this._auto = false; this._raf = 0; return; }
-      const k = Math.min(1, (t - t0) / D);
-      const e = 1 - Math.pow(1 - k, 3);
-      const want = startTop + (goalOf() - startTop) * e;
-      const now = el.getBoundingClientRect().top;
-      window.scrollTo(0, Math.max(0, window.scrollY + (now - want)));
-      if (k < 1) this._raf = requestAnimationFrame(step);
-      else { this._auto = false; this._raf = 0; }
-    };
-    this._raf = requestAnimationFrame(step);
-  }
-
-  cancelAuto() {
-    this._auto = false;
-    if (this._raf) cancelAnimationFrame(this._raf);
-    this._raf = 0;
-  }
-
-  // 手動捲動優先：停掉進行中與排隊中的自動捲動
-  abortAuto() {
-    this.cancelAuto();
-    clearTimeout(this._advT);
-    clearTimeout(this._fixT1);
-    clearTimeout(this._fixT2);
-    this._advT = null;
-    this._userAbort = true;
-    this._starting = false;
-    clearTimeout(this._startFlagT);
-  }
-
-  userTakeover() {
-    clearTimeout(this._idleT);
-    this.stopEyeHint();
-    this.abortAuto();
-    this.reveal();
-  }
-
-  reveal() {
-    if (!this.state.revealed) this.setState({ revealed: true });
-  }
-
-  smoothTo(y, dur) { this.autoTo(y, dur); }
-
-  // 開始／繼續提示：先明顯彈跳三次，之後轉低干擾浮動＋緩慢光澤
-  startHint() {
-    if (this.reduced()) { this.setState({ ctaPhase: 'calm' }); return; }
-    this._hintT1 = setTimeout(() => {
-      if (this.state.ctaPhase === 'off') return;
-      this.setState({ ctaPhase: 'kick' });
-      this._hintT2 = setTimeout(() => {
-        if (this.state.ctaPhase === 'off') return;
-        this.setState({ ctaPhase: 'idle' });
-      }, 2340);
-    }, 3350);
-  }
-
-  stopHint() {
-    clearTimeout(this._hintT1);
-    clearTimeout(this._hintT2);
-    if (this.state.ctaPhase !== 'off') this.setState({ ctaPhase: 'off' });
-  }
-
-  // 眼睛看向某個元素（用滑鼠追視的同一套算式，只是把目標換成元素中心）
-  eyeLookAt(el) {
-    if (!el || !this._look) return;
-    const r = el.getBoundingClientRect();
-    const wrap = this.eyesRef.current;
-    if (wrap) wrap.style.transition = 'transform .52s cubic-bezier(.3,.9,.3,1)';
-    [this.pupilL, this.pupilR].forEach(ref => { const p = ref.current; if (p) p.style.transition = 'transform .52s cubic-bezier(.3,.9,.3,1)'; });
-    this._smooth = true;
-    this._look(r.left + r.width / 2, r.top + r.height / 2);
-  }
-
-  eyeFront() {
-    const wrap = this.eyesRef.current;
-    if (wrap) { wrap.style.transition = 'transform .52s cubic-bezier(.3,.9,.3,1)'; wrap.style.transform = 'translate(0,0)'; }
-    [this.pupilL, this.pupilR].forEach(ref => {
-      const p = ref.current;
-      if (p) { p.style.transition = 'transform .52s cubic-bezier(.3,.9,.3,1)'; p.style.transform = 'translate(0,0)'; }
-    });
-  }
-
-  // 停在首屏超過 10 秒：眼睛往上看開始／繼續 + 冒驚嘆號，正面↔往上來回 5 次
-  startEyeHint = () => {
-    if (this._eyeHint || this.state.started || this.state.dizzy || this._grab) return;
-    if (window.scrollY > 24 || this.reduced()) return;
-    if (!this.ctaRef.current) return;
-    this._eyeHint = true;
-    this._eyeN = 0;
-    this.setState({ eyeBang: true });
-    const cycle = () => {
-      if (!this._eyeHint) return;
-      this.eyeLookAt(this.ctaRef.current);
-      this._eyeT1 = setTimeout(() => { if (this._eyeHint) this.eyeFront(); }, 780);
-      this._eyeN++;
-      this._eyeT2 = setTimeout(this._eyeN >= 5 ? () => this.stopEyeHint() : cycle, 1500);
-    };
-    cycle();
-  };
-
-  stopEyeHint() {
-    clearTimeout(this._idleT);
-    clearTimeout(this._eyeT1);
-    clearTimeout(this._eyeT2);
-    if (!this._eyeHint) return;
-    this._eyeHint = false;
-    this.eyeFront();
-    if (this.state.eyeBang) this.setState({ eyeBang: false });
-    setTimeout(() => {
-      const wrap = this.eyesRef.current;
-      if (wrap) wrap.style.transition = 'transform .25s ease-out';
-      [this.pupilL, this.pupilR].forEach(ref => { const p = ref.current; if (p) p.style.transition = 'transform .12s linear'; });
-    }, 540);
+    requestAnimationFrame(step);
   }
 
   idTarget() {
@@ -1552,23 +1267,18 @@ class Component extends DCLogic {
   }
 
   startNow = () => {
-    this.stopHint();
-    this.stopEyeHint();
-    this.reveal();
-    this._userAbort = false;
-    if (this.state.started) { this.autoToEl(() => this.idRef.current, () => (this._hCol || 118) + 14, 340); return; }
+    if (this.state.started) return;
     this._starting = true;
-    clearTimeout(this._startFlagT);
-    this._startFlagT = setTimeout(() => { this._starting = false; }, 900);
+    this.scrollLock(false);
     this.setState({ started: true, bnc: false });
-    const live = () => this.idTarget();
-    const pad = () => (this._hCol || 118) + 14;
     setTimeout(() => {
-      this.autoToEl(() => this.idRef.current, pad, 420);
-      this._fixT1 = setTimeout(() => {
-        if (!this._userAbort && Math.abs(live() - window.scrollY) > 8) this.autoToEl(() => this.idRef.current, pad, 240);
-      }, 700);
-    }, 60);
+      this.smoothTo(this.idTarget(), 900);
+      setTimeout(() => {
+        const t = this.idTarget();
+        if (Math.abs(t - window.scrollY) > 14) this.smoothTo(t, 320);
+        setTimeout(() => { this._starting = false; }, 420);
+      }, 1000);
+    }, 200);
   };
 
   // 首屏＝滑動區 + 底下兩張共用卡片，兩者相加剛好一個畫面
@@ -1621,11 +1331,17 @@ class Component extends DCLogic {
     if (h > 60 && h < 1200 && Math.abs(h - (this.state.introH || 0)) > 1) this.setState({ introH: h }, () => this._recenter && this._recenter(0));
   };
 
-  // 已取消「先按開始才能下滑」：進站即可自由捲動，保留空實作讓舊呼叫點無副作用
+  // 按開始前鎖住頁面：往下滑只會有回彈，不會露出下面的檢核清單
   scrollLock(on) {
     const d = document.documentElement, b = document.body;
-    d.style.overflow = ''; b.style.overflow = '';
-    b.style.overscrollBehaviorY = '';
+    if (on) {
+      window.scrollTo(0, 0);
+      d.style.overflow = 'hidden'; b.style.overflow = 'hidden';
+      b.style.overscrollBehaviorY = 'none';
+    } else {
+      d.style.overflow = ''; b.style.overflow = '';
+      b.style.overscrollBehaviorY = '';
+    }
   }
 
   bounce = () => {
@@ -1671,10 +1387,7 @@ class Component extends DCLogic {
   bldChange = (e) => this.setState({ bldQ: e.target.value, bldRes: null });
   bldGo = () => {
     const r = resolveBuilding(this.state.bldQ);
-    // 搜尋也改成先定位再問，維持與點棟別一致的體驗
-    if (r.ok && BUILDING_FOCUS[r.code]) { this.setState({ bldRes: null }); this.focusBld(r.code); return; }
     if (r.ok) { window.open(r.url, '_blank', 'noopener'); this.setState({ bldRes: null }); return; }
-    if (r.code && BUILDING_FOCUS[r.code]) { this.setState({ bldRes: r }); this.focusBld(r.code); return; }
     this.setState({ bldRes: r });
   };
   bldKey = (e) => { if (e.key === 'Enter') { e.preventDefault(); this.bldGo(); } };
@@ -1705,55 +1418,18 @@ class Component extends DCLogic {
   };
 
   mapImg = React.createRef();
-  mapLayer = React.createRef();
-  mapPin = React.createRef();
-  legendInner = React.createRef();
 
   // 圖片的 transform 直接寫到 DOM：翻卡遮罩展開前這棵子樹是凍結的，
   // 交給 CSS transition 插值會被固定在第一幀，所以每次都手動重啟過渡
-  applyMap(anim, dur) {
-    const z = this.state.mapZ || 1;
-    const tf = 'translate(' + (this.state.mapX || 0).toFixed(1) + 'px,' + (this.state.mapY || 0).toFixed(1) + 'px) scale(' + z + ')';
-    const ease = 'transform ' + (dur || 340) + 'ms cubic-bezier(.22,.68,.16,1)';
-    [this.mapImg.current, this.mapLayer.current].forEach(el => {
-      if (!el) return;
-      el.getAnimations && el.getAnimations().forEach(a => { try { a.cancel(); } catch (e) {} });
-      el.style.transition = 'none';
-      void el.offsetWidth;
-      if (anim) el.style.transition = ease;
-      el.style.transform = tf;
-    });
-    const pin = this.mapPin.current;
-    if (pin) {
-      pin.style.transition = anim ? ease : 'none';
-      pin.style.transform = 'translate(-50%,-50%) scale(' + (1 / z).toFixed(3) + ')';
-    }
+  applyMap(anim) {
+    const el = this.mapImg.current;
+    if (!el) return;
+    el.getAnimations && el.getAnimations().forEach(a => { try { a.cancel(); } catch (e) {} });
+    el.style.transition = 'none';
+    void el.offsetWidth;
+    if (anim) el.style.transition = 'transform .34s cubic-bezier(.32,.72,0,1)';
+    el.style.transform = 'translate(' + (this.state.mapX || 0).toFixed(1) + 'px,' + (this.state.mapY || 0).toFixed(1) + 'px) scale(' + (this.state.mapZ || 1) + ')';
   }
-
-  // 點棟別：從目前位置平滑 pan/zoom 到該棟，完成後在地圖框內詢問是否導航
-  focusBld = (code) => {
-    const f = BUILDING_FOCUS[code];
-    if (!f) { const u = BUILDING_LINKS[code]; if (u) window.open(u, '_blank', 'noopener'); return; }
-    const el = this.mapWrapEl;
-    const w = el ? el.clientWidth : 320, h = el ? el.clientHeight : 320;
-    const z = f.z || 2.6;
-    const c = this.clampMap(z, (0.5 - f.x) * w * z, (0.5 - f.y) * h * z);
-    this._mapDrag = null;
-    this._pinch = null;
-    this._mapPts.clear();
-    clearTimeout(this._askT);
-    this.setState({ mapZ: c.z, mapX: c.x, mapY: c.y, pin: code, askBld: null }, () => {
-      this.applyMap(true, 440);
-      this._askT = setTimeout(() => this.setState({ askBld: code }), 400);
-    });
-  };
-
-  mapReset = () => {
-    this._mapDrag = null;
-    this._pinch = null;
-    this._mapPts.clear();
-    this.setState({ mapZ: 1, mapX: 0, mapY: 0, askBld: null }, () => this.applyMap(true, 420));
-  };
 
   clampMap(z, x, y) {
     const el = this.mapWrapEl;
@@ -1847,7 +1523,7 @@ class Component extends DCLogic {
     if (!el || this.state.mp) return;
     const r = el.getBoundingClientRect();
     document.body.style.overflow = 'hidden';
-    this.setState({ mp: 'in', mpNoAnim: false, mapZ: 1, mapX: 0, mapY: 0, pin: null, askBld: null, mpRect: { l: r.left, t: r.top, w: r.width, h: r.height } });
+    this.setState({ mp: 'in', mpNoAnim: false, mapZ: 1, mapX: 0, mapY: 0, mpRect: { l: r.left, t: r.top, w: r.width, h: r.height } });
     this._mapPts.clear(); this._pinch = null; this._mapDrag = null;
     requestAnimationFrame(() => this.applyMap(false));
     requestAnimationFrame(() => requestAnimationFrame(() => {
@@ -1863,7 +1539,7 @@ class Component extends DCLogic {
     this.setState({ mp: 'open', mpNoAnim: true });
     requestAnimationFrame(() => requestAnimationFrame(() => {
       this.setState({ mp: 'in', mpNoAnim: false });
-      this._mpT = setTimeout(() => { this.setState({ mp: null, mapZ: 1, mapX: 0, mapY: 0, pin: null, askBld: null }); document.body.style.overflow = ''; this.scrollLock(!this.state.started); this.bgQuiet(false); }, 700);
+      this._mpT = setTimeout(() => { this.setState({ mp: null, mapZ: 1, mapX: 0, mapY: 0 }); document.body.style.overflow = ''; this.scrollLock(!this.state.started); this.bgQuiet(false); }, 700);
     }));
   };
 
@@ -1946,10 +1622,9 @@ class Component extends DCLogic {
   onboard(target) {
     const el = this.paneRef.current;
     if (el) el.scrollLeft = el.clientWidth;
-    this._userAbort = false;
-    this.autoTo(0, 300);
+    this.smoothTo(0, 720);
     clearTimeout(this._obT);
-    this._obT = setTimeout(() => this.goPane(target), 380);
+    this._obT = setTimeout(() => this.goPane(target), 900);
   }
 
   // 只判斷桌機／行動裝置，不做任何 App 偵測
@@ -1970,12 +1645,9 @@ class Component extends DCLogic {
     });
   };
 
-  // 背景動態光暈永不中斷：地圖／時程表開合時不再隱藏它（blob 已各自獨立成合成層，不吃主執行緒）
-  bgQuiet() {}
-
-  // 身分別隨時都能換回去，不再有任何切換限制
-  swipeLocked() {
-    return false;
+  bgQuiet(on) {
+    const el = this.bgRef.current;
+    if (el) el.style.visibility = on ? 'hidden' : '';
   }
 
   tapTl = () => {
@@ -2015,7 +1687,7 @@ class Component extends DCLogic {
         const valid = {};
         GROUPS.forEach(g => g.items.forEach(it => { if (s.done && s.done[it.id]) valid[it.id] = true; }));
         if (s.identity) this._entered = true;
-        this.setState({ identity: s.identity || null, done: this.withAuto(s.identity, valid), branch: s.branch || {}, slide: idx < 0 ? 0 : idx }, () => this.syncOffset());
+        this.setState({ identity: s.identity || null, done: valid, branch: s.branch || {}, slide: idx < 0 ? 0 : idx }, () => this.syncOffset());
       }
     } catch (e) {}
     try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
@@ -2031,19 +1703,17 @@ class Component extends DCLogic {
     try { document.fonts && document.fonts.ready && document.fonts.ready.then(() => { if (this.state.pane === 1) this._recenter(0); }); } catch (e) {}
     setTimeout(() => { if (this.state.pane === 1) this._recenter(0); }, 400);
     setTimeout(() => { if (this.state.pane === 1) this._recenter(0); }, 1200);
-    this.startHint();
-    this._idleT = setTimeout(this.startEyeHint, 10000);
-    this._preWheel = () => this.userTakeover();
+    if (!this.state.started) this.scrollLock(true);
+    this._preWheel = (e) => { if (!this.state.started && !this.state.tl && !this.state.mp && (e.deltaY || 0) > 2) this.bounce(); };
     window.addEventListener('wheel', this._preWheel, { passive: true });
     this._preTS = (e) => { this._ty = e.touches && e.touches[0] ? e.touches[0].clientY : 0; };
     this._preTM = (e) => {
+      if (this.state.started || this.state.tl || this.state.mp) return;
       const y = e.touches && e.touches[0] ? e.touches[0].clientY : 0;
-      if (Math.abs(this._ty - y) > 6) this.userTakeover();
+      if (this._ty - y > 14) this.bounce();
     };
     window.addEventListener('touchstart', this._preTS, { passive: true });
     window.addEventListener('touchmove', this._preTM, { passive: true });
-    this._preKey = (e) => { if (['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Home', 'End', ' ', 'Spacebar'].indexOf(e.key) >= 0) this.userTakeover(); };
-    window.addEventListener('keydown', this._preKey, { passive: true });
     setTimeout(() => {
       const el = this.actStrip.current || document.querySelector('[data-actstrip]');
       if (!el || el._dragWired) return;
@@ -2148,7 +1818,6 @@ class Component extends DCLogic {
       wrap.style.transform = 'translate(' + ox.toFixed(1) + 'px,' + oy.toFixed(1) + 'px)';
     };
     this._onMove = (e) => {
-      if (this._eyeHint) this.stopEyeHint();
       if (this._grab || this.state.dizzy) return;
       this._smooth = e.pointerType && e.pointerType !== 'mouse';
       this._look(e.clientX, e.clientY);
@@ -2224,17 +1893,6 @@ class Component extends DCLogic {
     window.removeEventListener('wheel', this._preWheel);
     window.removeEventListener('touchstart', this._preTS);
     window.removeEventListener('touchmove', this._preTM);
-    window.removeEventListener('keydown', this._preKey);
-    clearTimeout(this._hintT1);
-    clearTimeout(this._hintT2);
-    clearTimeout(this._idleT);
-    clearTimeout(this._eyeT1);
-    clearTimeout(this._eyeT2);
-    clearTimeout(this._fixT1);
-    clearTimeout(this._fixT2);
-    clearTimeout(this._startFlagT);
-    clearTimeout(this._askT);
-    this.cancelAuto();
     this.scrollLock(false);
     document.body.style.overflow = '';
     if (this._rvIO) this._rvIO.disconnect();
@@ -2319,7 +1977,7 @@ class Component extends DCLogic {
     this.flash('已解鎖常用服務', 3000);
     clearTimeout(this._advT);
     this._advT = setTimeout(() => {
-      this.autoTo(document.documentElement.scrollHeight, 380);
+      window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
     }, 520);
   }
 
@@ -2393,8 +2051,7 @@ class Component extends DCLogic {
 
   settle(slide) {
     const id = IDS[slide];
-    this._idOpen = false;
-    this.setState(s => { const done = this.withAuto(id, s.done); this.save({ identity: id, done: done }); return { slide, dragX: 0, dragging: false, identity: id, done: done }; }, () => {
+    this.setState(s => { this.save({ identity: id, done: s.done }); return { slide, dragX: 0, dragging: false, identity: id }; }, () => {
       this.syncOffset();
       this.maybeEnterList();
       const b = this.state.branch || {};
@@ -2549,16 +2206,6 @@ class Component extends DCLogic {
         key: i, bg: b === '1' ? '#FBF6F0' : 'transparent', bgGhost: b === '1' ? 'rgba(44,37,33,.13)' : 'transparent'
       }))
     }));
-  }
-
-  // 學校統一排課這類項目：切到該學制時自動標記完成
-  withAuto(identity, done) {
-    const d = Object.assign({}, done || {});
-    GROUPS.forEach(g => g.items.forEach(it => {
-      if (!it.autoDone) return;
-      if (it.autoDone === identity) d[it.id] = true; else delete d[it.id];
-    }));
-    return d;
   }
 
   visible(it, identity, branch) {
@@ -2727,7 +2374,8 @@ class Component extends DCLogic {
       const r = (this._grpRefs || {})[k];
       const el = r && r.current;
       if (!el) return;
-      this.autoToEl(el, 22, 340);
+      const top = Math.max(0, window.scrollY + el.getBoundingClientRect().top - 22);
+      window.scrollTo({ top, behavior: 'smooth' });
     }, delay || 0);
   }
 
@@ -2871,40 +2519,6 @@ class Component extends DCLogic {
       tlCard: this.tlCard,
       bounceTf: this.state.bnc ? 'translateY(-22px)' : 'none',
       introRef: this.introRef,
-      bldLegend: Object.keys(BUILDING_NAMES).filter(c => BUILDING_LINKS[c]).map(c => ({ key: c, code: c, name: BUILDING_NAMES[c].name, url: BUILDING_LINKS[c], focus: () => this.focusBld(c) })),
-      mapLayer: this.mapLayer,
-      mapPin: this.mapPin,
-      hasPin: !!(this.state.pin && BUILDING_FOCUS[this.state.pin]),
-      pinL: (((BUILDING_FOCUS[this.state.pin] || {}).x || 0) * 100).toFixed(2) + '%',
-      pinT: (((BUILDING_FOCUS[this.state.pin] || {}).y || 0) * 100).toFixed(2) + '%',
-      canReset: (this.state.mapZ || 1) > 1.02,
-      mapReset: this.mapReset,
-      askOpen: !!this.state.askBld,
-      askHasUrl: !!(this.state.askBld && BUILDING_LINKS[this.state.askBld]),
-      askNoLabel: (this.state.askBld && BUILDING_LINKS[this.state.askBld]) ? '不用' : '知道了',
-      askText: this.state.askBld
-        ? (BUILDING_LINKS[this.state.askBld]
-          ? '已定位 ' + this.state.askBld + ' 棟' + ((BUILDING_NAMES[this.state.askBld] || {}).name ? '（' + BUILDING_NAMES[this.state.askBld].name + '）' : '') + '，要開啟 Google Maps 導航嗎？'
-          : '已定位 ' + this.state.askBld + ' 棟，目前尚無精準導航資料。')
-        : '',
-      askGo: () => {
-        const c = this.state.askBld, u = c && BUILDING_LINKS[c];
-        if (u) window.open(u, '_blank', 'noopener');
-        this.setState({ askBld: null });
-      },
-      askNo: () => this.setState({ askBld: null }),
-      legendInner: this.legendInner,
-      legendPanelH: this.state.legendOpen ? ((this.state.legendH || 0) ? (this.state.legendH + 'px') : 'auto') : '0px',
-      legendOp: this.state.legendOpen ? 1 : 0,
-      legendTf: this.state.legendOpen ? 'scale(1)' : 'scale(.965) translateY(-10px)',
-      chevTf: this.state.legendOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-      legendOpen: !!this.state.legendOpen,
-      legendLabel: '建築代號一覽與直接導航',
-      legendToggle: () => this.setState(s => {
-        const el = this.legendInner.current;
-        const h = el ? el.scrollHeight : 0;
-        return { legendOpen: !s.legendOpen, legendH: h || s.legendH };
-      }),
       bldQ: this.state.bldQ || '',
       bldChange: this.bldChange,
       bldGo: this.bldGo,
@@ -2922,23 +2536,11 @@ class Component extends DCLogic {
       paneH: this.paneCss(),
       blowTf: this.state.started ? 'translateY(56px) scale(.9)' : 'none',
       blowOp: this.state.started ? 0 : 1,
-      riseTf: (this.state.started || this.state.revealed) ? 'none' : 'translateY(38px)',
-      riseOp: (this.state.started || this.state.revealed) ? 1 : 0,
-      riseHit: (this.state.started || this.state.revealed) ? 'auto' : 'none',
+      riseTf: this.state.started ? 'none' : 'translateY(38px)',
+      riseOp: this.state.started ? 1 : 0,
+      riseHit: this.state.started ? 'auto' : 'none',
       logoOrder: (this.state.started || this.state.hideLogo) ? 0 : 9,
-      ctaRef: this.ctaRef,
       startNow: this.startNow,
-      ctaAnim: this.state.ctaPhase === 'kick' ? 'ctakick .78s cubic-bezier(.34,1.16,.36,1) 3 both' : (this.state.ctaPhase === 'idle' ? 'ctafloat 2.8s ease-in-out infinite' : 'none'),
-      ctaTap: this.state.ctaPhase === 'idle' ? 'ctatap 5s cubic-bezier(.34,1.16,.36,1) infinite' : 'none',
-      ctaSheen: (this.state.ctaPhase === 'kick' || this.state.ctaPhase === 'idle') ? 'ctasheen 4.4s ease-in-out infinite' : 'none',
-      ctaGlow: (this.state.ctaPhase === 'kick' || this.state.ctaPhase === 'idle') ? 1 : (this.state.ctaPhase === 'calm' ? 0.45 : 0),
-      switchId: () => {
-        this._entered = false;
-        this._userAbort = false;
-        clearTimeout(this._advT);
-        this.reveal();
-        this.autoToEl(() => this.idRef.current, () => (this._hCol || 118) + 14, 340);
-      },
       openTl: this.openTl,
       tapTl: this.tapTl,
       bgRef: this.bgRef,
@@ -3044,7 +2646,6 @@ class Component extends DCLogic {
       cardsPE: this.state.hideLogo ? 'none' : 'auto',
       eyeBox: this.eyeBox,
       eyesRef: this.eyesRef,
-      eyeBang: !!this.state.eyeBang,
       pupilL: this.pupilL,
       pupilR: this.pupilR,
       swipeBox: this.swipeBox,
@@ -3100,23 +2701,12 @@ class Component extends DCLogic {
         if (Math.abs(e.clientX - this._x0) > 6) this._moved = true;
         let dx = e.clientX - this._x0;
         const s = this.state.slide;
-        if (this.swipeLocked() || (s === 0 && dx > 0) || (s === IDS.length - 1 && dx < 0)) dx *= 0.28;
+        if ((s === 0 && dx > 0) || (s === IDS.length - 1 && dx < 0)) dx *= 0.28;
         this.setState({ dragX: dx });
       },
       onDragEnd: (e) => {
         if (!this.state.dragging) return;
         const dx = this.state.dragX, w = this._w || 240;
-        if (this.swipeLocked()) {
-          let nudged = this._moved && Math.abs(dx) > w * 0.05;
-          if (!this._moved && e && typeof e.clientX === 'number') {
-            const act = this.labelRefs[this.state.slide] && this.labelRefs[this.state.slide].current;
-            const b = act ? act.getBoundingClientRect() : null;
-            if (b && !(e.clientX >= b.left && e.clientX <= b.right)) nudged = true;
-          }
-          this.setState({ dragging: false, dragX: 0 });
-          if (nudged) this.flash('先完成 02 註冊與財務才能換學制');
-          return;
-        }
         if (!this._moved || Math.abs(dx) < w * 0.18) {
           const x = e && typeof e.clientX === 'number' ? e.clientX : null;
           const y = e && typeof e.clientY === 'number' ? e.clientY : null;
@@ -3154,9 +2744,9 @@ class Component extends DCLogic {
             tagBg: chain ? '#FDF0E6' : (c.k === 'fin' ? '#C0392B' : '#2C2521'),
             tagColor: chain ? '#C25A2F' : '#FBF6F0',
             tagBorder: '0',
-            brkBg: chain ? '#E8794A' : 'transparent',
-            brkTop: chain ? '4px' : '0',
-            brkBot: chain ? 'calc(100% - 32px)' : '0',
+            brkBg: inSpan ? '#E8794A' : 'transparent',
+            brkTop: i === 0 ? '11px' : '0',
+            brkBot: i === last ? 'calc(100% - 25px)' : '0',
             axTop: i === 0 ? '11px' : '0',
             axBot: i === CAL.length - 1 ? 'calc(100% - 25px)' : '0',
             nodeS: chain ? '14px' : (c.k === 'fin' ? '14px' : (c.k === 'start' ? '16px' : '10px')),
@@ -3182,9 +2772,7 @@ class Component extends DCLogic {
           key: id,
           ref: this.labelRefs[i],
           name: id === 'uni' ? '大學生' : '五專生',
-          pick: () => {
-            this.settle(i);
-          },
+          pick: () => this.settle(i),
           enter: () => this.setState({ hovId: id }),
           leave: () => this.setState({ hovId: null }),
           fs: active ? 'clamp(34px,26cqw,72px)' : 'clamp(18px,29cqw,36px)',
@@ -3236,8 +2824,7 @@ class Component extends DCLogic {
         clearTimeout(this._advT);
         this.setState({ identity: null, done: {}, branch: {}, open: {}, cleared: false, slide: 0, dragX: 0, offset: 0, started: false });
         this.flash('進度已重設');
-        this.autoTo(0, 320);
-        this.setState({ ctaPhase: 'wait', revealed: false }, () => this.startHint());
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         setTimeout(() => { if (!this.state.started) this.scrollLock(true); }, 620);
       }
     };
