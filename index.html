@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-49QV9BDXZD"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-49QV9BDXZD');
+</script>
+
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://unpkg.com" crossorigin>
@@ -61,10 +69,10 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://github.com/petertsai67/freshman-guide.git">
+<meta property="og:url" content="https://petertsai67.github.io/freshman-guide/">
 <meta property="og:title" content="南臺新生開學懶人導航">
 <meta property="og:description" content="註冊繳費、選課、宿舍、機車證，一頁走完開學前的最後一哩路。">
-<meta property="og:image" content="https://stust-csie-sa.github.io/freshman-guide/assets/og-cover.png">
+<meta property="og:image" content="https://petertsai67.github.io/freshman-guide/assets/og-cover.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="zh_TW">
@@ -72,7 +80,7 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="南臺新生開學懶人導航">
 <meta name="twitter:description" content="註冊繳費、選課、宿舍、機車證，一頁走完開學前的最後一哩路。">
-<meta name="twitter:image" content="https://stust-csie-sa.github.io/freshman-guide/assets/og-cover.png">
+<meta name="twitter:image" content="https://petertsai67.github.io/freshman-guide/assets/og-cover.png">
 <meta name="ext-resource-dependency" content="assets/campus-map-sq.png" data-resource-id="campusMap">
 <meta name="ext-resource-dependency" content="assets/csie-logo.svg" data-resource-id="logo">
 <meta name="ext-resource-dependency" content="assets/sa-logo.png" data-resource-id="saLogo">
@@ -127,13 +135,13 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
 
   <div ref="{{ heroRef }}" data-screen-label="Intro" data-hero="1" style="position:relative;display:flex;flex-direction:column;padding:0;min-height:{{ heroMin }};transform:{{ bounceTf }};transition:transform .34s cubic-bezier(.3,1.3,.4,1)">
 
-    <div ref="{{ bgRef }}" style="position:absolute;left:50%;margin-left:-50vw;width:100vw;top:0;bottom:0;z-index:0;overflow:hidden;pointer-events:none;transform:{{ blowTf }};opacity:{{ blowOp }};transition:transform 1.15s cubic-bezier(.55,0,.3,1),opacity .8s ease;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 7%,#000 92%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 7%,#000 92%,transparent 100%)">
-      <div style="position:absolute;left:-10%;top:2%;animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 1.9s both"><div style="width:190px;height:176px;border-radius:50%;filter:blur(26px);background:radial-gradient(circle at 50% 45%,rgba(232,121,74,.5) 0%,rgba(232,121,74,.14) 58%,rgba(232,121,74,0) 78%);animation:blobA 4.5s ease-in-out infinite"></div></div>
-      <div style="position:absolute;right:-8%;top:14%;animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 1.96s both"><div style="width:214px;height:196px;border-radius:50%;filter:blur(28px);background:radial-gradient(circle at 50% 50%,rgba(238,150,110,.5) 0%,rgba(238,150,110,.15) 56%,rgba(238,150,110,0) 78%);animation:blobC 5.2s ease-in-out infinite"></div></div>
-      <div style="position:absolute;left:6%;top:34%;animation:dropin 1.05s cubic-bezier(.3,1.05,.4,1) 2.02s both"><div style="width:262px;height:246px;border-radius:50%;filter:blur(30px);background:radial-gradient(circle at 46% 48%,rgba(228,112,63,.62) 0%,rgba(232,121,74,.2) 52%,rgba(232,121,74,0) 76%);animation:blobB 6s ease-in-out infinite"></div></div>
-      <div style="position:absolute;right:2%;top:52%;animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 2.08s both"><div style="width:198px;height:184px;border-radius:50%;filter:blur(26px);background:radial-gradient(circle at 50% 50%,rgba(240,144,106,.52) 0%,rgba(240,144,106,.16) 56%,rgba(240,144,106,0) 78%);animation:blobA 5.6s ease-in-out infinite reverse"></div></div>
-      <div style="position:absolute;left:-6%;top:70%;animation:dropin 1.05s cubic-bezier(.3,1.05,.4,1) 2.14s both"><div style="width:236px;height:214px;border-radius:50%;filter:blur(30px);background:radial-gradient(circle at 48% 50%,rgba(230,116,70,.5) 0%,rgba(232,121,74,.16) 54%,rgba(232,121,74,0) 78%);animation:blobC 6.4s ease-in-out infinite"></div></div>
-      <div style="position:absolute;right:12%;top:82%;animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 2.2s both"><div style="width:180px;height:166px;border-radius:50%;filter:blur(24px);background:radial-gradient(circle at 50% 50%,rgba(242,160,120,.46) 0%,rgba(242,160,120,.14) 56%,rgba(242,160,120,0) 78%);animation:blobB 4.9s ease-in-out infinite reverse"></div></div>
+    <div ref="{{ bgRef }}" style="position:absolute;left:50%;margin-left:-50vw;width:100vw;top:0;bottom:0;z-index:0;overflow:hidden;contain:paint;pointer-events:none;transform:{{ blowTf }};opacity:{{ blowOp }};transition:transform 1.15s cubic-bezier(.55,0,.3,1),opacity .8s ease;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 7%,#000 92%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 7%,#000 92%,transparent 100%)">
+      <div style="position:absolute;left:-10%;top:2%;animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 1.9s both"><div style="width:190px;height:176px;border-radius:50%;filter:blur(26px);background:radial-gradient(circle at 50% 45%,rgba(232,121,74,.5) 0%,rgba(232,121,74,.14) 58%,rgba(232,121,74,0) 78%);animation:blobA 4.5s ease-in-out infinite;will-change:transform;backface-visibility:hidden"></div></div>
+      <div style="position:absolute;right:-8%;top:14%;animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 1.96s both"><div style="width:214px;height:196px;border-radius:50%;filter:blur(28px);background:radial-gradient(circle at 50% 50%,rgba(238,150,110,.5) 0%,rgba(238,150,110,.15) 56%,rgba(238,150,110,0) 78%);animation:blobC 5.2s ease-in-out infinite;will-change:transform;backface-visibility:hidden"></div></div>
+      <div style="position:absolute;left:6%;top:34%;animation:dropin 1.05s cubic-bezier(.3,1.05,.4,1) 2.02s both"><div style="width:262px;height:246px;border-radius:50%;filter:blur(30px);background:radial-gradient(circle at 46% 48%,rgba(228,112,63,.62) 0%,rgba(232,121,74,.2) 52%,rgba(232,121,74,0) 76%);animation:blobB 6s ease-in-out infinite;will-change:transform;backface-visibility:hidden"></div></div>
+      <div style="position:absolute;right:2%;top:52%;animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 2.08s both"><div style="width:198px;height:184px;border-radius:50%;filter:blur(26px);background:radial-gradient(circle at 50% 50%,rgba(240,144,106,.52) 0%,rgba(240,144,106,.16) 56%,rgba(240,144,106,0) 78%);animation:blobA 5.6s ease-in-out infinite reverse;will-change:transform;backface-visibility:hidden"></div></div>
+      <div style="position:absolute;left:-6%;top:70%;animation:dropin 1.05s cubic-bezier(.3,1.05,.4,1) 2.14s both"><div style="width:236px;height:214px;border-radius:50%;filter:blur(30px);background:radial-gradient(circle at 48% 50%,rgba(230,116,70,.5) 0%,rgba(232,121,74,.16) 54%,rgba(232,121,74,0) 78%);animation:blobC 6.4s ease-in-out infinite;will-change:transform;backface-visibility:hidden"></div></div>
+      <div style="position:absolute;right:12%;top:82%;animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 2.2s both"><div style="width:180px;height:166px;border-radius:50%;filter:blur(24px);background:radial-gradient(circle at 50% 50%,rgba(242,160,120,.46) 0%,rgba(242,160,120,.14) 56%,rgba(242,160,120,0) 78%);animation:blobB 4.9s ease-in-out infinite reverse;will-change:transform;backface-visibility:hidden"></div></div>
     </div>
     <div ref="{{ paneRef }}" onScroll="{{ onPaneScroll }}" style="position:relative;z-index:5;flex:none;height:{{ paneH }};display:flex;align-items:stretch;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:none">
       <section data-screen-label="Tools" style="flex:none;width:100%;box-sizing:border-box;scroll-snap-align:center;display:flex;flex-direction:column;justify-content:flex-start;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:14px 24px 16px">
@@ -295,13 +303,13 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
         </div>
       </div>
       <div style="position:absolute;left:-4%;top:0%;z-index:0;display:none">
-        <div style="animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 2.02s both"><div style="width:138px;height:128px;border-radius:50%;filter:blur(19px);background:radial-gradient(circle at 50% 45%,rgba(232,121,74,.62) 0%,rgba(232,121,74,.16) 58%,rgba(232,121,74,0) 78%);animation:blobA 4.5s ease-in-out infinite"></div></div>
+        <div style="animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 2.02s both"><div style="width:138px;height:128px;border-radius:50%;filter:blur(19px);background:radial-gradient(circle at 50% 45%,rgba(232,121,74,.62) 0%,rgba(232,121,74,.16) 58%,rgba(232,121,74,0) 78%);animation:blobA 4.5s ease-in-out infinite;will-change:transform;backface-visibility:hidden"></div></div>
       </div>
       <div style="position:absolute;left:14%;top:11%;z-index:0;display:none">
-        <div style="animation:dropin 1.05s cubic-bezier(.3,1.05,.4,1) 2.06s both"><div style="width:224px;height:214px;border-radius:50%;filter:blur(24px);background:radial-gradient(circle at 46% 48%,rgba(228,112,63,.7) 0%,rgba(232,121,74,.22) 52%,rgba(232,121,74,0) 76%);animation:blobB 6s ease-in-out infinite"></div></div>
+        <div style="animation:dropin 1.05s cubic-bezier(.3,1.05,.4,1) 2.06s both"><div style="width:224px;height:214px;border-radius:50%;filter:blur(24px);background:radial-gradient(circle at 46% 48%,rgba(228,112,63,.7) 0%,rgba(232,121,74,.22) 52%,rgba(232,121,74,0) 76%);animation:blobB 6s ease-in-out infinite;will-change:transform;backface-visibility:hidden"></div></div>
       </div>
       <div style="position:absolute;right:-6%;top:16%;z-index:0;display:none">
-        <div style="animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 2.1s both"><div style="width:178px;height:164px;border-radius:50%;filter:blur(21px);background:radial-gradient(circle at 50% 50%,rgba(238,150,110,.58) 0%,rgba(238,150,110,.18) 56%,rgba(238,150,110,0) 78%);animation:blobC 5.2s ease-in-out infinite"></div></div>
+        <div style="animation:dropin 1s cubic-bezier(.3,1.05,.4,1) 2.1s both"><div style="width:178px;height:164px;border-radius:50%;filter:blur(21px);background:radial-gradient(circle at 50% 50%,rgba(238,150,110,.58) 0%,rgba(238,150,110,.18) 56%,rgba(238,150,110,0) 78%);animation:blobC 5.2s ease-in-out infinite;will-change:transform;backface-visibility:hidden"></div></div>
       </div>
 
     </div>
@@ -831,17 +839,6 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
               </div>
             </div>
 
-            <div style="display:flex;flex-direction:column;gap:10px">
-              <div style="display:flex;align-items:center;gap:9px;padding:6px 8px 6px 16px;border-radius:16px;background:#FFFFFF;border:1px solid rgba(44,37,33,.12)">
-                <span style="flex:none;font-size:12.5px;letter-spacing:.04em;color:#7A6759">找教室</span>
-                <input type="text" value="{{ bldQ }}" onChange="{{ bldChange }}" onKeyDown="{{ bldKey }}" placeholder="G" style="flex:1;min-width:0;height:42px;border:0;outline:none;background:transparent;font-family:'PixelTC','PingFang TC','Microsoft JhengHei',sans-serif;font-size:16px;letter-spacing:.06em;color:#2C2521" />
-                <button onClick="{{ bldGo }}" style="flex:none;height:38px;padding:0 18px;border:0;border-radius:12px;background:#2C2521;color:#FBF6F0;font-size:14px;letter-spacing:.04em;cursor:pointer;transition:transform .26s cubic-bezier(.32,.72,0,1),background .22s ease" style-hover="transform:scale(1.05);background:#E8794A">查詢</button>
-              </div>
-              <sc-if value="{{ bldMsg }}">
-                <div style="padding:12px 16px;border-radius:16px;background:#FFFFFF;border:1px solid rgba(44,37,33,.12);font-size:13px;line-height:1.6;letter-spacing:.02em;color:{{ bldMsgColor }}">{{ bldMsg }}</div>
-              </sc-if>
-            </div>
-
             <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px">
               <a href="https://www.google.com/maps/d/viewer?mid=1mn9coDoifZ81sMcskrE1UHrbh6z8l2c" target="_blank" rel="noopener" onClick="{{ svcTap }}" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:88px;border:1px solid rgba(44,37,33,.12);border-radius:18px;background:#FFFFFF;color:#2C2521;text-decoration:none;cursor:pointer;transition:transform .26s cubic-bezier(.32,.72,0,1),background .22s ease,color .22s ease" style-hover="transform:translateY(-3px);background:#2C2521;color:#FBF6F0" style-active="transform:scale(.97)">
                 <span data-svcicon="1" style="display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><rect x="3.2" y="5.2" width="17.6" height="13.6" rx="2.4" stroke-width="1.9"></rect><path d="M3.2 9.6 H20.8" stroke-width="1.9"></path><rect x="6.4" y="12.4" width="6.4" height="3.6" rx="1" fill="currentColor" stroke="none"></rect></svg></span>
@@ -855,6 +852,24 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
                 <span data-svcicon="1" style="display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="5" cy="16.6" r="3.2" stroke-width="1.8"></circle><circle cx="19" cy="16.6" r="3.2" stroke-width="1.8"></circle><path d="M8.2 16.6 H13 l3.2-5.2h-4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12.2 11.4 9.6 7.6 H7.2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16.2 11.4 18.4 15" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
                 <span style="font-size:12.5px;letter-spacing:.04em">機車停車場</span>
               </a>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <button onClick="{{ legendToggle }}" style="display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;min-height:46px;padding:0 16px;border:1px solid rgba(44,37,33,.12);border-radius:16px;background:#FFFFFF;color:#2C2521;font-family:'LINE Seed TW','PingFang TC','Microsoft JhengHei',sans-serif;font-weight:700;font-size:13.5px;letter-spacing:.03em;cursor:pointer;transition:background .22s ease" style-hover="background:#F7F2E8">
+                <span>{{ legendLabel }}</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9.5 L12 15.5 L18 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              </button>
+              <sc-if value="{{ legendOpen }}">
+                <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;padding:14px;border:1px solid rgba(44,37,33,.12);border-radius:18px;background:#FFFFFF">
+                  <sc-for list="{{ bldLegend }}" as="b" hint-placeholder-count="9">
+                    <a href="{{ b.url }}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:9px;min-width:0;min-height:44px;padding:6px 10px;border-radius:12px;text-decoration:none;color:inherit;cursor:pointer;transition:background .2s ease,transform .24s cubic-bezier(.32,.72,0,1)" style-hover="background:#F7F2E8;transform:translateX(2px)" style-active="transform:scale(.98)">
+                      <span style="flex:none;font-family:'Rubik','LINE Seed TW',sans-serif;font-weight:700;font-size:13px;letter-spacing:.04em;color:#E8794A;min-width:26px">{{ b.code }}</span>
+                      <span style="flex:1;min-width:0;font-size:12.5px;line-height:1.45;color:#6B5A4E;text-wrap:pretty">{{ b.name }}</span>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex:none;color:#A8927E"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path><circle cx="12" cy="10" r="2.6" stroke="currentColor" stroke-width="2"></circle></svg>
+                    </a>
+                  </sc-for>
+                </div>
+              </sc-if>
             </div>
           </div>
         </div>
@@ -1141,7 +1156,7 @@ const GLYPH = {
   '9': ['111','101','111','001','111']
 };
 
-const KEY = 'stust-csie-freshman-todo-v3';
+const KEY = 'stust-csie-freshman-todo-v4';
 const IDS = ['uni', 'five'];
 
 const ACTS = [
@@ -1193,20 +1208,77 @@ const BUILDING_LINKS = {
   Z: 'https://www.google.com/maps/dir//23.0241495,120.2233944/@23.0239506,120.2231446,19.96z/data=!4m2!4m1!3e9?entry=ttu&g_ep=EgoyMDI2MDgxMC4wIKXMDSoASAFQAw%3D%3D'
 };
 
+// 棟別 → 中文館名與主要單位（依校方導覽地圖）
+const BUILDING_NAMES = {
+  A: { name: '電機系專業教室', alias: ['電機'] },
+  B: { name: '電機系館', alias: ['電機'] },
+  C: { name: '資工系館', alias: ['資工', '資訊工程'] },
+  D: { name: '一般教室', alias: [] },
+  E: { name: '修齊大樓', alias: ['圖書館', '計網中心', '商管學院'] },
+  F: { name: '學務處衛保組・諮商輔導組', alias: ['衛保', '諮商', '健康中心'] },
+  G: { name: '體育中心・社團辦公室', alias: ['體育', '社團'] },
+  I: { name: '工學院', alias: ['化材', '食品'] },
+  J: { name: '電子系館', alias: ['電子'] },
+  K: { name: '機械系館', alias: ['機械'] },
+  L: { name: '行政大樓', alias: ['教務處', '學務處', '總務處', '註冊', '出納', '國際處'] },
+  M: { name: '人文藝術大樓', alias: ['藝文中心', '通識中心', '校史室'] },
+  N: { name: '文炳館', alias: ['人文社會學院', '應英', '應日', '幼保', '師培'] },
+  O: { name: '高齡福祉大樓', alias: ['高福'] },
+  P: { name: '機車停車場・產設系', alias: ['機車', '停車', '產設'] },
+  Q: { name: '汽車工廠・半導體與光電系', alias: ['半導體', '光電', '汽車工廠'] },
+  R: { name: '機械系汽車組', alias: ['汽車組'] },
+  S: { name: '進修部・管科大樓', alias: ['進修', '會資', '國企', '財金', '企管', '財法'] },
+  T: { name: '雙語教學中心・管理學院', alias: ['雙語', '休閒', '餐旅', '工管', '資管', '行流'] },
+  U: { name: '優活館', alias: ['體育中心教室'] },
+  V: { name: '能源工程館', alias: ['能源', '育成中心'] },
+  W: { name: '磅礡館', alias: ['統一商場', '南臺書坊', '流音', '設計學院', '資傳', '多樂', '視傳', '書店', '星巴克'] },
+  X: { name: '創思設計坊', alias: ['產品設計', '設計坊'] },
+  Y: { name: '三連堂', alias: ['大禮堂', '禮堂'] },
+  Z: { name: '西淮館', alias: ['學務長辦公室', '課外組'] },
+  H1: { name: '第一學生宿舍', alias: ['宿舍'] },
+  H2: { name: '第二學生宿舍・創業教育空間', alias: ['宿舍', '創業'] },
+  H3: { name: '第三學生宿舍', alias: ['宿舍'] },
+  H5: { name: '第五學生宿舍（國際會館）', alias: ['宿舍', '國際會館'] },
+  H6: { name: '第六學生宿舍・幼兒園', alias: ['宿舍', '幼兒園'] }
+};
+
 // 最長有效棟別代碼優先（H1/H2… 不得先被解析成 H）
 const BUILDING_CODES = Object.keys(BUILDING_LINKS).sort((a, b) => b.length - a.length);
 
+// 中文查詢：館名或關鍵字（例如「圖書館」「資工」「宿舍」）
+function matchByName(raw) {
+  const q = String(raw || '').trim().replace(/\s+/g, '').replace(/[棟館系]$/, '');
+  if (!q) return null;
+  const hit = [];
+  for (const code in BUILDING_NAMES) {
+    const b = BUILDING_NAMES[code];
+    if (b.name.indexOf(q) >= 0 || b.alias.some(a => a.indexOf(q) >= 0 || q.indexOf(a) >= 0)) hit.push(code);
+  }
+  return hit.length ? hit : null;
+}
+
 function resolveBuilding(raw) {
   const s = String(raw || '').trim().toUpperCase().replace(/\s+/g, '').replace(/棟$/, '');
-  if (!s) return { ok: false, msg: '請先輸入教室代碼，例如 C306' };
-  if (!/^[A-Z][0-9A-Z]*$/.test(s)) return { ok: false, msg: '找不到這間教室，請確認教室代碼' };
+  if (!s) return { ok: false, msg: '請先輸入棟別代碼或建築名稱，例如 G 或 圖書館' };
+  if (!/^[A-Z][0-9A-Z]*$/.test(s)) {
+    const hits = matchByName(raw);
+    if (!hits) return { ok: false, msg: '找不到這個地點，換個關鍵字試試（例如 圖書館、宿舍、資工）' };
+    const usable = hits.filter(c => BUILDING_LINKS[c]);
+    if (!usable.length) return { ok: false, msg: '目前尚無 ' + hits[0] + ' 棟精準導航資料' };
+    if (usable.length > 1) {
+      return { ok: false, multi: true, msg: '符合多個地點：' + usable.map(c => c + '棟 ' + BUILDING_NAMES[c].name).join('、') + '　請輸入代碼' };
+    }
+    const c = usable[0];
+    return { ok: true, code: c, url: BUILDING_LINKS[c], label: c + '棟 ' + BUILDING_NAMES[c].name };
+  }
   const code = BUILDING_CODES.find(c => s.indexOf(c) === 0);
   if (!code) return { ok: false, msg: '找不到這間教室，請確認教室代碼' };
   const rest = s.slice(code.length);
   if (rest && !/^[0-9]+$/.test(rest)) return { ok: false, msg: '找不到這間教室，請確認教室代碼' };
   const url = BUILDING_LINKS[code];
   if (!url) return { ok: false, code, msg: '目前尚無 ' + code + ' 棟精準導航資料' };
-  return { ok: true, code, url, label: (rest ? s : code) + ' → ' + code + '棟' };
+  const nm = BUILDING_NAMES[code];
+  return { ok: true, code, url, label: (rest ? s : code) + ' → ' + code + '棟' + (nm ? ' ' + nm.name : '') };
 }
 
 class Component extends DCLogic {
@@ -1634,9 +1706,17 @@ class Component extends DCLogic {
     });
   };
 
-  bgQuiet(on) {
-    const el = this.bgRef.current;
-    if (el) el.style.visibility = on ? 'hidden' : '';
+  // 背景動態光暈永不中斷：地圖／時程表開合時不再隱藏它（blob 已各自獨立成合成層，不吃主執行緒）
+  bgQuiet() {}
+
+  // 完成 02 註冊與財務前，左右換屏鎖住（只能橡皮筋拉伸）
+  swipeLocked() {
+    if (!this.state.identity) return false;
+    const g = GROUPS.filter(x => x.no === '02')[0];
+    if (!g) return false;
+    const done = this.state.done || {};
+    const items = g.items.filter(it => this.visible(it, this.state.identity, this.state.branch || {}));
+    return !(items.length && items.every(it => done[it.id]));
   }
 
   tapTl = () => {
@@ -2508,6 +2588,10 @@ class Component extends DCLogic {
       tlCard: this.tlCard,
       bounceTf: this.state.bnc ? 'translateY(-22px)' : 'none',
       introRef: this.introRef,
+      bldLegend: Object.keys(BUILDING_NAMES).filter(c => BUILDING_LINKS[c]).map(c => ({ key: c, code: c, name: BUILDING_NAMES[c].name, url: BUILDING_LINKS[c] })),
+      legendOpen: !!this.state.legendOpen,
+      legendLabel: '建築代號一覽與直接導航',
+      legendToggle: () => this.setState(s => ({ legendOpen: !s.legendOpen })),
       bldQ: this.state.bldQ || '',
       bldChange: this.bldChange,
       bldGo: this.bldGo,
@@ -2690,12 +2774,23 @@ class Component extends DCLogic {
         if (Math.abs(e.clientX - this._x0) > 6) this._moved = true;
         let dx = e.clientX - this._x0;
         const s = this.state.slide;
-        if ((s === 0 && dx > 0) || (s === IDS.length - 1 && dx < 0)) dx *= 0.28;
+        if (this.swipeLocked() || (s === 0 && dx > 0) || (s === IDS.length - 1 && dx < 0)) dx *= 0.28;
         this.setState({ dragX: dx });
       },
       onDragEnd: (e) => {
         if (!this.state.dragging) return;
         const dx = this.state.dragX, w = this._w || 240;
+        if (this.swipeLocked()) {
+          let nudged = this._moved && Math.abs(dx) > w * 0.05;
+          if (!this._moved && e && typeof e.clientX === 'number') {
+            const act = this.labelRefs[this.state.slide] && this.labelRefs[this.state.slide].current;
+            const b = act ? act.getBoundingClientRect() : null;
+            if (b && !(e.clientX >= b.left && e.clientX <= b.right)) nudged = true;
+          }
+          this.setState({ dragging: false, dragX: 0 });
+          if (nudged) this.flash('先完成 02 註冊與財務才能換學制');
+          return;
+        }
         if (!this._moved || Math.abs(dx) < w * 0.18) {
           const x = e && typeof e.clientX === 'number' ? e.clientX : null;
           const y = e && typeof e.clientY === 'number' ? e.clientY : null;
