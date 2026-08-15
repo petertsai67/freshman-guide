@@ -896,7 +896,8 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
               </button>
               <div style="overflow:hidden;height:{{ legendPanelH }};transition:height .46s cubic-bezier(.32,.72,0,1)">
                 <div ref="{{ legendInner }}" style="transform-origin:20% 0;transition:opacity .26s ease,transform .46s cubic-bezier(.32,.72,0,1);opacity:{{ legendOp }};transform:{{ legendTf }}">
-                <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;padding:14px;border:1px solid rgba(44,37,33,.12);border-radius:18px;background:#FFFFFF">
+                <div style="max-height:min(46vh,300px);overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;border:1px solid rgba(44,37,33,.12);border-radius:18px;background:#FFFFFF">
+                <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;padding:14px">
                   <sc-for list="{{ bldLegend }}" as="b" hint-placeholder-count="9">
                     <button onClick="{{ b.focus }}" style="display:flex;align-items:center;gap:9px;min-width:0;min-height:44px;padding:6px 10px;border:0;outline:none;-webkit-tap-highlight-color:transparent;border-radius:12px;background:transparent;text-align:left;font-weight:400;color:inherit;cursor:pointer;transition:background .2s ease,transform .24s cubic-bezier(.32,.72,0,1)" style-hover="background:#F7F2E8;transform:translateX(2px)" style-active="transform:scale(.98)">
                       <span style="flex:none;font-family:'Rubik','LINE Seed TW',sans-serif;font-weight:700;font-size:13px;letter-spacing:.04em;color:#E8794A;min-width:26px">{{ b.code }}</span>
@@ -904,6 +905,7 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex:none;color:#A8927E"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path><circle cx="12" cy="10" r="2.6" stroke="currentColor" stroke-width="2"></circle></svg>
                     </button>
                   </sc-for>
+                </div>
                 </div>
                 </div>
               </div>
