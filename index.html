@@ -391,6 +391,12 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
         <svg viewBox="0 0 24 24" fill="none" style="width:15px;height:15px;display:block" aria-hidden="true"><path d="M9.5 5.5 L16 12 L9.5 18.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </button>
     </sc-if>
+    <div style="position:relative;z-index:6;flex:none;display:flex;justify-content:flex-end;padding:0 24px;animation:floatup .9s cubic-bezier(.25,.9,.3,1) 1.72s both">
+      <button onClick="{{ shareCopy }}" aria-label="複製網址分享" style="display:flex;align-items:center;gap:6px;min-height:34px;padding:0 13px;border:0;outline:none;-webkit-tap-highlight-color:transparent;border-radius:999px;cursor:pointer;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.05em;color:#6B5A4E;background:rgba(44,37,33,.07);transition:background .35s ease,color .3s ease,transform .35s cubic-bezier(.32,.72,0,1),box-shadow .35s ease" style-hover="background:rgba(232,121,74,.16);color:#9A5A31;transform:scale(1.03)" style-active="transform:scale(.985)">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex:none"><circle cx="18" cy="5.5" r="2.6" stroke="currentColor" stroke-width="2"></circle><circle cx="6" cy="12" r="2.6" stroke="currentColor" stroke-width="2"></circle><circle cx="18" cy="18.5" r="2.6" stroke="currentColor" stroke-width="2"></circle><path d="M8.4 10.8 15.6 6.9M8.4 13.2l7.2 3.9" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+        <span>分享</span>
+      </button>
+    </div>
     <div ref="{{ cardsRef }}" style="position:relative;z-index:5;flex:none;width:100%;margin:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:14px;align-items:start;padding:14px 24px 12px;animation:floatup .9s cubic-bezier(.25,.9,.3,1) 1.86s both">
       <div ref="{{ eyeBox }}" onClick="{{ tapMap }}" onPointerDown="{{ onEyeDown }}" onPointerMove="{{ onEyeMove }}" onPointerUp="{{ onEyeUp }}" onPointerCancel="{{ onEyeUp }}" style="position:relative;width:100%;min-width:0;overflow:hidden;background:#E3D6C8;border-radius:14px;aspect-ratio:472/325;max-height:21vh;container-type:inline-size;touch-action:pan-y;cursor:pointer;opacity:{{ mpSrcOp }};transition:transform .18s ease,opacity .18s ease" style-hover="transform:scale(1.02)" style-active="transform:scale(1.03)">
         <div style="position:absolute;left:14px;top:13px;display:flex;align-items:center;gap:7px;color:rgba(44,37,33,.52);font-family:'PixelTC','Noto Sans TC',sans-serif;font-size:13px;letter-spacing:.04em;line-height:1">校園地圖</div>
@@ -3204,6 +3210,26 @@ class Component extends DCLogic {
       toast: this.state.toast,
       cleared: this.state.cleared,
       openMap: () => this.flash('校園地圖頁製作中，下一版接上'),
+      shareCopy: () => {
+        const url = 'https://petertsai67.github.io/freshman-guide/?=v3';
+        const done = () => this.flash('已複製網址到剪貼簿');
+        const fallback = () => {
+          const ta = document.createElement('textarea');
+          ta.value = url;
+          ta.setAttribute('readonly', '');
+          ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0;pointer-events:none';
+          document.body.appendChild(ta);
+          ta.select();
+          ta.setSelectionRange(0, url.length);
+          let ok = false;
+          try { ok = document.execCommand('copy'); } catch (e) {}
+          document.body.removeChild(ta);
+          if (ok) done(); else this.flash('複製失敗，請手動複製網址', 3000);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done).catch(fallback);
+        } else fallback();
+      },
       openIg: () => window.open(String(this.props.igUrl ?? 'https://www.instagram.com/stust_csie_sa/'), '_blank', 'noopener'),
       openDc: () => window.open(String(this.props.dcUrl ?? 'https://discord.gg/Rh7gyw5EEn'), '_blank', 'noopener'),
       acts: ACTS.map(a => {
