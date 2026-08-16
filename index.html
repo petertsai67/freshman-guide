@@ -347,9 +347,9 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
             <div ref="{{ actStrip }}" data-actstrip="1" style="margin:20px -24px -20px;padding:14px 24px 50px;display:flex;gap:12px;overflow-x:auto;overflow-y:hidden;touch-action:pan-x;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:none;cursor:grab;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 26px,#000 calc(100% - 26px),transparent 100%);mask-image:linear-gradient(to right,transparent 0,#000 26px,#000 calc(100% - 26px),transparent 100%)">
               <sc-for list="{{ acts }}" as="a" hint-placeholder-count="2">
                 <div data-actcard="1" onClick="{{ a.flip }}" onMouseEnter="{{ a.enter }}" onMouseLeave="{{ a.leave }}" onPointerDown="{{ a.down }}" onPointerUp="{{ a.up }}" onPointerCancel="{{ a.up }}" style="flex:none;width:214px;height:285px;scroll-snap-align:start;cursor:pointer;perspective:1100px;-webkit-tap-highlight-color:transparent;transition:transform .3s cubic-bezier(.32,.72,0,1);transform:{{ a.hoverTf }}">
-                  <div style="position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .68s cubic-bezier(.32,.72,0,1);transform:{{ a.flipTf }}">
+                  <div style="position:relative;width:100%;height:100%;transform-style:preserve-3d;will-change:transform;transition:transform .68s cubic-bezier(.32,.72,0,1);transform:{{ a.flipTf }}">
 
-                    <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;opacity:{{ a.faceFrontOp }};transition:opacity 0s linear .34s,box-shadow .4s ease;border-radius:16px;overflow:hidden;background:transparent;box-shadow:{{ a.frontShadow }}">
+                    <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;transition:box-shadow .4s ease;border-radius:16px;overflow:hidden;background:transparent;box-shadow:{{ a.frontShadow }}">
                       <sc-if value="{{ a.hasImage }}">
                         <div role="img" aria-label="{{ a.title }}" style="position:absolute;left:-0.5px;top:-0.5px;width:calc(100% + 1px);height:calc(100% + 1px);background-image:url({{ a.image }});background-size:cover;background-position:50% 50%;background-repeat:no-repeat;border-radius:16.5px;transform:{{ a.imgTf }};transition:transform .55s cubic-bezier(.32,.72,0,1)"></div>
                       </sc-if>
@@ -360,7 +360,7 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
                       </div>
                     </div>
 
-                    <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;opacity:{{ a.faceBackOp }};transition:opacity 0s linear .34s;transform:rotateY(180deg) translateZ(1px);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;gap:10px;padding:20px 18px;background:{{ a.backBg }};box-shadow:0 14px 32px rgba(44,37,33,.22)">
+                    <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;transform:rotateY(180deg) translateZ(1px);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;gap:10px;padding:20px 18px;background:{{ a.backBg }};box-shadow:0 14px 32px rgba(44,37,33,.22)">
                       <div style="font-size:10.5px;line-height:1;letter-spacing:.1em;color:{{ a.accent }}">{{ a.tag }}</div>
                       <div style="font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:17px;line-height:1.45;color:{{ a.backFg }}">{{ a.title }}</div>
                       <div style="margin-top:6px">
@@ -3577,8 +3577,6 @@ class Component extends DCLogic {
           btnBg: 'linear-gradient(100deg,hsl(' + H + ',' + S + '%,60%),hsl(' + H + ',' + S + '%,44%))',
           btnFg: '#FFFFFF',
           btnShadow: '0 8px 20px hsla(' + H + ',' + S + '%,42%,.32)',
-          faceFrontOp: flipped ? 0 : 1,
-          faceBackOp: flipped ? 1 : 0,
           flipTf: flipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
           hoverTf: hovered && !flipped ? 'translateY(-5px)' : 'none',
           imgTf: pressed ? 'scale(1.11)' : (hovered ? 'scale(1.045)' : 'scale(1)'),
