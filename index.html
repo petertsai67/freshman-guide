@@ -90,6 +90,7 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
 <meta name="ext-resource-dependency" content="assets/csie-logo.svg" data-resource-id="logo">
 <meta name="ext-resource-dependency" content="assets/sa-logo.png" data-resource-id="saLogo">
 <meta name="ext-resource-dependency" content="assets/act-7tea.png" data-resource-id="act7tea">
+<meta name="ext-resource-dependency" content="assets/act-newwave.png" data-resource-id="actNewwave">
 <meta name="ext-resource-dependency" content="assets/fonts/pixel-subset.ttf" data-resource-id="pixelFont">
 <meta name="ext-resource-dependency" content="assets/fonts/seed-bd-sub.ttf" data-resource-id="seedBold">
 <meta name="ext-resource-dependency" content="assets/fonts/seed-rg-sub.ttf" data-resource-id="seedReg">
@@ -151,7 +152,6 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
     <div ref="{{ paneRef }}" onScroll="{{ onPaneScroll }}" style="position:relative;z-index:5;flex:none;height:{{ paneH }};display:flex;align-items:stretch;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:none">
       <section data-screen-label="Tools" style="flex:none;width:100%;box-sizing:border-box;scroll-snap-align:center;display:flex;flex-direction:column;justify-content:flex-start;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:14px 24px 16px">
           <div style="margin-top:0">
-            <div style="height:4px;width:52px;border-radius:2px;background:#E8794A;margin:0 4px 16px"></div>
             <h3 style="margin:0;padding:0 4px;font-size:24px;line-height:1.2">常用服務</h3>
             <p style="margin:10px 4px 0;font-size:13px;line-height:1.7;color:#6B5A4E">開學後最常用到的系統，點一下直接前往。</p>
             <div style="margin:20px 0 0;display:flex;flex-direction:column;gap:22px">
@@ -342,39 +342,35 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
       </section>
       <section data-screen-label="Activities" style="flex:none;width:100%;box-sizing:border-box;scroll-snap-align:center;display:flex;flex-direction:column;justify-content:center;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:14px 24px 16px">
           <div style="margin-top:0">
-            <div style="height:4px;width:52px;border-radius:2px;background:#E8794A;margin:0 4px 16px"></div>
             <h3 style="margin:0;padding:0 4px;font-size:24px;line-height:1.2">上學期活動推薦</h3>
             <p style="margin:10px 4px 0;font-size:13px;line-height:1.7;color:#6B5A4E">點卡片翻到背面看時間與地點；點卡片外面就翻回來。</p>
             <div ref="{{ actStrip }}" data-actstrip="1" style="margin:20px -24px -20px;padding:14px 24px 50px;display:flex;gap:12px;overflow-x:auto;overflow-y:hidden;touch-action:pan-x;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:none;cursor:grab;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 26px,#000 calc(100% - 26px),transparent 100%);mask-image:linear-gradient(to right,transparent 0,#000 26px,#000 calc(100% - 26px),transparent 100%)">
-              <sc-for list="{{ acts }}" as="a" hint-placeholder-count="1">
-                <div data-actcard="1" onClick="{{ a.flip }}" onMouseEnter="{{ a.enter }}" onMouseLeave="{{ a.leave }}" style="flex:none;width:206px;height:284px;scroll-snap-align:start;cursor:pointer;perspective:1100px;-webkit-tap-highlight-color:transparent;transition:transform .3s cubic-bezier(.32,.72,0,1);transform:{{ a.hoverTf }}">
+              <sc-for list="{{ acts }}" as="a" hint-placeholder-count="2">
+                <div data-actcard="1" onClick="{{ a.flip }}" onMouseEnter="{{ a.enter }}" onMouseLeave="{{ a.leave }}" onPointerDown="{{ a.down }}" onPointerUp="{{ a.up }}" onPointerCancel="{{ a.up }}" style="flex:none;width:214px;height:285px;scroll-snap-align:start;cursor:pointer;perspective:1100px;-webkit-tap-highlight-color:transparent;transition:transform .3s cubic-bezier(.32,.72,0,1);transform:{{ a.hoverTf }}">
                   <div style="position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .68s cubic-bezier(.32,.72,0,1);transform:{{ a.flipTf }}">
 
-                    <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:26px;overflow:hidden;display:flex;flex-direction:column;background:{{ a.frontBg }};box-shadow:inset 0 1.5px 0 rgba(255,255,255,.4),inset 0 0 0 1px rgba(255,255,255,.12),0 14px 32px rgba(44,37,33,.22)">
-                      <div style="flex:none;height:150px;position:relative;background:repeating-linear-gradient(135deg,rgba(251,246,240,.10) 0 9px,rgba(251,246,240,.03) 9px 18px);display:flex;align-items:center;justify-content:center">
-                        <div style="position:absolute;left:0;right:0;bottom:0;height:52%;z-index:1;background:linear-gradient(180deg,rgba(44,37,33,0) 0%,rgba(44,37,33,.42) 100%)"></div>
-                        <sc-if value="{{ a.hasImage }}">
-                          <div role="img" aria-label="{{ a.title }}" style="position:absolute;left:0;top:0;width:100%;height:100%;background-image:url({{ a.image }});background-size:cover;background-position:50% 62%;background-repeat:no-repeat"></div></sc-if>
-
-                      </div>
-                      <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:7px;padding:15px 16px 16px">
-                        <div style="font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:16px;line-height:1.4;color:#FBF6F0">{{ a.title }}</div>
-                        <div style="font-size:11.5px;line-height:1.6;color:rgba(251,246,240,.62)">{{ a.blurb }}</div>
-                        <div style="margin-top:auto;display:flex;align-items:center;gap:7px;font-size:11px;letter-spacing:.06em;color:rgba(251,246,240,.5)"><span>翻到背面</span><svg viewBox="0 0 10 14" style="width:7px;height:10px;display:block;flex:none" aria-hidden="true"><path d="M2.6 3.2 L7.4 7 L2.6 10.8 Z" fill="currentColor" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path></svg></div>
+                    <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;opacity:{{ a.faceFrontOp }};transition:opacity 0s linear .34s,box-shadow .4s ease;border-radius:16px;overflow:hidden;background:transparent;box-shadow:{{ a.frontShadow }}">
+                      <sc-if value="{{ a.hasImage }}">
+                        <div role="img" aria-label="{{ a.title }}" style="position:absolute;left:-0.5px;top:-0.5px;width:calc(100% + 1px);height:calc(100% + 1px);background-image:url({{ a.image }});background-size:cover;background-position:50% 50%;background-repeat:no-repeat;border-radius:16.5px;transform:{{ a.imgTf }};transition:transform .55s cubic-bezier(.32,.72,0,1)"></div>
+                      </sc-if>
+                      <div style="position:absolute;left:0;right:0;bottom:0;height:66%;pointer-events:none;border-radius:0 0 16px 16px;background:{{ a.ovBg }};opacity:{{ a.ovOp }};transition:opacity .4s ease"></div>
+                      <div style="position:absolute;left:0;right:0;bottom:0;pointer-events:none;display:flex;flex-direction:column;gap:7px;padding:0 17px 17px;opacity:{{ a.ovOp }};transform:{{ a.ovTf }};transition:opacity .4s ease,transform .55s cubic-bezier(.32,.72,0,1)">
+                        <div style="font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:17px;line-height:1.35;color:#FBF6F0;text-shadow:0 2px 10px rgba(20,15,12,.5)">{{ a.title }}</div>
+                        <div style="font-size:11.5px;line-height:1.65;color:rgba(251,246,240,.78);text-shadow:0 2px 8px rgba(20,15,12,.45)">{{ a.blurb }}</div>
                       </div>
                     </div>
 
-                    <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;transform:rotateY(180deg);border-radius:26px;overflow:hidden;display:flex;flex-direction:column;gap:10px;padding:20px 18px;background:#F8F2EB;box-shadow:0 14px 32px rgba(44,37,33,.22)">
-                      <div style="font-size:10.5px;line-height:1;letter-spacing:.1em;color:#A8927E">{{ a.tag }}</div>
-                      <div style="font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:17px;line-height:1.45;color:#2C2521">{{ a.title }}</div>
+                    <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;opacity:{{ a.faceBackOp }};transition:opacity 0s linear .34s;transform:rotateY(180deg) translateZ(1px);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;gap:10px;padding:20px 18px;background:{{ a.backBg }};box-shadow:0 14px 32px rgba(44,37,33,.22)">
+                      <div style="font-size:10.5px;line-height:1;letter-spacing:.1em;color:{{ a.accent }}">{{ a.tag }}</div>
+                      <div style="font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:17px;line-height:1.45;color:{{ a.backFg }}">{{ a.title }}</div>
                       <div style="margin-top:6px">
-                        <div style="font-size:10.5px;letter-spacing:.1em;color:#A8927E">活動時間</div>
-                        <div style="margin-top:5px;font-family:'PixelTC','Noto Sans TC',sans-serif;font-size:15px;line-height:1.5;color:#2C2521">{{ a.when }}</div>
-                        <div style="margin-top:4px;font-size:11.5px;line-height:1.6;color:#7A6759">{{ a.place }}</div>
+                        <div style="font-size:10.5px;letter-spacing:.1em;color:{{ a.accent }}">活動時間</div>
+                        <div style="margin-top:5px;font-family:'PixelTC','Noto Sans TC',sans-serif;font-size:15px;line-height:1.5;color:{{ a.backFg }}">{{ a.when }}</div>
+                        <div style="margin-top:4px;font-size:11.5px;line-height:1.6;color:{{ a.backSub }}">{{ a.place }}</div>
                       </div>
                       <div style="margin-top:auto">
                         <sc-if value="{{ a.hasUrl }}">
-                        <a href="{{ a.url }}" target="_blank" rel="noopener" onClick="{{ a.stop }}" style="display:flex;align-items:center;justify-content:center;min-height:42px;border-radius:14px;font-size:14px;letter-spacing:.04em;text-decoration:none;background:linear-gradient(100deg,#F3A972,#E8794A);color:#FFFFFF;transition:transform .28s cubic-bezier(.32,.72,0,1),box-shadow .28s ease;box-shadow:0 8px 20px rgba(232,121,74,.28)" style-hover="transform:scale(1.035);box-shadow:0 12px 26px rgba(232,121,74,.34)">報名</a>
+                        <a href="{{ a.url }}" target="_blank" rel="noopener" onClick="{{ a.stop }}" style="display:flex;align-items:center;justify-content:center;min-height:42px;border-radius:14px;font-size:14px;letter-spacing:.04em;text-decoration:none;background:{{ a.btnBg }};color:{{ a.btnFg }};transition:transform .28s cubic-bezier(.32,.72,0,1),box-shadow .28s ease;box-shadow:{{ a.btnShadow }}" style-hover="transform:scale(1.035);box-shadow:0 12px 26px rgba(232,121,74,.34)">報名</a>
                         </sc-if>
                       </div>
                     </div>
@@ -1233,6 +1229,20 @@ const GLYPH = {
 const KEY = 'stust-csie-freshman-todo-v4';
 const IDS = ['uni', 'five'];
 
+// 從活動海報取主色（避開灰白與過暗），用來配卡片配色
+function actHsl(rgb) {
+  const r = rgb[0] / 255, g = rgb[1] / 255, b = rgb[2] / 255;
+  const mx = Math.max(r, g, b), mn = Math.min(r, g, b), l = (mx + mn) / 2;
+  let h = 0, s = 0;
+  if (mx !== mn) {
+    const d = mx - mn;
+    s = l > .5 ? d / (2 - mx - mn) : d / (mx + mn);
+    h = mx === r ? (g - b) / d + (g < b ? 6 : 0) : mx === g ? (b - r) / d + 2 : (r - g) / d + 4;
+    h *= 60;
+  }
+  return [Math.round(h), Math.round(s * 100), Math.round(l * 100)];
+}
+
 const ACTS = [
   {
     id: 'act-7tea',
@@ -1244,6 +1254,18 @@ const ACTS = [
     when: '10/14 13:00–22:00',
     place: 'M棟4F',
     image: (typeof window !== 'undefined' && (window.__resources || {}).act7tea) || 'assets/act-7tea.png',
+    url: ''
+  },
+  {
+    id: 'act-newwave',
+    tag: '新生',
+    title: '新風作浪',
+    blurb: '新訓好熱又好躁，晚上冷氣開起來跟其他新生一起嗨',
+    date: '09/03',
+    time: '18:00 開始',
+    when: '09/03 18:00 開始',
+    place: 'Y棟三連堂',
+    image: (typeof window !== 'undefined' && (window.__resources || {}).actNewwave) || 'assets/act-newwave.png',
     url: ''
   }
 ];
@@ -2234,7 +2256,43 @@ class Component extends DCLogic {
   footRef = React.createRef();
   labelRefs = [React.createRef(), React.createRef()];
 
+  extractActColors() {
+    ACTS.forEach(a => {
+      if (!a.image) return;
+      const img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.onload = () => {
+        try {
+          const n = 48, cv = document.createElement('canvas');
+          cv.width = n; cv.height = n;
+          const cx = cv.getContext('2d', { willReadFrequently: true });
+          cx.drawImage(img, 0, 0, n, n);
+          const d = cx.getImageData(0, 0, n, n).data, bins = {};
+          for (let i = 0; i < d.length; i += 4) {
+            const r = d[i], g = d[i + 1], b = d[i + 2];
+            const mx = Math.max(r, g, b), mn = Math.min(r, g, b);
+            if (mx === mn) continue;
+            const l = (mx + mn) / 510;
+            const s = l > .5 ? (mx - mn) / (510 - mx - mn) : (mx - mn) / (mx + mn);
+            if (s < .16 || l < .12 || l > .93) continue;
+            const k = (r >> 5) + ',' + (g >> 5) + ',' + (b >> 5);
+            const w = s * (1 - Math.abs(l - .55));
+            const o = bins[k] || (bins[k] = { w: 0, r: 0, g: 0, b: 0, n: 0 });
+            o.w += w; o.r += r; o.g += g; o.b += b; o.n++;
+          }
+          let best = null;
+          for (const k in bins) if (!best || bins[k].w > best.w) best = bins[k];
+          if (!best) return;
+          const rgb = [Math.round(best.r / best.n), Math.round(best.g / best.n), Math.round(best.b / best.n)];
+          this.setState(st => ({ actColors: Object.assign({}, st.actColors, { [a.id]: rgb }) }));
+        } catch (e) {}
+      };
+      img.src = a.image;
+    });
+  }
+
   componentDidMount() {
+    this.extractActColors();
     try {
       const raw = localStorage.getItem(KEY);
       if (raw) {
@@ -3498,15 +3556,39 @@ class Component extends DCLogic {
       acts: ACTS.map(a => {
         const flipped = !!(this.state.flips || {})[a.id];
         const hovered = this.state.actHov === a.id;
+        const pressed = this.state.actPress === a.id;
+        const lit = (hovered || pressed) && !flipped;
+        const rgb = (this.state.actColors || {})[a.id];
+        const hsl = rgb ? actHsl(rgb) : null;
+        const H = hsl ? hsl[0] : 24;
+        const S = hsl ? Math.min(78, Math.max(34, hsl[1])) : 62;
         return {
           key: a.id, tag: a.tag, title: a.title, blurb: a.blurb, when: a.when, place: a.place, url: a.url,
           image: a.image || '', hasImage: !!a.image, hasUrl: !!a.url,
           frontBg: 'linear-gradient(155deg,#3A302A 0%,#2C2521 62%)',
+          ovBg: 'linear-gradient(180deg,hsla(' + H + ',' + S + '%,10%,0) 0%,hsla(' + H + ',' + S + '%,10%,.5) 44%,hsla(' + H + ',' + S + '%,8%,.9) 100%)',
+          frontShadow: lit
+            ? '0 18px 40px hsla(' + H + ',' + S + '%,26%,.42),inset 0 0 0 1px hsla(' + H + ',' + S + '%,74%,.3)'
+            : '0 14px 32px rgba(44,37,33,.22),inset 0 0 0 1px rgba(255,255,255,.12)',
+          backBg: 'linear-gradient(158deg,hsl(' + H + ',' + Math.min(S, 52) + '%,97%) 0%,hsl(' + H + ',' + Math.min(S, 44) + '%,92%) 100%)',
+          accent: 'hsl(' + H + ',' + Math.min(S, 56) + '%,38%)',
+          backFg: '#2C2521',
+          backSub: '#7A6759',
+          btnBg: 'linear-gradient(100deg,hsl(' + H + ',' + S + '%,60%),hsl(' + H + ',' + S + '%,44%))',
+          btnFg: '#FFFFFF',
+          btnShadow: '0 8px 20px hsla(' + H + ',' + S + '%,42%,.32)',
+          faceFrontOp: flipped ? 0 : 1,
+          faceBackOp: flipped ? 1 : 0,
           flipTf: flipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
           hoverTf: hovered && !flipped ? 'translateY(-5px)' : 'none',
+          imgTf: pressed ? 'scale(1.11)' : (hovered ? 'scale(1.045)' : 'scale(1)'),
+          ovOp: lit ? 1 : 0,
+          ovTf: lit ? 'translateY(0)' : 'translateY(10px)',
           flip: () => { if (this._actMoved) return; this.setState(st => ({ flips: (st.flips || {})[a.id] ? {} : { [a.id]: true } })); },
+          down: () => this.setState({ actPress: a.id }),
+          up: () => this.setState(st => (st.actPress === a.id ? { actPress: null } : null)),
           enter: () => this.setState({ actHov: a.id }),
-          leave: () => this.setState({ actHov: null }),
+          leave: () => this.setState(st => ({ actHov: null, actPress: st.actPress === a.id ? null : st.actPress })),
           stop: (ev) => { ev.stopPropagation(); }
         };
       }),
