@@ -7,6 +7,23 @@
 <meta name="description" content="南臺科大新生開學待辦清單：註冊繳費、選課、宿舍、機車證，一頁走完開學前的最後一哩路。">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#EFE7DF">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="新生懶人導航">
+<script>
+// 只在正式部署的頁面註冊（路徑以 / 或 /index.html 結尾），編輯器與單檔版不註冊
+(function () {
+  if (!('serviceWorker' in navigator)) return;
+  var p = location.pathname;
+  if (!(p.slice(-1) === '/' || p.slice(-11) === '/index.html')) return;
+  addEventListener('load', function () {
+    navigator.serviceWorker.register('sw.js').catch(function () {});
+  });
+})();
+</script>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://petertsai67.github.io/freshman-guide/">
 <meta property="og:title" content="南臺新生開學懶人導航">
@@ -869,6 +886,21 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
             <div style="font-size:18px;line-height:1.2">校園地圖</div>
           </div>
           <div style="flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:18px 20px 28px;display:flex;flex-direction:column;gap:16px">
+            <div style="display:grid;grid-template-columns:{{ svcCols }};gap:10px;transition:grid-template-columns .52s cubic-bezier(.32,.72,0,1)">
+              <button onClick="{{ svcAtm }}" style="container-type:inline-size;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;min-height:84px;border:1px solid rgba(44,37,33,.12);border-radius:18px;background:{{ atmBg }};color:{{ atmFg }};box-shadow:{{ atmSh }};cursor:pointer;transition:transform .26s cubic-bezier(.32,.72,0,1),background .3s ease,color .3s ease,box-shadow .3s ease" style-hover="transform:translateY(-3px)" style-active="transform:scale(.97)">
+                <span data-svcicon="1" style="display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" style="width:clamp(19px,17cqw,26px);height:clamp(19px,17cqw,26px);display:block"><rect x="3.2" y="5.2" width="17.6" height="13.6" rx="2.4" stroke-width="1.9"></rect><path d="M3.2 9.6 H20.8" stroke-width="1.9"></path><rect x="6.4" y="12.4" width="6.4" height="3.6" rx="1" fill="currentColor" stroke="none"></rect></svg></span>
+                <span style="font-size:clamp(9.5px,8cqw,12.5px);letter-spacing:.04em;white-space:nowrap">ATM</span>
+              </button>
+              <button onClick="{{ svcCvs }}" style="container-type:inline-size;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;min-height:84px;border:1px solid rgba(44,37,33,.12);border-radius:18px;background:{{ cvsBg }};color:{{ cvsFg }};box-shadow:{{ cvsSh }};cursor:pointer;transition:transform .26s cubic-bezier(.32,.72,0,1),background .3s ease,color .3s ease,box-shadow .3s ease" style-hover="transform:translateY(-3px)" style-active="transform:scale(.97)">
+                <span data-svcicon="1" style="display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" style="width:clamp(19px,17cqw,26px);height:clamp(19px,17cqw,26px);display:block"><path d="M4 9.4 L5.6 4.6 H18.4 L20 9.4" stroke-width="1.9" stroke-linejoin="round"></path><rect x="4" y="9.4" width="16" height="10" rx="1.8" stroke-width="1.9"></rect><path d="M9 19.4 V13.6 H15 V19.4" stroke-width="1.9"></path></svg></span>
+                <span style="font-size:clamp(9.5px,8cqw,12.5px);letter-spacing:.04em;white-space:nowrap">超商</span>
+              </button>
+              <button onClick="{{ svcMoto }}" style="container-type:inline-size;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;min-height:84px;border:1px solid rgba(44,37,33,.12);border-radius:18px;background:{{ motoBg }};color:{{ motoFg }};box-shadow:{{ motoSh }};cursor:pointer;transition:transform .26s cubic-bezier(.32,.72,0,1),background .3s ease,color .3s ease,box-shadow .3s ease" style-hover="transform:translateY(-3px)" style-active="transform:scale(.97)">
+                <span data-svcicon="1" style="display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" style="width:clamp(19px,17cqw,26px);height:clamp(19px,17cqw,26px);display:block"><circle cx="5" cy="16.6" r="3.2" stroke-width="1.8"></circle><circle cx="19" cy="16.6" r="3.2" stroke-width="1.8"></circle><path d="M8.2 16.6 H13 l3.2-5.2h-4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12.2 11.4 9.6 7.6 H7.2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16.2 11.4 18.4 15" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+                <span style="font-size:clamp(9.5px,8cqw,12.5px);letter-spacing:.04em;white-space:nowrap">機車停車場</span>
+              </button>
+            </div>
+
             <div ref="{{ mapWrap }}" onPointerDown="{{ mapDown }}" onPointerMove="{{ mapMove }}" onPointerUp="{{ mapUp }}" onPointerCancel="{{ mapUp }}" style="position:relative;flex:none;width:100%;aspect-ratio:1/1;border-radius:22px;overflow:hidden;background:#F7F2E8;border:1px solid rgba(44,37,33,.14);touch-action:none;cursor:{{ mapCur }}">
               <img ref="{{ mapImg }}" src="assets/campus-map-sq.png" alt="南臺科大校園地圖" draggable="false" style="position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;transform-origin:50% 50%;-webkit-user-drag:none;user-select:none;pointer-events:none" />
               <div ref="{{ mapLayer }}" style="position:absolute;left:0;top:0;width:100%;height:100%;transform-origin:50% 50%;pointer-events:none;z-index:2">
@@ -878,6 +910,15 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
                     <div style="position:absolute;left:50%;top:50%;width:13px;height:13px;margin:-6.5px 0 0 -6.5px;border-radius:50%;background:#E8794A;box-shadow:0 0 0 3px rgba(251,246,240,.92)"></div>
                   </div>
                 </sc-if>
+                <div ref="{{ svcPinsRef }}">
+                  <sc-for list="{{ svcPins }}" as="sp" hint-placeholder-count="0">
+                    <div style="position:absolute;left:{{ sp.l }};top:{{ sp.t }};width:44px;height:44px;transform:translate(-50%,-50%);transform-origin:50% 50%">
+                      <div style="position:absolute;left:0;top:0;width:100%;height:100%;border-radius:50%;border:2.5px solid #E8794A;animation:pinpulse 1.9s ease-out infinite"></div>
+                      <div style="position:absolute;left:50%;top:50%;width:13px;height:13px;margin:-6.5px 0 0 -6.5px;border-radius:50%;background:#E8794A;box-shadow:0 0 0 3px rgba(251,246,240,.92)"></div>
+                      <div style="position:absolute;left:50%;top:calc(50% + 12px);transform:translateX(-50%);white-space:nowrap;padding:3px 7px;border-radius:999px;background:rgba(44,37,33,.88);color:#FBF6F0;font-size:9.5px;letter-spacing:.03em">{{ sp.name }}</div>
+                    </div>
+                  </sc-for>
+                </div>
               </div>
               <sc-if value="{{ canReset }}">
                 <button onClick="{{ mapReset }}" style="position:absolute;left:12px;top:12px;z-index:3;display:flex;align-items:center;gap:6px;min-height:34px;padding:0 12px;border:0;outline:none;-webkit-tap-highlight-color:transparent;border-radius:999px;cursor:pointer;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.03em;background:rgba(251,246,240,.92);color:#6B5A4E;box-shadow:0 6px 16px rgba(44,37,33,.18);transition:background .2s ease,transform .24s cubic-bezier(.32,.72,0,1)" style-hover="background:#FFFFFF;transform:translateY(-1px)" style-active="transform:scale(.97)">
@@ -889,7 +930,7 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
                 <div style="position:absolute;left:10px;right:10px;bottom:10px;z-index:4;display:flex;align-items:center;gap:8px;padding:11px 11px 11px 14px;border-radius:18px;background:rgba(251,246,240,.97);box-shadow:0 12px 28px rgba(44,37,33,.26);animation:asknote .28s cubic-bezier(.25,.9,.3,1) both">
                   <div style="flex:1;min-width:0;font-size:12.5px;line-height:1.5;color:#2C2521;text-wrap:pretty">{{ askText }}</div>
                   <sc-if value="{{ askHasUrl }}">
-                    <button onClick="{{ askGo }}" style="flex:none;min-height:38px;padding:0 15px;border:0;outline:none;-webkit-tap-highlight-color:transparent;border-radius:999px;cursor:pointer;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.04em;color:#FFFFFF;background:linear-gradient(100deg,#F3A972,#E8794A);box-shadow:0 8px 18px rgba(232,121,74,.3);transition:background .35s ease,color .3s ease,transform .35s cubic-bezier(.32,.72,0,1),box-shadow .35s ease" style-hover="transform:scale(1.03)" style-active="transform:scale(.985)">導航</button>
+                    <button onClick="{{ askGo }}" style="flex:none;min-height:38px;padding:0 15px;border:0;outline:none;-webkit-tap-highlight-color:transparent;border-radius:999px;cursor:pointer;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.04em;color:#FFFFFF;background:linear-gradient(100deg,#F3A972,#E8794A);box-shadow:0 8px 18px rgba(232,121,74,.3);transition:background .35s ease,color .3s ease,transform .35s cubic-bezier(.32,.72,0,1),box-shadow .35s ease" style-hover="transform:scale(1.03)" style-active="transform:scale(.985)">{{ askGoLabel }}</button>
                   </sc-if>
                   <button onClick="{{ askNo }}" style="flex:none;min-height:38px;padding:0 13px;border:0;outline:none;-webkit-tap-highlight-color:transparent;border-radius:999px;cursor:pointer;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.04em;color:#6B5A4E;background:rgba(44,37,33,.08);transition:background .35s ease,color .3s ease,transform .35s cubic-bezier(.32,.72,0,1),box-shadow .35s ease" style-hover="background:rgba(44,37,33,.14);transform:scale(1.03)" style-active="transform:scale(.985)">{{ askNoLabel }}</button>
                 </div>
@@ -904,28 +945,12 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
               </div>
             </div>
 
-            <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px">
-              <a href="https://www.google.com/maps/d/viewer?mid=1mn9coDoifZ81sMcskrE1UHrbh6z8l2c" target="_blank" rel="noopener" onClick="{{ svcTap }}" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:88px;border:1px solid rgba(44,37,33,.12);border-radius:18px;background:#FFFFFF;color:#2C2521;text-decoration:none;cursor:pointer;transition:transform .26s cubic-bezier(.32,.72,0,1),background .22s ease,color .22s ease" style-hover="transform:translateY(-3px);background:#2C2521;color:#FBF6F0" style-active="transform:scale(.97)">
-                <span data-svcicon="1" style="display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><rect x="3.2" y="5.2" width="17.6" height="13.6" rx="2.4" stroke-width="1.9"></rect><path d="M3.2 9.6 H20.8" stroke-width="1.9"></path><rect x="6.4" y="12.4" width="6.4" height="3.6" rx="1" fill="currentColor" stroke="none"></rect></svg></span>
-                <span style="font-size:12.5px;letter-spacing:.04em">ATM</span>
-              </a>
-              <a href="https://www.google.com/maps/d/viewer?mid=1xmU-ViYlFrCC_iqL_rryJuBiTxIPgWo" target="_blank" rel="noopener" onClick="{{ svcTap }}" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:88px;border:1px solid rgba(44,37,33,.12);border-radius:18px;background:#FFFFFF;color:#2C2521;text-decoration:none;cursor:pointer;transition:transform .26s cubic-bezier(.32,.72,0,1),background .22s ease,color .22s ease" style-hover="transform:translateY(-3px);background:#2C2521;color:#FBF6F0" style-active="transform:scale(.97)">
-                <span data-svcicon="1" style="display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 9.4 L5.6 4.6 H18.4 L20 9.4" stroke-width="1.9" stroke-linejoin="round"></path><rect x="4" y="9.4" width="16" height="10" rx="1.8" stroke-width="1.9"></rect><path d="M9 19.4 V13.6 H15 V19.4" stroke-width="1.9"></path></svg></span>
-                <span style="font-size:12.5px;letter-spacing:.04em">超商</span>
-              </a>
-              <a href="https://www.google.com/maps/d/viewer?mid=1mLDkulZpvqnK59yS9c4cfxFAqFOejVY" target="_blank" rel="noopener" onClick="{{ svcTap }}" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:88px;border:1px solid rgba(44,37,33,.12);border-radius:18px;background:#FFFFFF;color:#2C2521;text-decoration:none;cursor:pointer;transition:transform .26s cubic-bezier(.32,.72,0,1),background .22s ease,color .22s ease" style-hover="transform:translateY(-3px);background:#2C2521;color:#FBF6F0" style-active="transform:scale(.97)">
-                <span data-svcicon="1" style="display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="5" cy="16.6" r="3.2" stroke-width="1.8"></circle><circle cx="19" cy="16.6" r="3.2" stroke-width="1.8"></circle><path d="M8.2 16.6 H13 l3.2-5.2h-4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12.2 11.4 9.6 7.6 H7.2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16.2 11.4 18.4 15" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
-                <span style="font-size:12.5px;letter-spacing:.04em">機車停車場</span>
-              </a>
-            </div>
-
             <div style="display:flex;flex-direction:column;gap:10px">
-              <button onClick="{{ legendToggle }}" style="display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;min-height:46px;padding:0 16px;border:1px solid rgba(44,37,33,.12);border-radius:16px;background:#FFFFFF;color:#2C2521;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:13.5px;letter-spacing:.03em;cursor:pointer;transition:background .22s ease" style-hover="background:#F7F2E8">
+              <div style="display:flex;align-items:center;gap:10px;padding:0 4px;color:#6B5A4E;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:13.5px;letter-spacing:.03em">
                 <span>{{ legendLabel }}</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex:none;transform:{{ chevTf }};transition:transform .46s cubic-bezier(.32,.72,0,1)"><path d="M6 9.5 L12 15.5 L18 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-              </button>
-              <div style="overflow:hidden;height:{{ legendPanelH }};transition:height .46s cubic-bezier(.32,.72,0,1)">
-                <div ref="{{ legendInner }}" style="transform-origin:20% 0;transition:opacity .26s ease,transform .46s cubic-bezier(.32,.72,0,1);opacity:{{ legendOp }};transform:{{ legendTf }}">
+              </div>
+              <div>
+                <div>
                 <div style="max-height:min(46vh,300px);overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;border:1px solid rgba(44,37,33,.12);border-radius:18px;background:#FFFFFF">
                 <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;padding:14px">
                   <sc-for list="{{ bldLegend }}" as="b" hint-placeholder-count="9">
@@ -943,6 +968,18 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
           </div>
         </div>
        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ canInstall }}">
+    <div style="position:fixed;left:14px;right:14px;bottom:18px;z-index:55;display:flex;justify-content:center;pointer-events:none">
+      <div style="pointer-events:auto;display:flex;align-items:center;gap:10px;max-width:420px;width:100%;padding:11px 12px 11px 16px;border-radius:20px;background:#2C2521;color:#FBF6F0;box-shadow:0 14px 32px rgba(44,37,33,.32);animation:clearpop .42s cubic-bezier(.25,.9,.3,1) both">
+        <div style="flex:1;min-width:0;font-size:12.5px;line-height:1.5;letter-spacing:.02em">把這頁裝成 App，離線也能開</div>
+        <button onClick="{{ doInstall }}" style="flex:none;min-height:38px;padding:0 15px;border:0;outline:none;border-radius:999px;cursor:pointer;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.04em;color:#FFFFFF;background:linear-gradient(100deg,#F3A972,#E8794A);box-shadow:0 8px 18px rgba(232,121,74,.3);transition:transform .3s cubic-bezier(.32,.72,0,1)" style-hover="transform:scale(1.04)" style-active="transform:scale(.97)">安裝</button>
+        <button onClick="{{ hideInstall }}" aria-label="不用了" style="flex:none;width:34px;height:34px;display:flex;align-items:center;justify-content:center;border:0;outline:none;border-radius:999px;cursor:pointer;color:rgba(251,246,240,.66);background:rgba(251,246,240,.1);transition:background .22s ease,color .22s ease" style-hover="background:rgba(251,246,240,.2);color:#FBF6F0">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6 L18 18 M18 6 L6 18" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"></path></svg>
+        </button>
       </div>
     </div>
   </sc-if>
@@ -1336,6 +1373,44 @@ const BUILDING_NAMES = {
   H3: { name: '第三學生宿舍', alias: ['宿舍'] },
   H5: { name: '第五學生宿舍（國際會館）', alias: ['宿舍', '國際會館'] },
   H6: { name: '第六學生宿舍・幼兒園', alias: ['宿舍', '幼兒園'] }
+};
+
+// 校內服務地點（依教務處「校內自動提款機」與新生專區「校內商店與餐廳」公告）
+const SERVICE_SPOTS = {
+  atm: {
+    label: 'ATM',
+    url: 'https://www.google.com/maps/d/viewer?mid=1mn9coDoifZ81sMcskrE1UHrbh6z8l2c',
+    spots: [
+      { x: 0.292, y: 0.270, name: 'C 棟 1F' },
+      { x: 0.436, y: 0.301, name: 'L 棟行政大樓' },
+      { x: 0.164, y: 0.325, name: 'S 棟進修部' },
+      { x: 0.847, y: 0.229, name: 'W 棟磅礡館' },
+      { x: 0.442, y: 0.717, name: '六宿郵局' }
+    ],
+    text: '已標出校內 ATM：C 棟、L 棟行政大樓（彰銀・土銀）、S 棟、W 棟磅礡館、六宿一樓（郵局）。要開 Google 地圖看嗎？'
+  },
+  cvs: {
+    label: '超商',
+    url: 'https://www.google.com/maps/d/viewer?mid=1xmU-ViYlFrCC_iqL_rryJuBiTxIPgWo',
+    spots: [
+      { x: 0.167, y: 0.263, name: '7-11 S107' },
+      { x: 0.847, y: 0.229, name: '7-11 W 棟 1F' },
+      { x: 0.445, y: 0.704, name: '7-11 六宿' }
+    ],
+    text: '已標出校內 7-11：S107、W 棟一樓（還有星巴克）、六宿一樓。要開 Google 地圖看營業時間嗎？'
+  },
+  moto: {
+    label: '機車停車場',
+    url: 'https://www.google.com/maps/d/viewer?mid=1mLDkulZpvqnK59yS9c4cfxFAqFOejVY',
+    spots: [
+      { x: 0.159, y: 0.117, name: '水資源回收中心旁' },
+      { x: 0.100, y: 0.322, name: 'P 棟停車場' },
+      { x: 0.165, y: 0.322, name: 'S 棟旁' },
+      { x: 0.847, y: 0.232, name: 'W 棟旁' },
+      { x: 0.436, y: 0.715, name: '六宿停車場' }
+    ],
+    text: '已標出校內機車停車場：P 棟、S 棟旁、W 棟旁、六宿，以及水資源回收中心旁。要開 Google 地圖看其他停車區嗎？'
+  }
 };
 
 // 棟別 → 校園地圖上的定位（x/y 為圖片正規化坐標，z 為放大倍率）
@@ -1782,6 +1857,7 @@ class Component extends DCLogic {
   mapImg = React.createRef();
   mapLayer = React.createRef();
   mapPin = React.createRef();
+  svcPinsRef = React.createRef();
   legendInner = React.createRef();
 
   // 圖片的 transform 直接寫到 DOM：翻卡遮罩展開前這棵子樹是凍結的，
@@ -1799,6 +1875,11 @@ class Component extends DCLogic {
       el.style.transform = tf;
     });
     const pin = this.mapPin.current;
+    const sp = this.svcPinsRef.current;
+    if (sp) Array.prototype.forEach.call(sp.children, (ch) => {
+      ch.style.transition = anim ? ease : 'none';
+      ch.style.transform = 'translate(-50%,-50%) scale(' + (1 / z).toFixed(3) + ')';
+    });
     if (pin) {
       pin.style.transition = anim ? ease : 'none';
       pin.style.transform = 'translate(-50%,-50%) scale(' + (1 / z).toFixed(3) + ')';
@@ -1817,9 +1898,23 @@ class Component extends DCLogic {
     this._pinch = null;
     this._mapPts.clear();
     clearTimeout(this._askT);
-    this.setState({ mapZ: c.z, mapX: c.x, mapY: c.y, pin: code, askBld: null }, () => {
+    this.setState({ mapZ: c.z, mapX: c.x, mapY: c.y, pin: code, askBld: null, svc: null, askSvc: null }, () => {
       this.applyMap(true, 440);
       this._askT = setTimeout(() => this.setState({ askBld: code }), 400);
+    });
+  };
+
+  // 校內服務（ATM／超商／機車停車場）：先在地圖標點，再問要不要開 Google 我的地圖
+  focusSvc = (key) => {
+    const s = SERVICE_SPOTS[key];
+    if (!s) return;
+    this._mapDrag = null;
+    this._pinch = null;
+    this._mapPts.clear();
+    clearTimeout(this._askT);
+    this.setState({ mapZ: 1, mapX: 0, mapY: 0, pin: null, askBld: null, svc: key, askSvc: null }, () => {
+      this.applyMap(true, 440);
+      this._askT = setTimeout(() => this.setState({ askSvc: key }), 420);
     });
   };
 
@@ -1827,7 +1922,7 @@ class Component extends DCLogic {
     this._mapDrag = null;
     this._pinch = null;
     this._mapPts.clear();
-    this.setState({ mapZ: 1, mapX: 0, mapY: 0, askBld: null }, () => this.applyMap(true, 420));
+    this.setState({ mapZ: 1, mapX: 0, mapY: 0, askBld: null, askSvc: null }, () => this.applyMap(true, 420));
   };
 
   clampMap(z, x, y) {
@@ -1922,7 +2017,7 @@ class Component extends DCLogic {
     if (!el || this.state.mp) return;
     const r = el.getBoundingClientRect();
     document.body.style.overflow = 'hidden';
-    this.setState({ mp: 'in', mpNoAnim: false, mapZ: 1, mapX: 0, mapY: 0, pin: null, askBld: null, mpRect: { l: r.left, t: r.top, w: r.width, h: r.height } });
+    this.setState({ mp: 'in', mpNoAnim: false, mapZ: 1, mapX: 0, mapY: 0, pin: null, askBld: null, svc: null, askSvc: null, mpRect: { l: r.left, t: r.top, w: r.width, h: r.height } });
     this._mapPts.clear(); this._pinch = null; this._mapDrag = null;
     requestAnimationFrame(() => this.applyMap(false));
     requestAnimationFrame(() => requestAnimationFrame(() => {
@@ -1938,7 +2033,7 @@ class Component extends DCLogic {
     this.setState({ mp: 'open', mpNoAnim: true });
     requestAnimationFrame(() => requestAnimationFrame(() => {
       this.setState({ mp: 'in', mpNoAnim: false });
-      this._mpT = setTimeout(() => { this.setState({ mp: null, mapZ: 1, mapX: 0, mapY: 0, pin: null, askBld: null }); document.body.style.overflow = ''; this.scrollLock(!this.state.started); this.bgQuiet(false); }, 700);
+      this._mpT = setTimeout(() => { this.setState({ mp: null, mapZ: 1, mapX: 0, mapY: 0, pin: null, askBld: null, svc: null, askSvc: null }); document.body.style.overflow = ''; this.scrollLock(!this.state.started); this.bgQuiet(false); }, 700);
     }));
   };
 
@@ -2291,7 +2386,41 @@ class Component extends DCLogic {
     });
   }
 
+  // 「加到主畫面」：Chrome/Edge 會丟 beforeinstallprompt，接住它自己出提示
+  _installEvt = null;
+  initInstall() {
+    const standalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+    if (standalone) return;
+    let hid = false;
+    try { hid = localStorage.getItem('stust_install_hide') === '1'; } catch (e) {}
+    if (hid) return;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      this._installEvt = e;
+      this.setState({ canInstall: true });
+    });
+    window.addEventListener('appinstalled', () => {
+      this._installEvt = null;
+      this.setState({ canInstall: false });
+      this.flash('已加到主畫面');
+    });
+  }
+
+  doInstall = () => {
+    const e = this._installEvt;
+    if (!e) return;
+    this._installEvt = null;
+    this.setState({ canInstall: false });
+    e.prompt();
+  };
+
+  hideInstall = () => {
+    try { localStorage.setItem('stust_install_hide', '1'); } catch (err) {}
+    this.setState({ canInstall: false });
+  };
+
   componentDidMount() {
+    this.initInstall();
     this.extractActColors();
     try {
       const raw = localStorage.getItem(KEY);
@@ -3212,20 +3341,52 @@ class Component extends DCLogic {
       pinT: (((BUILDING_FOCUS[this.state.pin] || {}).y || 0) * 100).toFixed(2) + '%',
       canReset: (this.state.mapZ || 1) > 1.02,
       mapReset: this.mapReset,
-      askOpen: !!this.state.askBld,
-      askHasUrl: !!(this.state.askBld && BUILDING_LINKS[this.state.askBld]),
-      askNoLabel: (this.state.askBld && BUILDING_LINKS[this.state.askBld]) ? '不用' : '知道了',
-      askText: this.state.askBld
+      askOpen: !!(this.state.askBld || this.state.askSvc),
+      askHasUrl: !!((this.state.askBld && BUILDING_LINKS[this.state.askBld]) || (this.state.askSvc && (SERVICE_SPOTS[this.state.askSvc] || {}).url)),
+      askGoLabel: this.state.askSvc ? '開地圖' : '導航',
+      canInstall: !!this.state.canInstall,
+      doInstall: this.doInstall,
+      hideInstall: this.hideInstall,
+      svcPinsRef: this.svcPinsRef,
+      svcPins: ((SERVICE_SPOTS[this.state.svc] || {}).spots || []).map((s, i) => ({
+        key: this.state.svc + '-' + i,
+        name: s.name,
+        l: (s.x * 100).toFixed(2) + '%',
+        t: (s.y * 100).toFixed(2) + '%'
+      })),
+      svcCols: this.state.svc === 'atm' ? '2.3fr 1fr 1fr' : (this.state.svc === 'cvs' ? '1fr 2.3fr 1fr' : (this.state.svc === 'moto' ? '1fr 1fr 2.3fr' : '1fr 1fr 1fr')),
+      atmBg: this.state.svc === 'atm' ? '#2C2521' : '#FFFFFF',
+      atmFg: this.state.svc === 'atm' ? '#FBF6F0' : '#2C2521',
+      atmSh: this.state.svc === 'atm' ? '0 10px 22px rgba(44,37,33,.22)' : 'none',
+      cvsBg: this.state.svc === 'cvs' ? '#2C2521' : '#FFFFFF',
+      cvsFg: this.state.svc === 'cvs' ? '#FBF6F0' : '#2C2521',
+      cvsSh: this.state.svc === 'cvs' ? '0 10px 22px rgba(44,37,33,.22)' : 'none',
+      motoBg: this.state.svc === 'moto' ? '#2C2521' : '#FFFFFF',
+      motoFg: this.state.svc === 'moto' ? '#FBF6F0' : '#2C2521',
+      motoSh: this.state.svc === 'moto' ? '0 10px 22px rgba(44,37,33,.22)' : 'none',
+      svcAtm: (e) => { this.svcTap(e); this.focusSvc('atm'); },
+      svcCvs: (e) => { this.svcTap(e); this.focusSvc('cvs'); },
+      svcMoto: (e) => { this.svcTap(e); this.focusSvc('moto'); },
+      askNoLabel: this.state.askSvc ? '不用' : ((this.state.askBld && BUILDING_LINKS[this.state.askBld]) ? '不用' : '知道了'),
+      askText: this.state.askSvc
+        ? ((SERVICE_SPOTS[this.state.askSvc] || {}).text || '')
+        : this.state.askBld
         ? (BUILDING_LINKS[this.state.askBld]
           ? '已定位 ' + this.state.askBld + ' 棟' + ((BUILDING_NAMES[this.state.askBld] || {}).name ? '（' + BUILDING_NAMES[this.state.askBld].name + '）' : '') + '，要開啟 Google Maps 導航嗎？'
           : '已定位 ' + this.state.askBld + ' 棟，目前尚無精準導航資料。')
         : '',
       askGo: () => {
+        if (this.state.askSvc) {
+          const u = (SERVICE_SPOTS[this.state.askSvc] || {}).url;
+          if (u) window.open(u, '_blank', 'noopener');
+          this.setState({ askSvc: null });
+          return;
+        }
         const c = this.state.askBld, u = c && BUILDING_LINKS[c];
         if (u) window.open(u, '_blank', 'noopener');
         this.setState({ askBld: null });
       },
-      askNo: () => this.setState({ askBld: null }),
+      askNo: () => this.setState({ askBld: null, askSvc: null }),
       legendInner: this.legendInner,
       legendPanelH: this.state.legendOpen ? ((this.state.legendH || 0) ? (this.state.legendH + 'px') : 'auto') : '0px',
       legendOp: this.state.legendOpen ? 1 : 0,

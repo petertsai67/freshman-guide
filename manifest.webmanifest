@@ -1,0 +1,21 @@
+{
+  "id": "./",
+  "name": "南臺新生開學懶人導航",
+  "short_name": "新生懶人導航",
+  "description": "南臺科大新生開學待辦清單：註冊繳費、選課、宿舍、機車證、校園地圖，一頁走完開學前的最後一哩路。",
+  "lang": "zh-Hant-TW",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "background_color": "#EFE7DF",
+  "theme_color": "#EFE7DF",
+  "categories": ["education", "utilities"],
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
