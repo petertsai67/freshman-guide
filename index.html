@@ -568,6 +568,26 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
           <div style="font-size:11px;color:#7A6759;letter-spacing:.08em">{{ doneLabel }}</div>
         </div>
 
+        <sc-if value="{{ hasSoon }}">
+          <div style="margin-top:18px;border:1px solid rgba(44,37,33,.12);border-radius:22px;background:#FFFFFF;overflow:hidden">
+            <div style="display:flex;align-items:center;gap:8px;padding:14px 18px 12px">
+              <span style="width:7px;height:7px;border-radius:50%;background:#E8794A;animation:pulseline 1.8s ease-in-out infinite"></span>
+              <div style="flex:1;min-width:0;font-size:13px;letter-spacing:.03em;color:#2C2521">最近要辦的</div>
+              <div style="font-size:11px;letter-spacing:.06em;color:#7A6759">{{ soonNote }}</div>
+            </div>
+            <div style="display:flex;flex-direction:column">
+              <sc-for list="{{ soon }}" as="s" hint-placeholder-count="2">
+                <button onClick="{{ s.go }}" style="display:flex;align-items:center;gap:10px;width:100%;min-height:52px;padding:10px 18px;border:0;border-top:1px solid rgba(44,37,33,.08);outline:none;-webkit-tap-highlight-color:transparent;background:transparent;text-align:left;font-weight:400;cursor:pointer;transition:background .2s ease" style-hover="background:#F8F2EB" style-active="background:#F2E9DE">
+                  <span style="flex:none;font-family:'Rubik','LINE Seed TW',sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.04em;color:#A8927E;min-width:34px">{{ s.due }}</span>
+                  <span style="flex:1;min-width:0;font-size:13.5px;line-height:1.45;color:#2C2521">{{ s.title }}</span>
+                  <span style="flex:none;padding:4px 10px;border-radius:999px;font-family:'LINE Seed TW','Noto Sans TC',sans-serif;font-weight:700;font-size:11px;letter-spacing:.04em;color:{{ s.fg }};background:{{ s.bg }}">{{ s.left }}</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex:none;color:#C4B7A8"><path d="M9.5 5.5 L16.5 12 L9.5 18.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </button>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
         <div ref="{{ qCard }}" style="margin-top:18px;border-radius:24px;background:#F8F2EB;padding:20px 20px;display:flex;flex-direction:column;gap:16px">
           <div style="font-size:12px;line-height:1.7;color:#7A6759">回答下面幾題，清單只留下跟你有關的項目。</div>
           <sc-for list="{{ branchQs }}" as="q" hint-placeholder-count="2">
@@ -795,7 +815,7 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
       <div style="max-width:520px;margin:0 auto;padding-top:18px;font-size:11.5px;line-height:1.85;color:#8A7666;text-align:center;text-wrap:pretty">本站為南臺科大資工系學會學生自製，非校方官方網站。本站不蒐集個人資料，勾選紀錄僅儲存於你自己的瀏覽器。本站使用 Google Analytics 進行匿名流量統計。所有日期與規定以校方公告為準。</div>
       <div style="max-width:520px;margin:0 auto;padding-top:8px;font-size:11.5px;line-height:1.85;color:#8A7666;text-align:center;text-wrap:pretty">發現錯誤或有東西該補，請到 IG @stust_csie_sa 私訊我們。</div>
       <div style="display:flex;justify-content:center;padding-top:16px"><img src="assets/csie-logo.svg" alt="南臺科大資訊工程系學會" style="height:26px;width:auto;display:block;opacity:.85;filter:brightness(0) saturate(100%) invert(11%) sepia(12%) saturate(680%) hue-rotate(340deg) brightness(94%) contrast(88%)" /></div>
-      <div style="padding-top:14px;font-size:11px;line-height:1.8;letter-spacing:.06em;color:#8A7666;opacity:.8;text-align:center">更新版本v22</div>
+      <div style="padding-top:14px;font-size:11px;line-height:1.8;letter-spacing:.06em;color:#8A7666;opacity:.8;text-align:center">更新版本v23</div>
     </div>
   </div>
 
@@ -904,7 +924,7 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
             </button>
             <div style="font-size:18px;line-height:1.2">校園地圖</div>
           </div>
-          <div style="flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:18px 20px 28px;display:flex;flex-direction:column;gap:16px">
+          <div ref="{{ mapScrollRef }}" style="flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:18px 20px 28px;display:flex;flex-direction:column;gap:16px">
             <div style="display:grid;grid-template-columns:{{ svcCols }};gap:10px;transition:grid-template-columns .52s cubic-bezier(.32,.72,0,1)">
               <button onClick="{{ svcAtm }}" style="container-type:inline-size;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;min-height:84px;border:1px solid rgba(44,37,33,.12);border-radius:18px;background:{{ atmBg }};color:{{ atmFg }};box-shadow:{{ atmSh }};cursor:pointer;transition:transform .26s cubic-bezier(.32,.72,0,1),background .3s ease,color .3s ease,box-shadow .3s ease" style-hover="transform:translateY(-3px)" style-active="transform:scale(.97)">
                 <span data-svcicon="1" style="display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" style="width:clamp(19px,17cqw,26px);height:clamp(19px,17cqw,26px);display:block"><rect x="3.2" y="5.2" width="17.6" height="13.6" rx="2.4" stroke-width="1.9"></rect><path d="M3.2 9.6 H20.8" stroke-width="1.9"></path><rect x="6.4" y="12.4" width="6.4" height="3.6" rx="1" fill="currentColor" stroke="none"></rect></svg></span>
@@ -927,8 +947,16 @@ button{font-family:inherit;font-weight:700;cursor:pointer}
                   <div ref="{{ mapPin }}" style="position:absolute;left:{{ pinL }};top:{{ pinT }};width:44px;height:44px;transform:translate(-50%,-50%);transform-origin:50% 50%">
                     <div style="position:absolute;left:0;top:0;width:100%;height:100%;border-radius:50%;border:2.5px solid #E8794A;animation:pinpulse 1.9s ease-out infinite"></div>
                     <div style="position:absolute;left:50%;top:50%;width:13px;height:13px;margin:-6.5px 0 0 -6.5px;border-radius:50%;background:#E8794A;box-shadow:0 0 0 3px rgba(251,246,240,.92)"></div>
+                    <div style="position:absolute;left:50%;top:calc(50% + 12px);transform:translateX(-50%);white-space:nowrap;padding:3px 8px;border-radius:999px;background:rgba(44,37,33,.88);color:#FBF6F0;font-size:9.5px;letter-spacing:.03em">{{ pinLabel }}</div>
                   </div>
                 </sc-if>
+                <div ref="{{ bldSpotsRef }}">
+                  <sc-for list="{{ bldSpots }}" as="hs" hint-placeholder-count="0">
+                    <div style="position:absolute;left:{{ hs.l }};top:{{ hs.t }};width:2.5%;height:2.5%;transform:translate(-50%,-50%) scale(2.7);transform-origin:50% 50%">
+                      <div data-bldspot="{{ hs.key }}" title="{{ hs.label }}" style="width:100%;height:100%;border:1.5px solid rgba(29,78,143,.45);border-radius:50%;background:rgba(29,78,143,.16);pointer-events:auto;cursor:pointer;transition:background .22s ease,border-color .22s ease" style-hover="background:rgba(29,78,143,.34);border-color:#1D4E8F"></div>
+                    </div>
+                  </sc-for>
+                </div>
                 <div ref="{{ svcPinsRef }}">
                   <sc-for list="{{ svcPins }}" as="sp" hint-placeholder-count="0">
                     <div style="position:absolute;left:{{ sp.l }};top:{{ sp.t }};width:44px;height:44px;transform:translate(-50%,-50%);transform-origin:50% 50%">
@@ -1447,7 +1475,7 @@ const BUILDING_FOCUS = {
   L: { x: 0.403, y: 0.245, z: 2.3 },
   M: { x: 0.404, y: 0.483, z: 2.3 },
   N: { x: 0.619, y: 0.234, z: 2.8 },
-  O: { x: 0.524, y: 0.801, z: 2.8 },
+  O: { x: 0.521, y: 0.784, z: 2.8 },
   P: { x: 0.111, y: 0.286, z: 2.8 },
   Q: { x: 0.492, y: 0.054, z: 2.8 },
   R: { x: 0.536, y: 0.105, z: 2.8 },
@@ -1463,7 +1491,7 @@ const BUILDING_FOCUS = {
   H2: { x: 0.683, y: 0.551, z: 2.8 },
   H3: { x: 0.194, y: 0.514, z: 2.8 },
   H5: { x: 0.179, y: 0.585, z: 2.8 },
-  H6: { x: 0.451, y: 0.790, z: 2.5 }
+  H6: { x: 0.449, y: 0.772, z: 2.5 }
 };
 
 // 最長有效棟別代碼優先（H1/H2… 不得先被解析成 H）
@@ -1878,6 +1906,17 @@ class Component extends DCLogic {
   mapLayer = React.createRef();
   mapPin = React.createRef();
   svcPinsRef = React.createRef();
+  mapScrollRef = React.createRef();
+  bldSpotsRef = React.createRef();
+
+  // 點列表時地圖可能已滑出畫面：把地圖框捲回可視範圍（不用 scrollIntoView）
+  scrollMapIntoView = () => {
+    const sc = this.mapScrollRef.current, el = this.mapWrapEl;
+    if (!sc || !el) return;
+    const top = el.offsetTop - 12;
+    if (Math.abs(sc.scrollTop - top) < 8) return;
+    if (sc.scrollTo) sc.scrollTo({ top: top, behavior: 'smooth' }); else sc.scrollTop = top;
+  };
   legendInner = React.createRef();
 
   // 圖片的 transform 直接寫到 DOM：翻卡遮罩展開前這棵子樹是凍結的，
@@ -1895,6 +1934,16 @@ class Component extends DCLogic {
       el.style.transform = tf;
     });
     const pin = this.mapPin.current;
+    // 熱區＝地圖上原本的棟別圓標（圖片寬 2.5%）；放大時貼齊圓標，縮小時撐到 22px 好點
+    const hs = this.bldSpotsRef.current;
+    if (hs) {
+      const lw = (this.mapLayer.current && this.mapLayer.current.clientWidth) || 320;
+      const s = Math.max(1, 22 / (0.025 * lw * z));
+      Array.prototype.forEach.call(hs.children, (ch) => {
+        ch.style.transition = anim ? ease : 'none';
+        ch.style.transform = 'translate(-50%,-50%) scale(' + s.toFixed(3) + ')';
+      });
+    }
     const sp = this.svcPinsRef.current;
     if (sp) Array.prototype.forEach.call(sp.children, (ch) => {
       ch.style.transition = anim ? ease : 'none';
@@ -1918,6 +1967,7 @@ class Component extends DCLogic {
     this._pinch = null;
     this._mapPts.clear();
     clearTimeout(this._askT);
+    this.scrollMapIntoView();
     this.setState({ mapZ: c.z, mapX: c.x, mapY: c.y, pin: code, askBld: null, svc: null, askSvc: null }, () => {
       this.applyMap(true, 440);
       this._askT = setTimeout(() => this.setState({ askBld: code }), 400);
@@ -1932,6 +1982,7 @@ class Component extends DCLogic {
     this._pinch = null;
     this._mapPts.clear();
     clearTimeout(this._askT);
+    this.scrollMapIntoView();
     this.setState({ mapZ: 1, mapX: 0, mapY: 0, pin: null, askBld: null, svc: key, askSvc: null }, () => {
       this.applyMap(true, 440);
       this._askT = setTimeout(() => this.setState({ askSvc: key }), 420);
@@ -1974,6 +2025,9 @@ class Component extends DCLogic {
 
   mapDown = (e) => {
     if (e.target && e.target.closest && e.target.closest('button')) return;
+    // 建築熱區：不擋拖曳，改在 pointerup 判斷「幾乎沒移動」才算點擊
+    const spot = e.target && e.target.closest && e.target.closest('[data-bldspot]');
+    this._tapSpot = spot ? { code: spot.getAttribute('data-bldspot'), x: e.clientX, y: e.clientY } : null;
     try { e.currentTarget.setPointerCapture(e.pointerId); } catch (err) {}
     this._mapPts.set(e.pointerId, { x: e.clientX, y: e.clientY });
     if (this._mapPts.size === 2) { this._startPinch(); return; }
@@ -1997,6 +2051,8 @@ class Component extends DCLogic {
   }
 
   mapMove = (e) => {
+    const ts = this._tapSpot;
+    if (ts && Math.hypot(e.clientX - ts.x, e.clientY - ts.y) > 8) this._tapSpot = null;
     if (!this._mapPts.has(e.pointerId)) { if (this._mapDrag) this._panTo(e.clientX, e.clientY); return; }
     this._mapPts.set(e.pointerId, { x: e.clientX, y: e.clientY });
     const pz = this._pinch;
@@ -2023,6 +2079,13 @@ class Component extends DCLogic {
 
   mapUp = (e) => {
     if (e && e.pointerId != null) this._mapPts.delete(e.pointerId);
+    if (this._tapSpot && e && e.type !== 'pointercancel') {
+      const code = this._tapSpot.code;
+      this._tapSpot = null;
+      this.focusBld(code);
+      return;
+    }
+    this._tapSpot = null;
     if (this._mapPts.size < 2) this._pinch = null;
     if (this._mapPts.size === 1 && (this.state.mapZ || 1) > 1) {
       const p = [...this._mapPts.values()][0];
@@ -3248,6 +3311,30 @@ class Component extends DCLogic {
     const pct = identity ? Math.round((doneCount / total) * 100) : 0;
     const days = this.daysLeft();
 
+    // 時效提醒：還沒完成、且有截止日的項目，照剩餘天數排前三個
+    const today0 = new Date(); today0.setHours(0, 0, 0, 0);
+    const pending = [];
+    if (identity) {
+      GROUPS.forEach(g => g.items.forEach(it => {
+        if (!it.end || done[it.id]) return;
+        if (!this.visible(it, identity, this.state.branch || {})) return;
+        const n = Math.round((DT(it.end) - today0) / 86400000);
+        if (n < 0) return;
+        pending.push({ id: it.id, title: it.title, n: n, end: it.end });
+      }));
+      pending.sort((a, b) => a.n - b.n);
+    }
+    const soonPend = pending.length;
+    const soonList = pending.slice(0, 3).map(p => ({
+      key: p.id,
+      title: p.title,
+      due: p.end[0] + '/' + p.end[1],
+      left: p.n === 0 ? '就剩今天' : (p.n === 1 ? '只剩明天' : '剩 ' + p.n + ' 天'),
+      fg: p.n <= 7 ? '#FFFFFF' : '#6B5A4E',
+      bg: p.n <= 7 ? '#E8794A' : 'rgba(44,37,33,.08)',
+      go: () => this.jumpToItem(p.id)
+    }));
+
     const pad = (n) => (n < 10 ? '0' + n : '' + n);
     const branch = this.state.branch || {};
     const groups = GROUPS.map(g => {
@@ -3362,16 +3449,28 @@ class Component extends DCLogic {
       bounceTf: this.state.bnc ? 'translateY(-22px)' : 'none',
       introRef: this.introRef,
       bldLegend: Object.keys(BUILDING_NAMES).filter(c => BUILDING_LINKS[c]).map(c => ({ key: c, code: c, name: BUILDING_NAMES[c].name, url: BUILDING_LINKS[c], focus: () => this.focusBld(c) })),
+      // 地圖圖片上的可點熱區：與底下清單按鈕同一個 focusBld 行為
+      bldSpots: Object.keys(BUILDING_FOCUS).filter(c => c !== this.state.pin).map(c => ({
+        key: c,
+        l: (BUILDING_FOCUS[c].x * 100).toFixed(2) + '%',
+        t: (BUILDING_FOCUS[c].y * 100).toFixed(2) + '%',
+        label: c + '棟' + ((BUILDING_NAMES[c] || {}).name ? ' ' + BUILDING_NAMES[c].name : '')
+      })),
+      bldSpotsRef: this.bldSpotsRef,
       mapLayer: this.mapLayer,
       mapPin: this.mapPin,
       hasPin: !!(this.state.pin && BUILDING_FOCUS[this.state.pin]),
       pinL: (((BUILDING_FOCUS[this.state.pin] || {}).x || 0) * 100).toFixed(2) + '%',
       pinT: (((BUILDING_FOCUS[this.state.pin] || {}).y || 0) * 100).toFixed(2) + '%',
+      pinLabel: this.state.pin ? this.state.pin + '棟' + ((BUILDING_NAMES[this.state.pin] || {}).name ? ' ' + BUILDING_NAMES[this.state.pin].name : '') : '',
       canReset: (this.state.mapZ || 1) > 1.02,
       mapReset: this.mapReset,
       askOpen: !!(this.state.askBld || this.state.askSvc),
       askHasUrl: !!((this.state.askBld && BUILDING_LINKS[this.state.askBld]) || (this.state.askSvc && (SERVICE_SPOTS[this.state.askSvc] || {}).url)),
       askGoLabel: this.state.askSvc ? '開地圖' : '導航',
+      soon: soonList,
+      hasSoon: !!soonList.length,
+      soonNote: soonPend > soonList.length ? ('還有 ' + soonPend + ' 項有期限') : '照期限排序',
       canInstall: !!this.state.canInstall,
       doInstall: this.doInstall,
       hideInstall: this.hideInstall,

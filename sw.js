@@ -1,6 +1,6 @@
 // 南臺新生開學懶人導航 — Service Worker
 // 目的：讓網站能被「安裝到主畫面」並在離線／訊號差時仍可開啟。
-const V = 'stust-freshman-v1';
+const V = 'stust-freshman-v2';
 const CORE = [
   './',
   './index.html',
